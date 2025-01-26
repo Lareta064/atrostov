@@ -1,0 +1,20 @@
+.header-top{
+	padding-block:5px;
+	background-color: var(--grey);
+}
+.header-top__content,
+.header-top__links,
+.header-top__buttons{
+	display: flex;
+	align-items: center;
+	column-gap:15px;
+	flex-shrink:0;
+}
+.header-top__buttons{
+	margin-left: auto;
+}
+.header-top__links a{
+	opacity: .5;
+	transition: .3s; 
+	&:hover{opacity: 1;}
+}
