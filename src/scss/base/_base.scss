@@ -67,7 +67,15 @@ img {
 	height: auto;
 	vertical-align: middle;
 }
+.img-contain, .img-cover{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+.img-cover{
 
+	object-fit: cover;
+}
 input,
 button,
 button:focus,
@@ -98,7 +106,7 @@ input[type="submit"] {
 	-webkit-appearance: none;
 }
 
-.container{
+.container, .header-container{
 	width: min(1760px, 100%);
 	padding-left: 50px;
 	padding-right: 50px;
