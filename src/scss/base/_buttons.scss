@@ -38,6 +38,9 @@
 .btn--slim{
 	height: 55px;
 	font-size: 18px;
+	@media (max-width: 1199px) {
+		height: 55px;
+	}
 	@media (max-width: 699px) {
 		height: 40px;
 		font-size: 16px;

@@ -65,7 +65,7 @@
 	background-color: transparent;
 	border-radius: 10px;
 	&:hover{background-color: var(--grey);
-	&>a{color: var(--base);}
+	&>a{color: var(--base)!important;}
 		 
 	}
 }
@@ -88,6 +88,7 @@
 	overflow: hidden;
 	transition: .3s; 
 	height: 0;
+	
 	li{margin-bottom: 10px; }
 	@media (max-width: 1364px) {
 		width: 1000px;
@@ -103,14 +104,18 @@
 	}
 	li{
 		
-		width: fit-content;
+        width: auto;
+		
 		&:hover a{background-color:#E2E2E2;}
 	}
 	a{
 		font-size: 18px;
 		background-color: var(--greyBg);
-		// max-width: 335px;
+		break-inside: avoid;
 		border-radius: 10px;
+		white-space: pre-wrap; 
+		
+		word-wrap: break-word; 
 		@media (max-width: 1599px) {
 			padding: 10px 15px;
 			font-size: 16px;
@@ -123,4 +128,71 @@
 }
 .header-menu-item.has-drop:hover  .header-sub-menu{
 	height: 360px;
+}
+.header-mobile{
+	display: none;
+	@media (max-width: 1199px) {
+	display: flex;
+		padding-inline: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+.header-section{
+	@media (max-width: 1199px) {
+		position: fixed;
+		z-index: 10;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 100vh;
+		background: rgba(0, 0, 0, 0.8);
+		display: flex;
+		column-gap:50px;
+		padding-top: 114px;
+		padding-left: 20px;
+		padding-right: 20px;
+		.header-container{padding-inline:0}
+		.header-top{
+			width: 342px;
+			flex-shrink: 0;
+			background-color: transparent;
+			.header-container{
+				flex-direction: column-reverse;
+				&>*{width: 100%;}
+			}
+			.header-top__buttons{
+				flex-direction: column;
+				row-gap:10px;
+				&>*{width: 100%;}
+			}
+		}
+		.logo{display: none;}
+		.header-menu{
+			flex-direction: column;
+			justify-content: flex-end;
+			.header-menu-link{
+				color: white;
+				font-size: 20px;
+				padding: 10px 30px;
+			}
+			
+		}
+		.header-menu-item{text-align: right; position: relative;width: fit-content}
+		.header-sub-item:hover .header-menu-link{color: var(--base);}
+		.header-menu-item.has-drop:hover   .header-sub-menu{
+			height: calc(100vh - 150px);
+			overflow: hidden;
+			overflow-y: auto;;
+		}
+		.header-top,.header-nav{padding-block:0;}
+		.header-nav{flex-grow:1;}
+		.header-sub-menu{
+			width:calc(100vw - 40px);
+		}
+		.header-sub-list{
+			column-count:1;
+		}
+	}
 }
