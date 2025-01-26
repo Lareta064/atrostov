@@ -1,5 +1,13 @@
 
-
+:root{
+	--primary: #CCEC83;
+	--base: rgb(31, 29, 27);
+	--baseOp: rgba(31, 29, 27, .8);
+	--grey: #F5F5F5;
+	-greenBg: #1E4737;
+	--inputBgGreen: #285141;
+	--greyBg: #F0F0F0;
+	}
 *, *:after, *:before {
 	box-sizing: border-box;
 }
@@ -86,3 +94,9 @@ input[type="submit"] {
 	-webkit-appearance: none;
 }
 
+.container{
+	width: min(1760px, 100%);
+	padding-left: 50px;
+	padding-right: 50px;
+	margin: 0 auto;
+}
