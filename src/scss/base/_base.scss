@@ -1,17 +1,5 @@
 
-:root{
-	--primary: #CCEC83;
-	--base: rgb(31, 29, 27);
-	--baseOp: rgba(31, 29, 27, .8);
-	--grey: #F5F5F5;
-	--greenBg: #1E4737;
-	--btnColor: #1E4737;
 
-	--inputBgGreen: #285141;
-	--greyBg: #F0F0F0;
-
-	--font: 'Mulish';
-}
 *, *:after, *:before {
 	box-sizing: border-box;
 }
@@ -32,8 +20,8 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	color: var(--base);
-	font-family: var(--font), sans-serif;
+	color: #1f1d1b;
+	font-family: 'Mulish', sans-serif;
 	font-size: 16px;
 	-webkit-font-smoothing: antialiased;
 }
