@@ -17,24 +17,35 @@ header.header
 					//SOCIAL GROUP
 					.social-group
 						a(href="#!")
-							img(src="./img/socials/vk.webp", width="25" height="25" alt="vk")
+							picture
+								source(media="(max-width: 1199px)" srcset="./img/socials/vk-white.webp")
+
+								img(src="./img/socials/vk.webp", width="25" height="25" alt="vk")
 						a(href="#!")
-							img(src="./img/socials/ok.webp", width="25" height="25" alt="vk")
+							picture
+								source(media="(max-width: 1199px)" srcset="./img/socials/ok-white.webp")
+								img(src="./img/socials/ok.webp", width="25" height="25" alt="ok")
+						
 						a(href="#!")
-							img(src="./img/socials/youtube.webp", width="25" height="25" alt="vk")
+							picture
+								source(media="(max-width: 1199px)" srcset="./img/socials/youtube-white.webp")
+								
+								img(src="./img/socials/youtube.webp", width="25" height="25" alt="youtube")
 					
 					a(href="tel:").phone-link
-						img(src="./img/phone.webp", width="25" height="25" alt="img")
+						picture
+							source(media="(max-width: 1199px)" srcset="./img/socials/phone-white.webp")
+							img(src="./img/phone.webp", width="25" height="25" alt="img")
 				
 				//BUTTONS
 				.header-top__buttons
-					button.btn-primary.btn--slim(type="btn") Забронировать
+					button.btn-primary(type="btn") Забронировать
 						svg.svg-arrow-r
 							use(href='./img/sprite.svg#svg-arrow-r')
 							
 					
-					button.btn.btn--slim(type="btn")
-						img(src="./img/phone.webp", width="25" height="25" alt="img")
+					button.btn(type="btn")
+						img(src="./img/phone.webp", width="20" height="20" alt="img")
 						| Заказать звонок
 
 		//HEADER NAVIGATION
@@ -52,47 +63,34 @@ header.header
 								.scroll-wrapper
 									ul.header-sub-list
 										li
-											a(href="#!")
-												span Вакансии
+											a(href="#!") Вакансии
+												
 										li
-											a(href="#!")
-												span Специалисты
+											a(href="#!") Специалисты
 										li
-											a(href="#!")
-												span Наши партнеры
+											a(href="#!") Наши партнеры
 										li
-											a(href="#!")
-												span Благодарность спонсорам
+											a(href="#!") Благодарность спонсорам
 										li
-											a(href="#!")
-												span Правила внутреннего распорядка в пансионате
+											a(href="#!") Правила внутреннего распорядка в пансионате
 										li
-											a(href="#!")
-												span Оформление
+											a(href="#!") Оформление
 										li
-											a(href="#!")
-												span VIP - Дома
+											a(href="#!") VIP - Дома
 										li
-											a(href="#!")
-												span Франшиза
+											a(href="#!") Франшиза
 										li
-											a(href="#!")
-												span Политика конфиденциальности
+											a(href="#!") Политика конфиденциальности
 										li
-											a(href="#!")
-												span Правила внутреннего трудового распорядка паснионата
+											a(href="#!") Правила внутреннего трудового распорядка паснионата
 										li
-											a(href="#!")
-												span Условия проживания
+											a(href="#!") Условия проживания
 										li
-											a(href="#!")
-												span Сеть домов престарелых Добро
+											a(href="#!") Сеть домов престарелых Добро
 										li
-											a(href="#!")
-												span Частые вопросы
+											a(href="#!") Частые вопросы
 										li
-											a(href="#!")
-												span Информация об исполнителе
+											a(href="#!") Информация об исполнителе
 								
 						li.header-menu-item
 							a(href="#!").header-menu-link 
