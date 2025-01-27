@@ -3,10 +3,19 @@ document.addEventListener("DOMContentLoaded", function (){
 	/*open mobile menu */
 	const menuButton = document.querySelector('.menu-button');
 	const mobileMenu = document.querySelector('#mobile-menu');
+	
 	menuButton.addEventListener('click', ()=> {
+		const hasDropActiveItem = mobileMenu.querySelector('.has-drop.active');
 		if( menuButton.classList.contains('active')){
 			menuButton.classList.remove('active');
 			mobileMenu.classList.remove('active');
+			if(hasDropActiveItem){
+				if(hasDropActiveItem.querySelector('active')){
+					hasDropActiveItem.querySelector('active').classList.remove('active');
+				}
+				
+				hasDropActiveItem.classList.remove('active');
+			}
 		}else{
 			menuButton.classList.add('active');
 			mobileMenu.classList.add('active');
