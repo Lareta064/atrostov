@@ -93,7 +93,9 @@ input[type="submit"] {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 }
-
+.w-100{
+	width:100%!important;
+}
 .container, .header-container{
 	width: min(1760px, 100%);
 	padding-left: 50px;

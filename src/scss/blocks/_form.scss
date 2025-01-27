@@ -8,6 +8,107 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   
-  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
-   box-shadow: 0 0 0px 1000px #fff inset;
+  // -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  //  box-shadow: 0 0 0px 1000px #fff inset;
+}
+.form-item{
+  border-radius: 15px;
+  background: #f0f0f0;
+  padding: 12px 20px;
+  margin-bottom: 25px;
+  label{
+    display: block;
+    position: relative;
+    margin-bottom: 8px;
+    font-size: 20px;
+    color: rgba(31, 29, 27, 0.5);
+  }
+  input, textarea{
+    display: block;
+    width: 100%;
+    height: 36px;
+    font-weight: 500;
+    font-size: 22px;
+    color: #1f1d1b;
+    background-color: inherit;
+
+  }
+}
+
+.checkbox-item{
+  position: relative;
+flex-shrink: 0;
+  input{
+    width: 0.01em;
+    height: 0.01em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+   
+  }
+  .custom-checkbox{
+    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #f0f0f0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    &:after{
+      content:'';
+      border-radius: 20px;
+      width: 0;
+      height: 0;
+      background: #ccec83;
+      flex-shrink: 0;
+      transition: .3s; 
+    }
+  }
+  input:checked + .custom-checkbox:after{
+    width: 15px;
+    height: 15px;
+  }
+}
+.agree-block{
+  display: flex;
+  column-gap:10px;
+  color: rgba(31, 29, 27, 0.3);
+  a{
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #ccec83;
+  }
+}
+ 
+.dark-bg{
+  background: #1e4737;
+  .form-item{
+    background: #285141;
+    label{
+      color: rgba(255, 255, 255, 0.5);
+    }
+    input, textarea{
+      color: white;
+    }
+  }
+  .custom-checkbox{background: #285141;}
+  .agree-block{
+        color: rgba(255, 255, 255, 0.3);
+    a{
+      color: #ccec83;
+      
+    }
+  }
+}
+.form-wrapper{
+  .title-35{
+    margin-bottom: 30px;
+  }
+  form{
+    padding-top: 30px;
+    .btn-primary{margin-top: 30px;} 
+  }
 }
