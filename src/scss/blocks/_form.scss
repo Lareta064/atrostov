@@ -22,6 +22,10 @@ select:-webkit-autofill:focus {
     margin-bottom: 8px;
     font-size: 20px;
     color: rgba(31, 29, 27, 0.5);
+    @media (max-width: 1439px) {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
   }
   input, textarea{
     display: block;
@@ -31,7 +35,14 @@ select:-webkit-autofill:focus {
     font-size: 22px;
     color: #1f1d1b;
     background-color: inherit;
+    @media (max-width: 1439px) {
+      font-size: 18px;
+    }
 
+  }
+  @media (max-width: 1439px) {
+    padding: 8px 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -104,11 +115,14 @@ flex-shrink: 0;
   }
 }
 .form-wrapper{
-  .title-35{
-    margin-bottom: 30px;
-  }
+    display: flex;
+		flex-direction: column;
+		row-gap:20px;
+		justify-content: space-between;
   form{
-    padding-top: 30px;
     .btn-primary{margin-top: 30px;} 
+  }
+  @media (max-width: 1439px) {
+    row-gap:18px;
   }
 }

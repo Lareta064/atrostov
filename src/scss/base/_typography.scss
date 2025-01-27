@@ -23,6 +23,9 @@
 .txt-opac{
 	font-size: 20px;
 	color: rgba(31, 29, 27, 0.5);
+	@media (max-width: 1199px) {
+		font-size: 18px;
+	}
 }
 .h3{
 
@@ -40,4 +43,7 @@
 	padding-left: 10px;
 	padding-right: 10px;
 	background-color: #ccec83;
+	@media (max-width: 1439px) {
+		border-radius: 8px;
+	}
 }
