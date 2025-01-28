@@ -7,7 +7,7 @@
 	
 }
 .h1{
-	@media (max-width: 1699px) {
+	@media (max-width: 1919px) {
 		font-size: 2.95vw;
 	}
 	@media (max-width: 1364px) {
@@ -45,8 +45,8 @@
 .accent-word{
 	display: inline-block;
 	border-radius: 15px;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
 	background-color: #ccec83;
 	@media (max-width: 1439px) {
 		border-radius: 8px;
