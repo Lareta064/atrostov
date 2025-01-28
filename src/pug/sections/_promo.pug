@@ -5,7 +5,12 @@ section.promo
 			.promo-title.inverted-border-radius
 				h1.h1 #[span.primary-word Профессиональный] уход и&nbsp;реабилитационные программы для пожилых людей 
 			.promo-img
-				img.img-cover(src="./img/header-bg.webp" srcset="./img/header-bg@2x.webp 2x", width="1660" height="680" alt="alt")
+				picture
+					source(media="(max-width: 1199px)" srcset="./img/header-w360.webp" )
+					source(media="(max-width: 1199px) and (min-resolution: 192dpi)" srcset="./img/header-w360@2x.webp 2x" )
+
+					
+					img.img-cover(src="./img/header-bg.webp" srcset="./img/header-bg@2x.webp 2x", width="1660" height="680" alt="alt")
 				
 				//FORM
 				.promo-form.form-wrapper

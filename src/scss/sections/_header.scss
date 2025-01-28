@@ -251,13 +251,14 @@
 			width:calc(100vw - 40px);
 			z-index: 7;
 			border-radius: 20px;
+			display: flex;
+			justify-content: flex-end;
 		}
 		.header-sub-list{
 			column-count:1;
 			padding:0;
-			
-			
 		}
+		
 	}
 	@media (max-width: 699px) {
 		
