@@ -1,0 +1,36 @@
+//PROMO
+section.promo
+	.container
+		.promo-content.invert-border-image
+			.promo-title.inverted-border-radius
+				h1.h1 #[span.primary-word Профессиональный] уход и&nbsp;реабилитационные программы для пожилых людей 
+			.promo-img
+				picture
+					source(media="(max-width: 1199px)" srcset="./img/header-w360.webp" )
+					source(media="(max-width: 1199px) and (min-resolution: 192dpi)" srcset="./img/header-w360@2x.webp 2x" )
+
+					
+					img.img-cover(src="./img/header-bg.webp" srcset="./img/header-bg@2x.webp 2x", width="1660" height="680" alt="alt")
+				
+				//FORM
+				.promo-form.form-wrapper
+					.title-35 Консультация по размещению
+					.txt-opac  Я бы сюда добавил какое нибудь краткое описание, преимуществаили может ваш слоган
+					
+					form.contacts-form
+						.form-item
+							label.label Ваше имя
+							input(type="text" placeholder="Иван")
+						.form-item
+							label.label Ваш номер телефона
+							input(type="tel" placeholder="+7 (000) 000-00-00")
+
+						.agree-block
+								label.checkbox-item
+									input(type="checkbox" checked)
+									span.custom-checkbox
+								p Я ознакомлен и согласен с условиями #[a(href="#!") пользовательского соглашения]
+						.form-btn
+							button.btn-primary.w-100(type="submit")  Оставить заявку
+
+			

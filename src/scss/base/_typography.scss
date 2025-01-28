@@ -1,4 +1,4 @@
-.h1, .h3{
+.h1, .h3, .title-35{
 	font-weight: 700;
 	font-size: 60px;
 	line-height: 1.08;
@@ -11,6 +11,20 @@
 	@media (max-width: 699px) {
 		font-size: 28px;
 		line-height: 1.25;
+	}
+}
+.title-35{
+	font-size: 35px;
+	line-height: 1.14;
+	@media (max-width: 1199px) {
+		font-size: 25px;
+	}
+}
+.txt-opac{
+	font-size: 20px;
+	color: rgba(31, 29, 27, 0.5);
+	@media (max-width: 1199px) {
+		font-size: 18px;
 	}
 }
 .h3{
@@ -29,4 +43,7 @@
 	padding-left: 10px;
 	padding-right: 10px;
 	background-color: #ccec83;
+	@media (max-width: 1439px) {
+		border-radius: 8px;
+	}
 }
