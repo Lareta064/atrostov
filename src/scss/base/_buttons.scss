@@ -12,6 +12,7 @@
 	font-weight: 600;
 	padding-inline: 50px;
 	column-gap:10px;
+	white-space: nowrap;
 	cursor:pointer;
 	outline: none;
 	&:focus{outline: none;}

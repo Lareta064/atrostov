@@ -7,9 +7,14 @@
 		padding-top: 40px;
 		
 	}
-	@media (max-width: 767px) {
+	@media (max-width: 743px) {
 		padding-top: 30px;
-		
+		.container{
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.promo-title {padding-left: 20px;
+		padding-right: 20px;}
 	}	
 	
 	.promo-img{
