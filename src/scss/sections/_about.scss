@@ -42,7 +42,7 @@
 			padding-left: 0;
 		}
 	}
-	.txt-opac{
+	.txt-18{
 		font-size: 18px;
 		@media (max-width: 1439px) {font-size: 16px;}
 	}
@@ -81,15 +81,13 @@
 	
 	.about__title{
 		max-width: 900px;
-		.txt-opac{
-			font-size: 22px;
+		.txt-22{
+			
 			max-width: 784px;
 			margin-top: 30px;
-			@media (max-width: 1919px) {
-				font-size:20px;
-			}
+			
 			@media (max-width: 1439px) {
-				font-size:18px;
+			
 				margin-top: 20px;
 			}
 			

@@ -45,6 +45,7 @@
 	.reward-txt,.reward-title, .reward-img{
 		padding: 20px;
 		border-radius: 30px 30px 0 30px;
+		background-color: #fff;
 	}
     .reward-title{border-radius: 0 0 0 40px;}
 	.reward-txt{
@@ -53,25 +54,21 @@
 	}
 	.reward-col{
 		row-gap:20px;
+		justify-content: center;
 	}
 	.reward-content{
 		column-gap:40px;
 	}
+	.reward-txt{flex-grow: 0;}
 }
 @media (max-width: 1364px) {
 	.reward-txt,.reward-title, .reward-img{
 		padding: 0;
-		background-color: #fff;
 	}
-	.reward-col{
-		justify-content: center;
-	}
-	.reward-txt{flex-grow: 0;}
 }
 @media (max-width:1023px) {
 	.reward-content{
 		flex-direction: column-reverse;row-gap: 20px;
-	
 	}
 	
 	.reward-col{

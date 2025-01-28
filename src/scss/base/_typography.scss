@@ -1,4 +1,4 @@
-.h1, .h3, .title-35{
+.h1, .h3, .h2,.h4{
 	font-weight: 700;
 	font-size: 60px;
 	line-height: 1.08;
@@ -20,18 +20,13 @@
 		font-size:28px;
 	}	
 }
-.title-35{
-	font-size: 35px;
-	line-height: 1.14;
-	@media (max-width: 1199px) {
-		font-size: 25px;
+.h2{
+	font-size: 50px;
+	@media (max-width: 1439px) {
+		font-size: 45px;
 	}
-}
-.txt-opac{
-	font-size: 20px;
-	color: rgba(31, 29, 27, 0.5);
-	@media (max-width: 1199px) {
-		font-size: 18px;
+	@media (max-width: 1279px) {
+		font-size: 40px;
 	}
 }
 .h3{
@@ -42,6 +37,35 @@
 	}
 	
 }
+.h4{
+	font-size: 35px;
+	line-height: 1.14;
+	@media (max-width: 1199px) {
+		font-size: 25px;
+	}
+}
+
+.txt-opac,.txt-18{
+	font-size: 20px;
+	color: rgba(31, 29, 27, 0.5);
+	@media (max-width: 1199px) {
+		font-size: 18px;
+	}
+}
+.txt-22{
+	font-size: 22px;
+	
+	@media (max-width: 1919px) {
+		font-size:20px;
+	}
+	@media (max-width: 1439px) {
+		font-size:18px;
+		
+	}
+	
+}
+.txt-18{font-size: 18px;}
+
 .accent-word{
 	display: inline-block;
 	border-radius: 15px;

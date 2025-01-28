@@ -20,7 +20,7 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	color: #1f1d1b;
+	color: rgba(31, 29, 27, 0.5);
 	font-family: 'Mulish', sans-serif;
 	font-size: 16px;
 	-webkit-font-smoothing: antialiased;
@@ -63,6 +63,12 @@ img {
 .img-cover{
 
 	object-fit: cover;
+}
+.mb-30{
+	margin-bottom: 30px;
+	@media (max-width: 1439px) {
+		margin-bottom: 20px;
+	}
 }
 input,
 button,
