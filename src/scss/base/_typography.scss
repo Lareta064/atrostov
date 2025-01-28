@@ -4,14 +4,21 @@
 	line-height: 1.08;
 	letter-spacing: -0.02em;
 	color: #1f1d1b;
+	
+}
+.h1{
+	@media (max-width: 1699px) {
+		font-size: 2.95vw;
+	}
+	@media (max-width: 1364px) {
+		font-size:2.9vw;
+	}
 	@media (max-width: 1199px) {
-		font-size: 40px;
-		line-height: 1;
+		font-size:40px; 
 	}
-	@media (max-width: 699px) {
-		font-size: 28px;
-		line-height: 1.25;
-	}
+	@media (max-width: 767px) {
+		font-size:28px;
+	}	
 }
 .title-35{
 	font-size: 35px;
@@ -30,14 +37,12 @@
 .h3{
 
 	font-size: 25px;
-	@media (max-width: 1199px) {
-		font-size: 22px;
-	}
-	@media (max-width: 699px) {
+	@media (max-width: 1439px) {
 		font-size: 20px;
 	}
+	
 }
-.primary-word{
+.accent-word{
 	display: inline-block;
 	border-radius: 15px;
 	padding-left: 10px;

@@ -93,6 +93,22 @@ input[type="submit"] {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 }
+.main{
+	display: flex;
+	flex-direction: column;
+	&>*{
+		flex-shrink: 0;
+		width: 100%;
+	}
+	row-gap:150px;
+	@media (max-width: 1699px) {
+		row-gap:120px;
+	}
+	@media (max-width: 1439px) {
+		row-gap:100px;
+	}
+	
+}
 .w-100{
 	width:100%!important;
 }
@@ -124,14 +140,13 @@ input[type="submit"] {
 	position: absolute;
 	top: 0;
 	left: 0;
-	padding-right: 20px;
-	padding-bottom: 50px;
+	
 }
 .inverted-border-radius::after {
 	content: "";
 	position: absolute;
 	background-color: transparent;
-	box-shadow: -33px -16px 0 0 #FFF;
+	box-shadow: -33px -16px 0 0 #d05757;
 	display: block;
 }
 .inverted-border-radius::before {
