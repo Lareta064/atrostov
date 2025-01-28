@@ -1,0 +1,33 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../fonts/fonts.css")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 карточка
+				.benefit-card
+					.benefit-card__icon
+						img(src="/img/benefits-icons/icon1.svg", width="30" height="30" alt="img")
+					.h3 2000+ положительных отзывов
+					p.txt-opac Доверие, подтвержденное тысячами довольных клиентов. Ваши положительные отзывы — наша лучшая награда и мотивация к дальнейшему развитию. 
+				.benefit-card
+					.benefit-card__icon
+						img(src="/img/benefits-icons/icon1.svg", width="30" height="30" alt="img")
+					.h3 2000+ <br>положительных отзывов
+					p.txt-opac Вы заключаете договор на проживание,и мы доставляем вашего близкого в пансионат на собственном транспорте.

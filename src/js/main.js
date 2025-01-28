@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		if( menuButton.classList.contains('active')){
 			menuButton.classList.remove('active');
 			mobileMenu.classList.remove('active');
+			bodyEl.classList.remove('lock');
 			if(hasDropActiveItem){
 				if(hasDropActiveItem.querySelector('active')){
 					hasDropActiveItem.querySelector('active').classList.remove('active');
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		}else{
 			menuButton.classList.add('active');
 			mobileMenu.classList.add('active');
+			bodyEl.classList.add('lock');
 		}
 	});
 
@@ -30,9 +32,11 @@ document.addEventListener("DOMContentLoaded", function (){
 				if(item.classList.contains('active')){
 					item.classList.remove('active');
 					item.querySelector('.header-sub-menu').classList.remove('active');
+					bodyEl.classList.remove('lock');
 				}else{
 					item.classList.add('active');
 					item.querySelector('.header-sub-menu').classList.add('active');
+					bodyEl.classList.add('lock');
 				}
 			});
 		});
