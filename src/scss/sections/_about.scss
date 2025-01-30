@@ -77,19 +77,10 @@
 	}
 }
 .about{
-	
-	.about__title{
+	.header-group{
 		max-width: 900px;
 		.txt-22{
-			
 			max-width: 784px;
-			margin-top: 20px;
-			
-			@media (max-width: 1439px) {
-			
-				margin-top: 20px;
-			}
-			
 		}
 	}
 }
@@ -106,7 +97,7 @@
 	}
 }
 	
-.about__title { grid-area: 1 / 1 / 2 / 2; }
+.about .header-group { grid-area: 1 / 1 / 2 / 2; }
 .about__video { grid-area: 2 / 1 / 4 / 2; }
 .benefit-card:first-of-type { grid-area: 1 / 2 / 2 / 3; }
 .benefit-card:nth-of-type(2){ grid-area: 2 / 2 / 3 / 3; }
@@ -120,7 +111,7 @@
 	.about-grid{
 		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 	}
-	.about__title { grid-area: 1 / 1 / 2 / 3; }
+	.about .header-group { grid-area: 1 / 1 / 2 / 3; }
 	.benefit-card:first-of-type { grid-area: 2 / 1 / 3 / 2; }
 	.benefit-card:nth-of-type(2){ grid-area: 2 / 2 / 3 / 3; }
 	.benefit-card:nth-of-type(3) { grid-area: 3 / 1 / 4 / 2; }
@@ -130,7 +121,7 @@
 	.about-grid{
 		grid-template-columns:  1fr;
 	}
-	.about__title { grid-area: 1 / 1 / 2 / 2; }
+	.about .header-group { grid-area: 1 / 1 / 2 / 2; }
 	.benefit-card:first-of-type { grid-area: 2 / 1 / 3 / 2; }
 	.benefit-card:nth-of-type(2){ grid-area: 3 / 1 / 4 / 2; }
 	.benefit-card:nth-of-type(3) { grid-area: 4 / 1 / 5 / 2; }

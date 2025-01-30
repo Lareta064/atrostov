@@ -25,7 +25,9 @@
 	img, svg{flex-shrink: 0;}
 	@media (max-width: 1199px) {
 		height: 64px;
+		.hide-mobile{display: none;}
 	}
+	
 }
 .btn-primary{
 	color: #1E4737;
