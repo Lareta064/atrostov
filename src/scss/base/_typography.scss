@@ -105,6 +105,7 @@ line-height:1;
 }
 .header-group{
 	.txt-22{margin-top: 20px;}
+	&.d-flex{.txt-22{margin-top: 0;}}
 }
 .grey-block{
 	background-color: #f5f5f5;
