@@ -116,3 +116,29 @@ line-height:1;
 		border-radius: 20px;
 	}
 }
+.phone-link-icon{
+	position: relative;
+	padding-top: 45px;
+	display: flex;
+	
+	&:after{
+		content:'';
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 50%;
+		background-color: $primary;
+		background-image: url('../img/phone.webp');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: auto;
+	}
+	 
+}
+.green-bg{
+	background-color: $greenBg;
+	color: rgba(255, 255, 255, 0.5);
+	a{color: white;}
+}

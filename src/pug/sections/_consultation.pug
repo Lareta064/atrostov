@@ -1,0 +1,26 @@
+//CONSULTATION
+section.consultation
+	.container.container--narrow
+		.consultation-content.green-bg
+			h2.h1  Получите #[span.accent-word бесплатную] консультацию
+			.consultation-row.d-flex
+				.consultation-txt
+					.txt-22 Оставьте заявку, и мы свяжемся с вами, чтобы обсудить ваши потребности
+					.contacts-block
+						a(href="tel:").phone-link-icon.txt-22  +7 (800) 775-46-13
+						p Позвоните нам по бесплатному номеру
+
+				//FORM
+				form.consult-form.dark-bg
+					.form-item
+						label.label Ваше имя
+						input(type="tel" placeholder="+7 (000) 000-00-00")
+					
+					.agree-block
+						label.checkbox-item
+							input(type="checkbox" checked)
+							span.custom-checkbox
+						p Я ознакомлен и согласен с условиями #[a(href="#!") пользовательского соглашения]
+
+					.form-btn
+						button.btn-primary.w-100(type="submit") Оставить заявку
