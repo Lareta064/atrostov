@@ -60,6 +60,12 @@ img {
 	height: 100%;
 	object-fit: contain;
 }
+.img-round{
+	border-radius: 30px;
+	@media (max-width: 1199px) {
+	border-radius: 20px;
+	}
+}
 .img-cover{
 
 	object-fit: cover;
@@ -135,7 +141,7 @@ input[type="submit"] {
 	column-gap:15px;
 }
 .social-group a{justify-content: center;}
-
+.d-flex{display: flex;}
 
 .invert-border-image{
 	position: relative;

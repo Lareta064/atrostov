@@ -127,23 +127,28 @@
 	.benefit-card:nth-of-type(3) { grid-area: 4 / 1 / 5 / 2; }
 	.about__video { grid-area: 5 / 1 / 6 / 2; }
 }
-
-.about__video{
-	height: 100%;
+.bg-overlay{
 	position: relative;
-	border-radius: 30px;
 	overflow: hidden;
-	&>*{
-		position: relative;
-		z-index: 2;
+	border-radius: 30px;
+	@media (max-width: 1199px) {
+	border-radius: 20px;
 	}
-	
 	&:before{
 		content:'';	
 		position: absolute;
 		inset: 0;
 		background: rgba(0, 0, 0, 0.5);
 	}
+}
+.about__video{
+	height: 100%;
+	
+	border-radius: 30px;
+	
+	
+	
+	
 	@media (max-width: 1439px) {
 	   border-radius: 20px;
 	}
