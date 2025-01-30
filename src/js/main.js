@@ -41,5 +41,42 @@ document.addEventListener("DOMContentLoaded", function (){
 			});
 		});
 	}
+   /*review slider */
+   $('.review-slider').slick({
+	
+	
+	infinite: true,
+	speed: 800,
+	slidesToShow: 3,
+	centerMode: true,
+	variableWidth: true,
+	centerPadding: '160px',
+	slidesToScroll: 1,
+	arrows: true,
+	prevArrow:$('.review-pagination .btn-prev'),
+	nextArrow:$('.review-pagination .btn-next'),
 
+	
+	responsive: [
+
+		{
+			breakpoint: 1023,
+			settings: {
+				slidesToShow: 4,
+				centerMode: true,
+				// variableWidth: true,
+				// centerPadding: '160px',
+			},
+		},
+		  {
+			
+			breakpoint: 424,
+			settings: {
+				slidesToShow: 1,
+				centerMode: false,
+				variableWidth: false,
+			}
+		}
+	]
+});
 });
