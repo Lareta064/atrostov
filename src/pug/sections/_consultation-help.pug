@@ -1,21 +1,24 @@
 //CONSULTATION
-section.consultation
+section.consultation-help
 	.container
 		.consultation-row.d-flex
-			.consultation-content.green-bg
-				.consultation-txt
-					h2.h1  Получите #[span.accent-word бесплатную] консультацию
-					.txt-22 Оставьте заявку, и мы свяжемся с вами, чтобы обсудить ваши потребности
-					.contacts-block
-						a(href="tel:").phone-link-icon.txt-22  +7 (800) 775-46-13
-						p Позвоните нам по бесплатному номеру
+			.consultation-contacts.green-bg
+				h2.h1  Консультация по #[span.accent-word размещению]
+				
+				.txt-22 Оставьте заявку, и мы свяжемся с вами, чтобы обсудить ваши потребности
+				.contacts-block
+					a(href="tel:").phone-link-icon.txt-22  +7 (800) 775-46-13
+					p Позвоните нам по бесплатному номеру
+			
 			.green-bg.form-wrapper
 				//FORM
 				form.consult-form.dark-bg
 					.form-item
 						label.label Ваше имя
+						input(type="text" placeholder="Иван")
+					.form-item
+						label.label Ваш телефон
 						input(type="tel" placeholder="+7 (000) 000-00-00")
-					
 					.agree-block
 						label.checkbox-item
 							input(type="checkbox" checked)

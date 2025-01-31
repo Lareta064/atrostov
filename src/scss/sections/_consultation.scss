@@ -7,6 +7,8 @@
 	   }
 	
 }
+.green-bg {.h1{
+	color: white;}}
 .consultation{
 	.h1{
 		color: white; margin-bottom: 40px; text-align: center;
@@ -39,18 +41,33 @@
 			row-gap:20px;
 		}
 	}
-	&-txt{
+	&-contacts{
 		flex:1;
 		max-width: 400px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		padding-bottom: 30px;
+		padding: 30px;
 		row-gap:20px;
+		border-radius: 30px;
 	}
 	.consult-form{
 		flex:1;
 		max-width: 540px;
+		border-radius: 30px;
+		padding: 30px;
 	}
 	
+}
+.consultation-help{
+	.consultation-row{
+		width: 100%;
+		max-width: 100%;
+		
+		gap: 20px;
+	}
+	.form-wrapper{
+		max-width: 530px;
+	}
+	.consultation-contacts{max-width: unset; flex:1}
 }
