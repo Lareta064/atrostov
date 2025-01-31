@@ -44,38 +44,75 @@ document.addEventListener("DOMContentLoaded", function (){
    /*review slider */
    $('.review-slider').slick({
 	
-	infinite: true,
-	speed: 800,
-	slidesToShow: 3,
-	centerMode: true,
-	variableWidth: true,
-	centerPadding: '160px',
-	slidesToScroll: 1,
-	arrows: true,
-	prevArrow:$('.review-pagination .btn-prev'),
-	nextArrow:$('.review-pagination .btn-next'),
+		infinite: true,
+		speed: 800,
+		slidesToShow: 3,
+		centerMode: true,
+		variableWidth: true,
+		centerPadding: '160px',
+		slidesToScroll: 1,
+		arrows: true,
+		prevArrow:$('.review-pagination .btn-prev'),
+		nextArrow:$('.review-pagination .btn-next'),
 
-	
-	responsive: [
+		
+		responsive: [
 
-		{
-			breakpoint: 1023,
-			settings: {
-				slidesToShow: 2,
-				centerMode: false,
-				variableWidth: false,
-				centerPadding: '0',
+			{
+				breakpoint: 1023,
+				settings: {
+					slidesToShow: 2,
+					centerMode: false,
+					variableWidth: false,
+					centerPadding: '0',
+				},
 			},
-		},
-		  {
-			
-			breakpoint: 699,
-			settings: {
-				slidesToShow: 1,
-				centerMode: false,
-				variableWidth: false,
+			{
+				
+				breakpoint: 699,
+				settings: {
+					slidesToShow: 1,
+					centerMode: false,
+					variableWidth: false,
+				}
 			}
-		}
-	]
-});
+		]
+	});
+	/**** */
+	$('.branches-slider').slick({
+	
+		infinite: true,
+		speed: 800,
+		slidesToShow: 3,
+		centerMode: true,
+		variableWidth: true,
+		centerPadding: '160px',
+		slidesToScroll: 1,
+		arrows: true,
+		prevArrow:$('.branches-pagination .btn-prev'),
+		nextArrow:$('.branches-pagination .btn-next'),
+	
+		
+		responsive: [
+	
+			{
+				breakpoint: 1023,
+				settings: {
+					slidesToShow: 2,
+					centerMode: false,
+					variableWidth: false,
+					centerPadding: '0',
+				},
+			},
+			  {
+				
+				breakpoint: 699,
+				settings: {
+					slidesToShow: 1,
+					centerMode: false,
+					variableWidth: false,
+				}
+			}
+		]
+	});
 });

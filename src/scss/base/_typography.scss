@@ -72,13 +72,8 @@ line-height:1;
 	font-size: 25px;
    }
 }
-.txt-opac,.txt-18{
-	font-size: 20px;
-	color: rgba(31, 29, 27, 0.5);
-	@media (max-width: 1199px) {
-		font-size: 18px;
-	}
-}
+
+
 .txt-22{
 	font-size: 22px;
 	
@@ -92,7 +87,7 @@ line-height:1;
 }
 .txt-center{text-align: center;}
 .txt-18{font-size: 18px;}
-
+.txt-bold{font-weight: 700;}
 .accent-word{
 	display: inline-block;
 	border-radius: 15px;

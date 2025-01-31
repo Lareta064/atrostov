@@ -1,0 +1,26 @@
+.branches{
+	.h1{padding-inline: 20px; text-align: center; margin-bottom: 50px;}
+	.branche-card{
+		padding: 10px;
+		border-radius: 30px;
+		background-color: #f5f5f5;
+		&__img{
+			overflow: hidden;
+			border-radius: 30px;
+			width: 530px;
+			height: 300px;
+			img{border-radius: 30px; object-fit: cover;}
+		}
+		&__txt{
+			padding: 30px 10px;
+			
+		}
+	}
+	figcaption {
+		line-height: 1;
+		font-size: 20px;
+		letter-spacing: -0.02em;
+		margin-bottom: 1em;
+	}
+}
+
