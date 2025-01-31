@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", function (){
    /*review slider */
    $('.review-slider').slick({
 	
-	
 	infinite: true,
 	speed: 800,
 	slidesToShow: 3,
@@ -62,15 +61,15 @@ document.addEventListener("DOMContentLoaded", function (){
 		{
 			breakpoint: 1023,
 			settings: {
-				slidesToShow: 4,
-				centerMode: true,
-				// variableWidth: true,
-				// centerPadding: '160px',
+				slidesToShow: 2,
+				centerMode: false,
+				variableWidth: false,
+				centerPadding: '0',
 			},
 		},
 		  {
 			
-			breakpoint: 424,
+			breakpoint: 699,
 			settings: {
 				slidesToShow: 1,
 				centerMode: false,
