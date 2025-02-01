@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		speed: 800,
 		slidesToShow: 3,
 		centerMode: true,
-		variableWidth: true,
+		// variableWidth: true,
 		centerPadding: '160px',
 		slidesToScroll: 1,
 		arrows: true,
@@ -93,7 +93,69 @@ document.addEventListener("DOMContentLoaded", function (){
 	
 		
 		responsive: [
+			{
+				breakpoint: 1799,
+				settings: {
+					slidesToShow: 2,
+					centerMode: true,
+					variableWidth: false,
+					centerPadding: '160px',
+				},
+			},
 	
+			{
+				breakpoint: 1279,
+				settings: {
+					slidesToShow: 1,
+					centerMode: true,
+					variableWidth: false,
+					centerPadding: '260px',
+				},
+			},
+			  {
+				
+				breakpoint: 743,
+				settings: {
+					slidesToShow: 1,
+					centerMode: false,
+					variableWidth: false,
+					
+				}
+			}
+		]
+	});
+
+	/**** */
+	$('.how-work-slider').slick({
+	
+		infinite: true,
+		speed: 800,
+		slidesToShow: 4,
+		
+		slidesToScroll: 1,
+		arrows: true,
+		prevArrow:$('.how-work-nav .btn-prev'),
+		nextArrow:$('.how-work-nav .btn-next'),
+	
+		
+		responsive: [
+			{
+				breakpoint: 1999,
+				settings: {
+					slidesToShow: 3,
+					
+				},
+			},
+			
+			{
+				breakpoint: 1249,
+				settings: {
+					slidesToShow: '2.5',
+					centerMode: true,
+					variableWidth: false,
+					centerPadding: '160px',
+				},
+			},
 			{
 				breakpoint: 1023,
 				settings: {
@@ -115,4 +177,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		]
 	});
+
+
+	
 });
