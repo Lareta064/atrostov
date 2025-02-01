@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	
 		infinite: true,
 		speed: 800,
-		slidesToShow: '2.2',
+		slidesToShow: '3',
 		
 		slidesToScroll: 1,
 		arrows: true,
