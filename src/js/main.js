@@ -54,26 +54,25 @@ document.addEventListener("DOMContentLoaded", function (){
 		arrows: true,
 		prevArrow:$('.review-pagination .btn-prev'),
 		nextArrow:$('.review-pagination .btn-next'),
-
-		
 		responsive: [
-
+	
 			{
 				breakpoint: 1023,
 				settings: {
-					slidesToShow: 2,
-					centerMode: false,
+					slidesToShow: 1,
+					centerMode: true,
 					variableWidth: false,
-					centerPadding: '0',
+					centerPadding: '160px',
 				},
 			},
-			{
+			  {
 				
-				breakpoint: 699,
+				breakpoint: 743,
 				settings: {
 					slidesToShow: 1,
 					centerMode: false,
 					variableWidth: false,
+					
 				}
 			}
 		]
@@ -98,19 +97,20 @@ document.addEventListener("DOMContentLoaded", function (){
 			{
 				breakpoint: 1023,
 				settings: {
-					slidesToShow: 2,
-					centerMode: false,
+					slidesToShow: 1,
+					centerMode: true,
 					variableWidth: false,
-					centerPadding: '0',
+					centerPadding: '160px',
 				},
 			},
 			  {
 				
-				breakpoint: 699,
+				breakpoint: 743,
 				settings: {
 					slidesToShow: 1,
 					centerMode: false,
 					variableWidth: false,
+					
 				}
 			}
 		]

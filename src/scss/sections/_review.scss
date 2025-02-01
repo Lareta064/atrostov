@@ -38,12 +38,12 @@
 	}
 }
 .review-card{
-	width: 590px;
-	padding-left: 10px;
-	padding-right: 10px;
+	// width: 590px;
+	// padding-left: 10px;
+	// padding-right: 10px;
 	flex-shrink: 0;
 	@media (max-width: 1199px) {
-		width: 365px;
+		// width: 365px;
 	}
 	&__header{
 		display: flex;

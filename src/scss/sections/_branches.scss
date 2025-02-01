@@ -7,20 +7,30 @@
 		&__img{
 			overflow: hidden;
 			border-radius: 30px;
-			width: 530px;
-			height: 300px;
-			img{border-radius: 30px; object-fit: cover;}
+			// width: 530px;
+			// height: 300px;
+			aspect-ratio: 53/30;
+			img{border-radius: 15px; object-fit: cover;}
 		}
-		&__txt{
-			padding: 30px 10px;
+		&__txt{padding: 30px 10px;}
+		
+		@media (max-width: 1199px) {
+			border-radius: 20px;
+			&__img{border-radius: 20px;
+				img{border-radius: 10px;}
+			}
+
 			
-		}
+		}	
 	}
 	figcaption {
 		line-height: 1;
 		font-size: 20px;
 		letter-spacing: -0.02em;
 		margin-bottom: 1em;
+	}
+	@media (max-width: 767px) {
+	padding-inline:20px;
 	}
 }
 
