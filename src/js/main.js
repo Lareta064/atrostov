@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		]
 	});
 
-	/**** */
+	/* .how-work-slider */
 	$('.how-work-slider').slick({
 	
 		infinite: true,
@@ -177,7 +177,54 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		]
 	});
-
-
+	/*team-slider*/
+	$('.team-slider').slick({
+	
+		infinite: true,
+		speed: 800,
+		slidesToShow: '2.2',
+		
+		slidesToScroll: 1,
+		arrows: true,
+		prevArrow:$('.team-pagination .btn-prev'),
+		nextArrow:$('.team-pagination .btn-next'),
+		
+		responsive: [
+			{
+				breakpoint: 1440,
+				settings: {
+					slidesToShow: 2,
+					
+				},
+			},
+			
+			{
+				breakpoint: 1270,
+				settings: {
+					slidesToShow:' 1.8',
+					
+				},
+			},{
+				breakpoint: 1023,
+				settings: {
+					slidesToShow:' 1',
+					centerMode: true,
+					
+					centerPadding: '190px',
+				},
+			},
+			  {
+				
+				breakpoint: 743,
+				settings: {
+					slidesToShow: 1,
+					centerMode: true,
+					centerPadding: '10px',
+					
+				}
+			}
+		]
+	});
+	
 	
 });
