@@ -225,6 +225,64 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		]
 	});
-	
+	/*.docs-slider*/
+	$('.docs-slider').slick({
+
+		infinite: true,
+		speed: 800,
+		slidesToShow: '3',
+		centerMode: true,
+		centerPadding: '300px',
+		slidesToScroll: 1,
+		arrows: true,
+		prevArrow:$('.docs-pagination .btn-prev'),
+		nextArrow:$('.docs-pagination .btn-next'),
+		
+		responsive: [
+			{
+				breakpoint: 1799,
+				settings: {
+					slidesToShow:'3',
+					centerMode: true,
+		           centerPadding: '190px',
+				},
+			},
+			{
+				breakpoint: 1450,
+				settings: {
+					slidesToShow:' 3',
+					centerMode: false,
+					centerPadding: 0,
+		         
+				},
+			},
+			{
+				breakpoint: 1270,
+				settings: {
+					slidesToShow:' 2',
+					centerMode: true,
+					centerPadding: '100px',
+					
+				},
+			},{
+				breakpoint: 1023,
+				settings: {
+					slidesToShow:' 1',
+					centerMode: true,
+					centerPadding: '220px',
+				},
+			},
+				{
+				
+				breakpoint: 743,
+				settings: {
+					slidesToShow: 1,
+					centerMode: true,
+					centerPadding: '40px',
+				
+				}
+			}
+		]
+	});
 	
 });
