@@ -443,5 +443,9 @@ document.addEventListener("DOMContentLoaded", function (){
 		clearTimeout(window.slickResizeTimer);
 		window.slickResizeTimer = setTimeout(initSliders, 200);
 	});
-	
+	// Fancybox
+	Fancybox.bind("[data-fancybox]", {
+        
+		Thumbs: false,
+	});
 });

@@ -1,53 +1,58 @@
 //GALLERY
 section.gallery
 	.container
-		h2.h1 Фото
+		h2.h1.txt-center #[span.accent-word Фото]
 	
-	//slider desktop
+	//slider desktopa
 	.gallery-slider-grid
 		//single slide
 		.gallery-group
-			.gallery-item
+			a.gallery-item(href="./img/gallery/1.webp" data-fancybox="gallery")
 				img(src="./img/gallery/1.webp", width="640" height="430" srcset="./img/gallery/1@2x.webp 2x" alt="alt")
-			.gallery-item
+			a.gallery-item(href="./img/gallery/6.webp" data-fancybox="gallery")
 				img(src="./img/gallery/6.webp", width="400" height="430" srcset="./img/gallery/6@2x.webp 2x" alt="alt")
-			.gallery-item
+			a.gallery-item(href="./img/gallery/2.webp" data-fancybox="gallery")
 				img(src="./img/gallery/2.webp", width="780" height="430" srcset="./img/gallery/2@2x.webp 2x" alt="alt")
-			.gallery-item
+			a.gallery-item(href="./img/gallery/3.webp" data-fancybox="gallery")
 				img(src="./img/gallery/3.webp", width="1060" height="430" srcset="./img/gallery/3@2x.webp 2x" alt="alt")
-			.gallery-item
+			a.gallery-item(href="./img/gallery/4.webp" data-fancybox="gallery")
 				img(src="./img/gallery/4.webp", width="380" height="430" srcset="./img/gallery/4@2x.webp 2x" alt="alt")
-			.gallery-item
+			a.gallery-item(href="./img/gallery/5.webp" data-fancybox="gallery")
 				img(src="./img/gallery/5.webp", width="380" height="430" srcset="./img/gallery/5@2x.webp 2x" alt="alt")
 		//single slide
 		.gallery-group
-			.gallery-item
+			a.gallery-item(href="./img/gallery/1.webp" data-fancybox="gallery")
 				img(src="./img/gallery/1.webp", width="640" height="430" srcset="./img/gallery/1@2x.webp 2x" alt="alt")
-			.gallery-item
+			a.gallery-item(href="./img/gallery/6.webp" data-fancybox="gallery")
 				img(src="./img/gallery/6.webp", width="400" height="430" srcset="./img/gallery/6@2x.webp 2x" alt="alt")
-			.gallery-item
+			a.gallery-item(href="./img/gallery/2.webp" data-fancybox="gallery")
 				img(src="./img/gallery/2.webp", width="780" height="430" srcset="./img/gallery/2@2x.webp 2x" alt="alt")
-			.gallery-item
+			a.gallery-item(href="./img/gallery/3.webp" data-fancybox="gallery")
 				img(src="./img/gallery/3.webp", width="1060" height="430" srcset="./img/gallery/3@2x.webp 2x" alt="alt")
-			.gallery-item
+			a.gallery-item(href="./img/gallery/4.webp" data-fancybox="gallery")
 				img(src="./img/gallery/4.webp", width="380" height="430" srcset="./img/gallery/4@2x.webp 2x" alt="alt")
-			.gallery-item
+			a.gallery-item(href="./img/gallery/5.webp" data-fancybox="gallery")
 				img(src="./img/gallery/5.webp", width="380" height="430" srcset="./img/gallery/5@2x.webp 2x" alt="alt")
 
 
 	//slider mobile
 	.gallery-slider.overflay-bg
-		.gallery-item
+		a.gallery-item(href="./img/gallery/mob1.webp" data-fancybox="gallery-mobile")
 			img(src="./img/gallery/mob1.webp", width="342" height="300" srcset="./img/gallery/mob1@2x.webp 2x" alt="alt")
-		.gallery-item
+		a.gallery-item(href="./img/gallery/mob2.webp" data-fancybox="gallery-mobile")
 			img(src="./img/gallery/mob2.webp", width="342" height="300" srcset="./img/gallery/mob2@2x.webp 2x" alt="alt")
-		.gallery-item
+		a.gallery-item(href="./img/gallery/mob3.webp" data-fancybox="gallery-mobile")
 			img(src="./img/gallery/mob3.webp", width="342" height="300" srcset="./img/gallery/mob3@2x.webp 2x" alt="alt")
-		.gallery-item
+		a.gallery-item(href="./img/gallery/mob1.webp" data-fancybox="gallery-mobile")
 			img(src="./img/gallery/mob1.webp", width="342" height="300" srcset="./img/gallery/mob1@2x.webp 2x" alt="alt")
-		.gallery-item
+		a.gallery-item(href="./img/gallery/mob21.webp" data-fancybox="gallery-mobile")
 			img(src="./img/gallery/mob2.webp", width="342" height="300" srcset="./img/gallery/mob2@2x.webp 2x" alt="alt")
-		.gallery-item
+		a.gallery-item(href="./img/gallery/mob3.webp" data-fancybox="gallery-mobile")
 			img(src="./img/gallery/mob3.webp", width="342" height="300" srcset="./img/gallery/mob3@2x.webp 2x" alt="alt")
 		
-		
+	//slider pagination
+	.gallery-nav.slider-pagination
+		button.btn-prev(type="btn")
+			span.arrow-left
+		button.btn-next(type="btn")
+			span.arrow-right

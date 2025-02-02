@@ -18,7 +18,7 @@
 			height: 22.4vw;
 		}
 	}
-	.gallery-item{flex-shrink: 0;}
+	.gallery-item{flex-shrink: 0; display: block;}
 	.gallery-item:first-child{
 		width: 640px;
 		width:34.4%;
@@ -69,3 +69,4 @@
 	  display: block;
 	}
 }
+.fancybox__content img{border-radius: 20px;}
