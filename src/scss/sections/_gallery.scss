@@ -50,6 +50,7 @@
 	}
 }
 .gallery-slider{
+	display: none;
 	.gallery-item{
 		width: 362px;
 		img{
@@ -64,9 +65,13 @@
 			}
 		}
 	}
-	display: none;
+	
 	@media (max-width: 1023px) {
 	  display: block;
+	  &.overlay-bg:after{display: block;}
+	}
+	@media (max-width: 767px) {
+		&.overlay-bg{width: 100vw;}
 	}
 }
 .fancybox__content img{border-radius: 20px;}

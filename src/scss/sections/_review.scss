@@ -93,6 +93,10 @@
 	display: flex;
 	height:unset ;
 	&>*{display: flex;}
+	@media (max-width: 743px) {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
 }
 
 .slider-pagination{
