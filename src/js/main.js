@@ -230,7 +230,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
 		infinite: true,
 		speed: 800,
-		slidesToShow: '3',
+		slidesToShow: '4.5',
 		centerMode: true,
 		centerPadding: '300px',
 		slidesToScroll: 1,
@@ -239,6 +239,14 @@ document.addEventListener("DOMContentLoaded", function (){
 		nextArrow:$('.docs-pagination .btn-next'),
 		
 		responsive: [
+			{
+				breakpoint: 1999,
+				settings: {
+					slidesToShow:'3.5',
+					centerMode: true,
+		           centerPadding: '190px',
+				},
+			},
 			{
 				breakpoint: 1799,
 				settings: {
@@ -289,7 +297,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		
 		infinite: true,
 		speed: 800,
-		slidesToShow: 3,
+		slidesToShow: '4',
 		centerMode: true,
 		// variableWidth: true,
 		centerPadding: '160px',
@@ -300,6 +308,15 @@ document.addEventListener("DOMContentLoaded", function (){
 	
 		
 		responsive: [
+			{
+				breakpoint: 1999,
+				settings: {
+					slidesToShow: '3',
+					centerMode: true,
+					variableWidth: false,
+					centerPadding: '160px',
+				},
+			},
 			{
 				breakpoint: 1799,
 				settings: {
