@@ -29,7 +29,7 @@
 		   margin-top: 30px;
 		}
 		@media (max-width: 743px) {
-		flex-wrap: wrap;
+		flex-direction: column;
 		row-gap:20px;
 		}
 	}
@@ -40,6 +40,9 @@
 		flex:1;
 		max-width: 540px;
 		&>*{width: 100%;}
+		@media (max-width: 743px) {
+		  width: 100%;
+		}
 	}
 	&-card__footer{margin-top: auto;}
 	.title-30{

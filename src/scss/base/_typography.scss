@@ -105,6 +105,12 @@ line-height:1;
 		border-radius: 8px;
 	}
 }
+.txt-link{
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
+	color: #1e4737;
+	display: inline;
+}
 .header-group{
 	margin-bottom: 60px;
 	.h1{
