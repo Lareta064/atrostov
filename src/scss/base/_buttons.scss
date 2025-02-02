@@ -23,9 +23,11 @@
 	}
 	&:active{background-color:#d7d7d7;}
 	img, svg{flex-shrink: 0;}
+	.hide-desktop{display: none;}
 	@media (max-width: 1199px) {
 		height: 64px;
 		.hide-mobile{display: none;}
+		.hide-desktop{display: block;}
 	}
 	
 }

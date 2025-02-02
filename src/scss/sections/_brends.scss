@@ -1,0 +1,30 @@
+.brands{
+	background-color: #1E4737;
+	padding-block:30px;
+	overflow: hidden;
+}
+.brands-slider.overlay-bg:after{
+	background: linear-gradient(90deg, #1e4737 0%, rgba(30, 71, 55, 0.8) 9.62%, rgba(30, 71, 55, 0) 19.9%, rgba(30, 71, 55, 0) 35.34%, rgba(30, 71, 55, 0) 50.3%, rgba(30, 71, 55, 0) 53.5%, rgba(30, 71, 55, 0) 80.47%, rgba(30, 71, 55, 0.8) 89.85%, #1e4737 100%);
+	@media (max-width: 1023px) {
+	display: block;
+	}
+}
+.brands-slider .slick-slide{
+	padding-inline:35px;
+}
+.brand-logo{
+	width: 256px!important;
+	height: 74px!important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+	img{
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+	@media (max-width: 1439px) {
+		width: 216px!important;
+	}
+}

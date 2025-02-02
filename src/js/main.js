@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		]
 	});
-	/**** */
+	/*branches-slider*/
 	$('.branches-slider').slick({
 	
 		infinite: true,
@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		
 		responsive: [
 			{
-				breakpoint: 1440,
+				breakpoint: 1919,
 				settings: {
 					slidesToShow: 2,
 					
@@ -283,6 +283,148 @@ document.addEventListener("DOMContentLoaded", function (){
 				}
 			}
 		]
+	});
+	/*.about-media-slider*/
+	$('.about-media-slider').slick({
+		
+		infinite: true,
+		speed: 800,
+		slidesToShow: 3,
+		centerMode: true,
+		// variableWidth: true,
+		centerPadding: '160px',
+		slidesToScroll: 1,
+		arrows: true,
+		prevArrow:$('.about-media .btn-prev'),
+		nextArrow:$('.about-media .btn-next'),
+	
+		
+		responsive: [
+			{
+				breakpoint: 1799,
+				settings: {
+					slidesToShow: '2.5',
+					centerMode: true,
+					variableWidth: false,
+					centerPadding: '160px',
+				},
+			},
+	
+			{
+				breakpoint: 1279,
+				settings: {
+					slidesToShow: '1.5',
+					centerMode: true,
+					variableWidth: false,
+					centerPadding: '260px',
+				},
+			},{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: '1.5',
+					centerMode: true,
+					variableWidth: false,
+					centerPadding: '180px',
+				},
+			},
+			  {
+				
+				breakpoint: 799,
+				settings: {
+					slidesToShow: '1.5',
+					centerMode: false,
+					variableWidth: false,
+					centerPadding: '140px',
+					
+				}
+			},
+			{
+			  
+			  breakpoint: 743,
+			  settings: {
+				  slidesToShow: 1,
+				  centerMode: false,
+				  variableWidth: false,
+				  centerPadding: '40px',
+				  
+			  }
+		  }
+		]
+		
+	});
+	/*brands-slider*/
+	$('.brands-slider').slick({
+	
+		infinite: true,
+		speed: 5000, // Чем больше, тем медленнее движение
+		slidesToShow: 7,
+		slidesToScroll: 1,
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 0, // Бесшовный эффект
+		cssEase: 'linear', // Линейное движение
+		pauseOnHover: false, // Не останавливать при наведении
+		pauseOnFocus: false,
+		variableWidth: true,
+	});
+	function updateSlidesToShow() {
+		let slider = $('.brands-slider');
+		let sliderWidth = slider.width(); // Получаем ширину слайдера
+		let slideWidth = slider.find('.slick-slide').outerWidth(true); // Получаем ширину одного слайда
+		let slidesToShow = Math.floor(sliderWidth / slideWidth); // Рассчитываем количество
+	
+		slider.slick('slickSetOption', 'slidesToShow', slidesToShow > 0 ? slidesToShow : 1, true);
+	}
+	
+	$(window).on('load resize', function() {
+		updateSlidesToShow();
+	});
+
+	/****************** */
+	function initSliders() {
+		let windowWidth = $(window).width();
+	
+		if (windowWidth >= 1024) {
+			// Если ширина экрана больше или равна 1024, включаем `.gallery-slider-grid`, а `.gallery-slider` отключаем
+			if (!$('.gallery-slider-grid').hasClass('slick-initialized')) {
+				$('.gallery-slider-grid').slick({
+					slidesToShow: 1,
+					speed: 800,
+					arrows: true,
+					prevArrow: $('.gallery-nav .btn-prev'),
+					nextArrow: $('.gallery-nav .btn-next'),
+				});
+			}
+			if ($('.gallery-slider').hasClass('slick-initialized')) {
+				$('.gallery-slider').slick('unslick');
+			}
+		} else {
+			// Если ширина экрана меньше 1024, включаем `.gallery-slider`, а `.gallery-slider-grid` отключаем
+			if (!$('.gallery-slider').hasClass('slick-initialized')) {
+				$('.gallery-slider').slick({
+					centerMode: true,
+					centerPadding: '160px',
+					slidesToShow: 1,
+					speed: 1000,
+					arrows: true,
+					variableWidth: true,
+					prevArrow: $('.gallery-nav .btn-prev'),
+					nextArrow: $('.gallery-nav .btn-next'),
+				});
+			}
+			if ($('.gallery-slider-grid').hasClass('slick-initialized')) {
+				$('.gallery-slider-grid').slick('unslick');
+			}
+		}
+	}
+	
+	// Вызываем при загрузке страницы
+	$(document).ready(initSliders);
+	
+	// Вызываем при изменении размера экрана с debounce (чтобы не вызывалось слишком часто)
+	$(window).on('resize', function () {
+		clearTimeout(window.slickResizeTimer);
+		window.slickResizeTimer = setTimeout(initSliders, 200);
 	});
 	
 });
