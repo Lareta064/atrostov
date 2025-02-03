@@ -206,7 +206,7 @@
 			scrollbar-width: none;
 			padding-left: 20px;
 		   padding-right: 20px;
-		   height: calc(100vh - 158px);
+		   height: calc(100vh - 130px);
 		}
 		.header-container{padding-inline:0}
 		.header-top{
@@ -258,6 +258,7 @@
 			border-radius: 20px;
 			display: flex;
 			justify-content: flex-end;
+			
 		}
 		.header-sub-list{
 			column-count:1;
@@ -281,6 +282,7 @@
 		.active.has-drop .header-sub-menu{height: calc(100vh - 178px);}
 		.header-top{width: 100%;}
 		.contacts-group{justify-content: center;}
+		
 	}
 }
 .header-section.active{transform: translateX(0);}

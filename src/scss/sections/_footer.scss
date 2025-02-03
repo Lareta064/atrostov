@@ -12,11 +12,11 @@ footer.footer{
 		}
 	}
 	.bank-details{
-		margin-top: 20px;
-		ul{margin-top: 20px;}
+		margin-top: 16px;
+		ul{margin-top: 16px; li+li{margin-top: 6px;}}
 	}
 	@media (max-width: 1023px) {
-		padding-top:175px;
+		padding-top:170px;
 	}
 	@media (max-width: 743px) {
 		padding-top:50px;
@@ -25,13 +25,13 @@ footer.footer{
 .footer-top{
 	column-count: 3;
 	column-gap:70px;
-	padding-bottom: 70px;
+	
 	page-break-inside: avoid;
     -webkit-column-break-inside: avoid;
 	position: relative;
 	.footer-buttons{
 		position: absolute;
-		top: -100px;
+		top: -90px;
 		right: 0;
 		z-index: 2;
 		display: flex;
@@ -49,7 +49,7 @@ footer.footer{
 		}
 
 	}
-	&>*+*{margin-top: 70px;}
+	&>*+*{margin-top: 58px;}
 	@media (max-width: 1439px) {
 		column-gap:50px;
 		&>*+*{margin-top: 50px;}
@@ -65,35 +65,38 @@ footer.footer{
 	}
 }
 .footer-info{
-	margin-bottom: 260px;
+	margin-bottom: 190px;
 	color: rgba(31, 29, 27, 0.8);
 	@media (max-width: 1439px) {
-		margin-bottom: 100px;
+		margin-bottom: 50px;
 	}
 	@media (max-width: 743px) {
 	margin-bottom: 50px;
 	}
 }
 .footer-slogan{
-	margin-bottom: 30px;
+	margin-bottom: 25px;
 	@media (max-width: 1439px) {margin-bottom: 20px;}
 }
-.footer-slogan, .footer-info{max-width:400px;}
+.footer-slogan, .footer-info{max-width:420px;}
 .footer-nav{
 	break-inside: avoid; /* Запрещает разрывать блок */
     display: inline-block; /* Не даёт колонке разбивать элемент */
     width: 100%; /* Гарантирует, что `.footer-nav` не будет дробиться */
+	
 }
 .footer-nav .h3{
-	margin-bottom: 20px;
+	margin-bottom: 13px;
 	font-size: 25px;
 }
 .footer-nav ul{
-	display: flex;flex-direction: column; row-gap:20px;
+	display: flex;flex-direction: column; row-gap:13px;
 	a{
 		font-size: 22px;
 		line-height: 1;
 		color: rgba(31, 29, 27, 0.2);
+		transition: .3s; 
+		&:hover{color:$greenBg;}
 		@media (max-width: 1439px) {
 			font-size: 20px;
 		}
@@ -106,13 +109,15 @@ footer.footer{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	column-gap:70px;
-	row-gap:70px;
+	row-gap:50px;
 	margin-top: 70px;
 	margin-bottom: 70px;
 	a{
 		font-weight: 700;
 		font-size: 25px;
 		color: #1f1d1b;
+		transition: .3s; 
+		&:hover{color: $greenBg;opacity: .5;}
 	}
 	@media (max-width: 1279px) {
 		display: none;
@@ -123,8 +128,9 @@ footer.footer{
 	@media (max-width: 1279px) {
 	 display: block;
 	 margin-top: 50px;
+	 margin-bottom: 0;
 	
-	 li +li{margin-top: 30px;}
+	 li +li{margin-top: 25px;}
 	}
 }
 .footer-copyright{

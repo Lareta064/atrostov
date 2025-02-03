@@ -108,20 +108,20 @@ input[type="submit"] {
 .main{
 	display: flex;
 	flex-direction: column;
-	row-gap:150px;
-	padding-bottom: 150px;
+	row-gap:130px;
+	padding-bottom: 130px;
 	&>*{
 		flex-shrink: 0;
 		width: 100%;
 	}
 	
 	@media (max-width: 1699px) {
-		row-gap:120px;
-		padding-bottom: 120px;
-	}
-	@media (max-width: 1439px) {
 		row-gap:100px;
 		padding-bottom: 100px;
+	}
+	@media (max-width: 1439px) {
+		row-gap:80px;
+		padding-bottom: 80px;
 	}
 	
 }
