@@ -1,8 +1,12 @@
 footer.footer{
-	padding-block:145px;
+	padding-top:145px;
 	background-color: #f5f5f5;
 	.footer-logo{
 		margin-top: -100px;
+	}
+	.bank-details{
+		margin-top: 20px;
+		ul{margin-top: 20px;}
 	}
 }
 .footer-top{
@@ -14,7 +18,7 @@ footer.footer{
 }
 .footer-info{
 	margin-bottom: 260px;
-	color: #1e4737;
+	color: rgba(31, 29, 27, 0.8);
 }
 .footer-slogan, .footer-info{max-width:400px;}
 .footer-nav{
@@ -39,9 +43,15 @@ footer.footer{
 	column-gap:70px;
 	row-gap:70px;
 	margin-top: 70px;
+	margin-bottom: 70px;
 	a{
 		font-weight: 700;
 		font-size: 25px;
 		color: #1f1d1b;
 	}
+}
+.footer-copyright{
+	padding-block:30px;
+	justify-content: space-between;
+	border-top:2px solid #e1e1e1;
 }
