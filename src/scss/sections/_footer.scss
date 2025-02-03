@@ -3,21 +3,52 @@ footer.footer{
 	background-color: #f5f5f5;
 	.footer-logo-group{
 		margin-top: -100px;
+		.logo{margin-bottom: 30px;}
+		@media (max-width: 1023px) {
+			margin-top: -130px;
+		}
 		@media (max-width: 743px) {
-			margin-top: 0;
+		margin-top: 0;
 		}
 	}
 	.bank-details{
 		margin-top: 20px;
 		ul{margin-top: 20px;}
 	}
+	@media (max-width: 1023px) {
+		padding-top:175px;
+	}
+	@media (max-width: 743px) {
+		padding-top:50px;
+	}
 }
 .footer-top{
 	column-count: 3;
 	column-gap:70px;
 	padding-bottom: 70px;
-	page-break-inside: avoid; /* Для совместимости с печатью */
-    -webkit-column-break-inside: avoid; /* Для старых версий Safari */
+	page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+	position: relative;
+	.footer-buttons{
+		position: absolute;
+		top: -100px;
+		right: 0;
+		z-index: 2;
+		display: flex;
+		gap:10px;
+		margin-top: 0;
+		@media (max-width: 1199px) {
+		flex-direction: column;
+		}
+		@media (max-width: 1023px) {
+			top: -120px;
+		}
+		@media (max-width: 743px) {
+			position: relative;
+			top: 0;
+		}
+
+	}
 	&>*+*{margin-top: 70px;}
 	@media (max-width: 1439px) {
 		column-gap:50px;
@@ -38,6 +69,9 @@ footer.footer{
 	color: rgba(31, 29, 27, 0.8);
 	@media (max-width: 1439px) {
 		margin-bottom: 100px;
+	}
+	@media (max-width: 743px) {
+	margin-bottom: 50px;
 	}
 }
 .footer-slogan{

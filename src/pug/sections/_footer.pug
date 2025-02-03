@@ -3,7 +3,7 @@ footer.footer
 	.container
 		.footer-top
 			.footer-logo-group
-				a(href="#!").footer-logo
+				a(href="#!").logo
 					img(src="./img/logo.webp", alt="alt")
 				.footer-slogan.txt-22
 					p  Я бы сюда добавил краткое описаниеМожет слоган какой нибудь
@@ -26,8 +26,14 @@ footer.footer
 						li #[b ИНН:] 6163209088
 						li #[b ОГРН:] 1186196012144
 
-
-
+			.footer-buttons
+				button.btn-primary.btn--slim(type="button") Забронировать
+					svg.svg-arrow-r
+						use(href='./img/sprite.svg#svg-arrow-r')
+				button.btn.btn--slim(type="button")
+					img(src="./img/phone.webp", width="20" height="20" alt="img")
+					| Заказать звонок
+			
 			.footer-nav
 				.h3 Услуги
 				ul
