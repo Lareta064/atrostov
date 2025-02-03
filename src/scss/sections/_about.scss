@@ -118,20 +118,43 @@
 	.benefit-card:nth-of-type(3) { grid-area: 4 / 1 / 5 / 2; }
 	.about__video { grid-area: 5 / 1 / 6 / 2; }
 }
-.bg-overlay{
+.video-link{
 	position: relative;
 	overflow: hidden;
+	display: flex;
 	border-radius: 30px;
 	@media (max-width: 1199px) {
 	border-radius: 20px;
 	}
-	&:before{
-		content:'';	
+	
+}
+
+.video-link:before{
+	   content:'';	
 		position: absolute;
 		inset: 0;
 		background: rgba(0, 0, 0, 0.5);
-	}
+		
 }
+.video-link:after{
+	content:'';
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 3;
+	background-size: contain;
+	background-position: center;
+	transition: .3s; 
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='70' height='70' viewBox='0 0 70 70' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='35' cy='35' r='35' fill='%23CCEC83' /%3e%3cpath d='M44.7004 30.6259L33.9582 23.0467C33.1192 22.4556 32.1264 22.0995 31.09 22.018C30.0535 21.9365 29.0138 22.1327 28.0862 22.585C27.1585 23.0372 26.3791 23.7278 25.8344 24.5801C25.2897 25.4325 25.0009 26.4133 25 27.4139V42.5798C24.9984 43.5813 25.2857 44.5637 25.8299 45.4175C26.3741 46.2713 27.1539 46.963 28.0824 47.4157C29.011 47.8684 30.0519 48.0643 31.0893 47.9815C32.1267 47.8987 33.1198 47.5406 33.9582 46.9469L44.7004 39.3678C45.4132 38.8645 45.9928 38.2068 46.3923 37.4479C46.7918 36.689 47 35.8502 47 34.9995C47 34.1488 46.7918 33.3101 46.3923 32.5512C45.9928 31.7923 45.4132 31.1346 44.7004 30.6313V30.6259Z' fill='%231E4737' /%3e%3c/svg%3e");
+	
+}
+.video-link:hover:after{
+		opacity: .8;
+	}
 .about__video{
 	height: 100%;
 	border-radius: 30px;
