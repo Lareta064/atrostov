@@ -14,7 +14,9 @@ footer.footer{
 }
 .footer-info{
 	margin-bottom: 260px;
+	color: #1e4737;
 }
+.footer-slogan, .footer-info{max-width:400px;}
 .footer-nav{
 	break-inside: avoid; /* Запрещает разрывать блок */
     display: inline-block; /* Не даёт колонке разбивать элемент */
@@ -29,5 +31,17 @@ footer.footer{
 		font-size: 22px;
 		line-height: 1;
 		color: rgba(31, 29, 27, 0.2);
+	}
+}
+.add-menu{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	column-gap:70px;
+	row-gap:70px;
+	margin-top: 70px;
+	a{
+		font-weight: 700;
+		font-size: 25px;
+		color: #1f1d1b;
 	}
 }

@@ -7,7 +7,7 @@
 	background-color: #F5F5F5;
 }
 .header-container,
-.header-top__links,
+.contacts-group,
 .header-top__buttons{
 	display: flex;
 	align-items: center;
@@ -25,7 +25,7 @@
 .header-top__buttons{
 	margin-left: auto;
 }
-.header-top__links a{
+.contacts-group a{
 	opacity: .1;
 	transition: .3s; 
 	&:hover{opacity: 1;}
@@ -279,7 +279,7 @@
 		}
 		.active.has-drop .header-sub-menu{height: calc(100vh - 178px);}
 		.header-top{width: 100%;}
-		.header-top__links{justify-content: center;}
+		.contacts-group{justify-content: center;}
 	}
 }
 .header-section.active{transform: translateX(0);}
