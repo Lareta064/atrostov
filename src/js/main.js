@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			bodyEl.classList.add('lock');
 		}
 	});
-
+	
 	/*open drop menu */
 	const hasDropItems = mobileMenu.querySelectorAll('.has-drop');
 	if(hasDropItems.length>0){
@@ -53,13 +53,62 @@ document.addEventListener("DOMContentLoaded", function (){
 				});
 			}
 		}
-	})
+	});
+	const header = document.querySelector(".header"); // 
+     let lastScrollTop = 0; 
+
+	window.addEventListener("scroll", () => {
+		const currentScrollTop = window.scrollY || document.documentElement.scrollTop;
+
+		// Если пользователь прокручивает вверх
+		if (currentScrollTop < lastScrollTop) {
+			header.classList.add("fix-header");
+		} else {
+			header.classList.remove("fix-header"); 
+		}
+
+		// Обновляем предыдущую позицию скролла
+		lastScrollTop = currentScrollTop;
+		
+	});
+	document.addEventListener('click', function(event) {
+		if (window.innerWidth >= 1200) return; // Проверяем, что экран мобильный
+	
+		if (!mobileMenu.classList.contains('active')) return; // Если меню не открыто, ничего не делаем
+	
+		const isInsideHasDrop = event.target.closest('.has-drop'); // Проверяем, был ли клик внутри .has-drop
+		const isInsideMenu = event.target.closest('#mobile-menu'); // Проверяем, был ли клик внутри меню
+		const isMenuButton = event.target.closest('.menu-button'); // Проверяем, был ли клик по кнопке-бургеру
+		const isLink = event.target.closest('a[href^="#"]'); // Проверяем, является ли кликнутый элемент ссылкой-якорем
+		const isButton = event.target.closest('button'); // Проверяем, является ли элемент кнопкой
+	
+		if (!isInsideHasDrop && !isMenuButton && (isLink || isButton || !isInsideMenu)) {
+			// Закрываем мобильное меню
+			menuButton.classList.remove('active');
+			mobileMenu.classList.remove('active');
+			bodyEl.classList.remove('lock');
+	
+			// Закрываем все .has-drop.active
+			const activeDrop = mobileMenu.querySelector('.has-drop.active');
+			if (activeDrop) {
+				activeDrop.classList.remove('active');
+				const subMenu = activeDrop.querySelector('.header-sub-menu');
+				if (subMenu) {
+					subMenu.classList.remove('active');
+				}
+			}
+		}
+	});
    /*review slider */
    $('.review-slider').slick({
 	
 		infinite: true,
-		speed: 800,
+		speed: 2000,
+		draggable: true,
+		swipe: true,
+		autoplay: true,
 		slidesToShow: 3,
+		pauseOnHover: false,
 		centerMode: true,
 		variableWidth: true,
 		centerPadding: '160px',
@@ -67,6 +116,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		arrows: true,
 		prevArrow:$('.review-pagination .btn-prev'),
 		nextArrow:$('.review-pagination .btn-next'),
+		autoplay: true,
 		responsive: [
 	
 			{
@@ -92,9 +142,12 @@ document.addEventListener("DOMContentLoaded", function (){
 	});
 	/*branches-slider*/
 	$('.branches-slider').slick({
-	
+	    speed: 2000,
+		draggable: true,
+		swipe: true,
+		autoplay: true,
 		infinite: true,
-		speed: 800,
+		
 		slidesToShow: 3,
 		centerMode: true,
 		// variableWidth: true,
@@ -140,9 +193,12 @@ document.addEventListener("DOMContentLoaded", function (){
 
 	/*team-slider*/
 	$('.team-slider').slick({
-	
+	    speed: 2000,
+		draggable: true,
+		swipe: true,
+		autoplay: true,
 		infinite: true,
-		speed: 800,
+		
 		slidesToShow: '3',
 		
 		slidesToScroll: 1,
@@ -255,9 +311,12 @@ document.addEventListener("DOMContentLoaded", function (){
 	});
 	/*.about-media-slider*/
 	$('.about-media-slider').slick({
-		
+		speed: 2000,
+		draggable: true,
+		swipe: true,
+		autoplay: true,
 		infinite: true,
-		speed: 800,
+		
 		slidesToShow: '4',
 		centerMode: true,
 		// variableWidth: true,
@@ -369,8 +428,8 @@ document.addEventListener("DOMContentLoaded", function (){
 					slidesToShow: 1,
 					speed: 800,
 					arrows: true,
-					prevArrow: $('.gallery-nav .btn-prev'),
-					nextArrow: $('.gallery-nav .btn-next'),
+					prevArrow: $('.gallery-grid-nav .btn-prev'),
+					nextArrow: $('.gallery-grid-nav .btn-next'),
 				});
 			}
 			if ($('.gallery-slider').hasClass('slick-initialized')) {

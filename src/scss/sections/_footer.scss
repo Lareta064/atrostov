@@ -136,5 +136,15 @@ footer.footer{
 .footer-copyright{
 	padding-block:30px;
 	justify-content: space-between;
+	gap:10px;
 	border-top:2px solid #e1e1e1;
+	@media (max-width: 1023px) {
+	  .txt-18{font-size: 16px;}
+	}
+	@media (max-width: 767px) {
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
+	  text-align: center;
+	}
 }

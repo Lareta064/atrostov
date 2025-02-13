@@ -10,44 +10,6 @@ header.header
 	//ШАПКА НА DESKTOP, НА МОБ ВЕРСИИ ОТОБРАЖАЕТСЯ ПО КЛИКУ НА БУРГЕР
 	.header-section#mobile-menu
 		.scroll-wrapper
-			//HEADER TOP
-			.header-top
-				.header-container
-					
-					.contacts-group
-						//SOCIAL GROUP
-						.social-group
-							a(href="#!")
-								picture
-									source(media="(max-width: 1199px)" srcset="./img/socials/vk-white.webp")
-
-									img(src="./img/socials/vk.webp", width="25" height="25" alt="vk")
-							a(href="#!")
-								picture
-									source(media="(max-width: 1199px)" srcset="./img/socials/ok-white.webp")
-									img(src="./img/socials/ok.webp", width="25" height="25" alt="ok")
-							
-							a(href="#!")
-								picture
-									source(media="(max-width: 1199px)" srcset="./img/socials/youtube-white.webp")
-									
-									img(src="./img/socials/youtube.webp", width="25" height="25" alt="youtube")
-						
-						a(href="tel:").phone-link
-							picture
-								source(media="(max-width: 1199px)" srcset="./img/socials/phone-white.webp")
-								img(src="./img/phone.webp", width="25" height="25" alt="img")
-					
-					//BUTTONS
-					.header-top__buttons
-						button.btn-primary(type="button") Забронировать
-							svg.svg-arrow-r
-								use(href='./img/sprite.svg#svg-arrow-r')
-								
-						
-						button.btn(type="button")
-							img(src="./img/phone.webp", width="20" height="20" alt="img")
-							| Заказать звонок
 
 			//HEADER NAVIGATION
 			.header-nav
@@ -101,26 +63,64 @@ header.header
 								a(href="#!").header-menu-link 
 									span Услуги
 							li.header-menu-item
-								a(href="#!").header-menu-link 
+								a(href="#branches").header-menu-link 
 									span Пансионаты
 							
 							li.header-menu-item
 								a(href="#!").header-menu-link 
 									span Рехаб
 							li.header-menu-item
-								a(href="#!").header-menu-link 
+								a(href="#price").header-menu-link 
 									span Цены
 							
 							li.header-menu-item
-								a(href="#!").header-menu-link 
+								a(href="#foto").header-menu-link 
 									span Галерея
 							li.header-menu-item
-								a(href="#!").header-menu-link 
+								a(href="#review").header-menu-link 
 									span Отзывы
 							li.header-menu-item
 								a(href="#!").header-menu-link 
 									span Блог
 							
 							li.header-menu-item
-								a(href="#!").header-menu-link 
+								a(href="#!").header-menu-link
 									span Контакты
+			//HEADER TOP
+			.header-top
+				.header-container
+					
+					.contacts-group
+						//SOCIAL GROUP
+						.social-group
+							a(href="#!")
+								picture
+									source(media="(max-width: 1199px)" srcset="./img/socials/vk-white.webp")
+
+									img(src="./img/socials/vk.webp", width="25" height="25" alt="vk")
+							a(href="#!")
+								picture
+									source(media="(max-width: 1199px)" srcset="./img/socials/ok-white.webp")
+									img(src="./img/socials/ok.webp", width="25" height="25" alt="ok")
+							
+							a(href="#!")
+								picture
+									source(media="(max-width: 1199px)" srcset="./img/socials/youtube-white.webp")
+									
+									img(src="./img/socials/youtube.webp", width="25" height="25" alt="youtube")
+						
+						a(href="tel:").phone-link
+							picture
+								source(media="(max-width: 1199px)" srcset="./img/socials/phone-white.webp")
+								img(src="./img/phone.webp", width="25" height="25" alt="img")
+					
+					//BUTTONS
+					.header-top__buttons
+						button.btn-primary(type="button") Забронировать
+							svg.svg-arrow-r
+								use(href='./img/sprite.svg#svg-arrow-r')
+								
+						
+						button.btn(type="button")
+							img(src="./img/phone.webp", width="20" height="20" alt="img")
+							| Заказать звонок

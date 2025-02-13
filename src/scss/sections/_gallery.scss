@@ -45,12 +45,23 @@
 }
 .gallery-slider-grid{
 	display: block;
+	
 	@media (max-width: 1023px) {
 	display: none;
+	
 	}
 }
+.gallery-grid-nav{display: flex;}
+.gallery-nav{
+	display: none;
+}
+@media (max-width: 1023px) {
+	.gallery-grid-nav{display: none;}
+	.gallery-nav{display: flex;}
+  }
 .gallery-slider{
 	display: none;
+	
 	.gallery-item{
 		width: 362px;
 		img{
@@ -69,6 +80,7 @@
 	@media (max-width: 1023px) {
 	  display: block;
 	  &.overlay-bg:after{display: block;}
+	  
 	}
 	@media (max-width: 767px) {
 		&.overlay-bg{width: 100vw;}

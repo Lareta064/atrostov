@@ -1,5 +1,5 @@
 //GALLERY
-section.gallery
+section.gallery#foto
 	.container
 		h2.h1.txt-center #[span.accent-word Фото]
 	
@@ -34,7 +34,12 @@ section.gallery
 			a.gallery-item(href="./img/gallery/5.webp" data-fancybox="gallery")
 				img(src="./img/gallery/5.webp", width="380" height="430" srcset="./img/gallery/5@2x.webp 2x" alt="alt")
 
-
+	//slider pagination
+	.gallery-grid-nav.slider-pagination
+		button.btn-prev(type="button")
+			span.arrow-left
+		button.btn-next(type="button")
+			span.arrow-right
 	//slider mobile
 	.gallery-slider.overlay-bg
 		a.gallery-item(href="./img/gallery/mob1.webp" data-fancybox="gallery-mobile")
