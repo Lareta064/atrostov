@@ -1,6 +1,9 @@
 .promo-video{
 	position: relative;
 	display: flex;
+	img{
+		object-position: right;
+	}
 	.promo-video-title{
 		position: absolute;
 		top: 50%;
@@ -16,16 +19,33 @@
 			@media (max-width: 1199px) {
 			font-size: 25px;
 			max-width:330px;
+			margin-left: auto;
+			margin-right: auto;
+			
 			}
 			@media (max-width: 1023px) {
 			font-size: 22px;
 			}
+		}
+		@media (max-width: 767px) {
+			text-align: left;
+			left:20px;
+			right: 20px;
+			transform: translate(0, -50%);
+			.h2{
+				margin-left: 0;
+				margin-right: 0;
+			}
+			.yout-btn{height: 48px; margin-top: 30px;}
 		}
 	}
 	.video-link:after{display: none;}
 	@media (max-width: 992px) {
 		min-height: 390px;;
 	
+	}
+	@media (max-width: 767px) {
+		min-height: 260px;;
 	}
 }
 .franshiza-benefits{
@@ -56,6 +76,10 @@
 		margin-inline:-20px;
 		margin-top: -40px;
 	}
+	@media (max-width: 743px) {
+		grid-template-columns: repeat(1, 1fr);
+		margin-top: -15px;
+	}
 }
 .light-card{
 	border-radius: 20px;
@@ -68,10 +92,14 @@
 	letter-spacing: -0.02em;
 	color: #1f1d1b;
 	
-	row-gap:20px;
+	row-gap:10px;
 	@media (min-width: 1200px) and (max-width: 1439px) {
 		padding: 20px;
 		font-size: 20px;
+	}
+	@media (max-width: 743px) {
+		font-size: 18px;
+		padding: 20px;
 	}
 }
 .round-icon{
@@ -85,4 +113,8 @@
 	background-color: $primary;
 	img{width: 30px;
 		height: 30px; object-fit:contain;}
+	@media (max-width: 743px) {
+		width: 50px;
+	  height: 50px;	
+	}
 }
