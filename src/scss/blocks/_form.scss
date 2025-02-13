@@ -142,3 +142,45 @@ select:-webkit-autofill:focus {
 .form-btn{
   margin-top: 30px;
 }
+.accordion__item .accordion__title {
+	position: relative;
+	display: block;
+	padding-block:16px;
+	font-size: 16px;
+	-webkit-transition: background-color 0.2s;
+	transition: background-color 0.2s;
+    cursor: pointer;
+
+}
+.accordion__item .accordion__title:hover {
+	transition: all 0.5s ease-out;
+}
+
+.accordion__item .accordion__title .accordion__arrow {
+	position: absolute;
+	top:50%;
+	transform: translateY(-50%);
+	 right: 10px;
+	display: inline-block;
+	vertical-align: middle;
+	width: 12px;
+	height: 12px;
+	text-align: center;
+	
+	-webkit-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+	.svg-carret{
+		width: 12px;
+	}
+}
+.accordion__item .accordion__arrow.accordion__rotate {
+	transform: translateY(-50%) rotate(-180deg);
+}
+.accordion__item .accordion__content {
+	padding-block: 16px;
+	
+	font-size: 16px;
+	display: none;
+	
+}
+

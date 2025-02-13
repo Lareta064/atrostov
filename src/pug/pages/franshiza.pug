@@ -4,9 +4,92 @@ block content
 	include ../sections/_header
 	main.main
 		include ../sections/_promo-fransiza
-		include ../sections/_about
-		include ../sections/_statistic
-		include ../sections/_services
+		//CONSULTATION
+		section.consultation
+			.container.container--narrow
+				.consultation-content.green-bg
+					h2.h1 Начните #[span.accent-word прибыльный] бизнес в сфере заботы о пожилых людях — свяжитесь с нами!
+					
+					.consultation-row.d-flex
+						.consultation-contacts
+							.txt-22 Оставьте заявку, и мы свяжемся с вами, чтобы обсудить ваши потребности
+							.contacts-block
+								a(href="tel:").phone-link-icon.txt-22  +7 (800) 775-46-13
+								p Позвоните нам по бесплатному номеру
+
+						//FORM
+						form.consult-form.dark-bg
+							.form-item
+								label.label Ваш телефон
+								input(type="tel" placeholder="+7 (000) 000-00-00")
+							
+							.agree-block
+								label.checkbox-item
+									input(type="checkbox" checked)
+									span.custom-checkbox
+									span Я ознакомлен и согласен с условиями #[a(href="#!") пользовательского соглашения]
+
+							.form-btn
+								button.btn-primary.w-100(type="submit") Оставить заявку
+		section.our-props
+			.container
+				.our-props-grid
+					.our-props-left.grey-block.txt-22
+						h2.h2 #[span.accent-word Кто мы] и что предлагаем
+						
+						p "Добро" - это не просто проект, это миссия, реализованная с учетом социальных потребностей нашего общества и ориентированная на долгосрочное развитие. Мы гордимся тем, что обеспечиваем индивидуальный подход к каждому клиенту, предоставляя ему необходимое внимание, заботу и персональную программу ухода.
+						p За годы работы мы помогли более 2000 пожилых людей, решив проблемы, связанные с отсутствием квалифицированной помощи и ограниченностью возможностей для активного общения и участия в социальной жизни. Мы также создали новые рабочие места и внесли вклад в экономическое развитие регионов, где находятся наши пансионаты.
+						p Мы предлагаем открыть собственный пансионат «Добро» на условиях франчайзи в вашем городе. Чтобы старт был успешным, мы обучаем и сопровождаем запуск.
+
+					.our-props-right.grey-block
+						.props-item
+							span 1
+							.title-30 Высокая социальная значимость
+							.txt-22 Меняем жизнь пожилых людей к лучшему.
+						.props-item
+							span 2
+							.title-30 Более 2000 довольных клиентов
+							.txt-22 Успешная и проверенная бизнес-модель.
+						.props-item
+							span 3
+							.title-30 Комплексная поддержка и обучение
+							.txt-22 Поможем запустить ваш бизнес с нуля.
+						.props-item
+							span 4
+							.title-30 Вклад в экономику региона
+							.txt-22 Создавайте рабочие места и развивайте свой город.
+
+		
+		section.why-franchise
+			.container
+				.why-franchise-grid
+					.why-franchise-left(style="background-image: url(./img/franshiza/image1.webp)")
+						.header-group
+							
+							h2.h1 #[span.accent-word Почему] стоит купить франшизу дома престарелых
+							.txt-22
+								p Откройте прибыльный и социально значимый бизнес, предоставляя качественные услуги по уходу за пожилыми людьми.
+						
+					.why-franchise-right
+						.why-franchise-acordion
+							.accordion__item
+								.accordion__title
+									span.accordion__arrow >
+										
+									span.accordion__title-text ОПИСАНИЕ
+								
+								.accordion__content
+									.specifications__desk
+										.title-24 Речной песок 
+										p Песок - один из самых востребованных строительных материалов. Используется для приготовления строительных растворов, сухих строительных смесей, а также в качестве выравнивающего основания.
+										p Подходит как для внутренних, так и для наружных работ. Применяется в строительстве и отделочных работах, возведении дорог и ландшафтном обустройстве. Продается в мешках весом 30 кг. Произведен в России.
+										p
+											strong Внимание! Товар весом более 1 тонны. необходимо перемещать минимум двумя людьми или с помощью механизированного оборудования.
+					
+				.why-franchise-img
+					img.img-cover.img-round(src="./img/franshiza/image1.webp", srcset="./img/franshiza/image1@2x.webp" width="1100" height="324" alt="img")
+					
+					
 		include ../sections/_feedback
 		include ../sections/_comparison
 		include ../sections/_faq
