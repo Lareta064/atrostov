@@ -105,7 +105,7 @@ block content
 										p Почти в любом городе России частных домов престарелых или нет совсем, или единицы: на Москву и Московскую область приходится 100 домов, на Петербург и Ленобласть — 40, а в Новосибирске с численностью населения около 1,5 млн человек всего 2 частных дома престарелых.
 					
 				.why-franchise-img
-					img.img-cover.img-round(src="./img/franshiza/image1.webp", srcset="./img/franshiza/image1@2x.webp" width="1100" height="324" alt="img")
+					img.img-cover.img-round(src="./img/franshiza/image1.webp", srcset="./img/franshiza/image1@2x.webp 2x" width="1100" height="324" alt="img")
 					
 		section.franchise-profit
 			.container
@@ -146,7 +146,6 @@ block content
 		
 		section.business-steps.grey-section
 			.container
-				
 				h2.h1 #[span.accent-word 6 шагов ] к собственному бизнесу
 				.business-steps-grid
 					.light-card
@@ -179,20 +178,124 @@ block content
 							span 6
 						.h3 Постепенное заполнение пансионата
 						p Наш отдел продаж активно занимается<br>привлечением новых клиентов<br>для вашего пансионата.
-		include ../sections/_feedback
-		include ../sections/_comparison
-		include ../sections/_faq
-		include ../sections/_review
-		include ../sections/_consultation
-		include ../sections/_branches
-		include ../sections/_how-work
+		
+		section.our-departments 
+			.container
+				h2.h1 Круглые сутки работают #[span.accent-word на вас]
+				.our-departments-grid
+					
+					.benefit-card.benefit-card--center
+						.benefit-card__top
+							.benefit-card__icon
+								span
+									img(src="./img/icons/i10.webp", width="30" height="30" alt="img")
+							.h3 Отдел маркетинга
+						p.txt-18 Отдел маркетинга курирует ведение рекламных кампаний и продвижение наших сайтов, обеспечивая максимальную видимость и привлечение клиентов. Мы разрабатываем и внедряем стратегии, которые помогают вашему бизнесу стать заметным на рынке и увеличивают конверсию.
+					
+					.benefit-card.benefit-card--center
+						.benefit-card__top
+							.benefit-card__icon
+								span
+									img(src="./img/icons/i8.webp", width="30" height="30" alt="img")
+							.h3 Отдел продаж
+						p.txt-18 Наши специалисты всегда готовы консультировать клиентов и предложить им оптимальные решения, обеспечивая высокий уровень обслуживания и максимальную эффективность продаж.
+					
+					.benefit-card.benefit-card--center
+						.benefit-card__top
+							.benefit-card__icon
+								span
+									img(src="./img/icons/i9.webp", width="30" height="30" alt="img")
+							.h3 Отдел аналитики
+						p.txt-18 Наши специалисты постоянно анализируют эффективность рекламных кампаний и общую активность, корректируя стратегии для максимальных результатов. Мы гарантируем, что каждый рубль будет работать на ваш успех.
+					
+					.benefit-card.benefit-card--center
+						.benefit-card__top
+							.benefit-card__icon
+								span
+									img(src="./img/icons/i11.webp", width="30" height="30" alt="img")
+							.h3 Отдел технической поддержки
+						p.txt-18 Мы обеспечиваем бесперебойную работу всех ваших платформ, сайтов и систем. В случае возникновения технических проблем, наши специалисты оперативно решат любые вопросы, гарантируя стабильную работу вашего бизнеса.
+					
+					.benefit-card.benefit-card--center
+						.benefit-card__top
+							.benefit-card__icon
+								span
+									img(src="./img/icons/i11.webp", width="30" height="30" alt="img")
+							.h3 Команда наставников
+						p.txt-18 С вами всегда на связи опытные наставники, которые помогут развивать бизнес, делиться успешными кейсами и давать рекомендации по оптимизации процессов.
+		section.franchise-conditions
+			.container
+				h2.h1 #[span.accent-word Условия]
+				.franchise-conditions-grid
+					.franchise-conditions-left
+						.txt-22
+							p Мы заинтересованы в успехе наших франчайзи. Для нас франчайзи — это партнеры, которые разделяют наши ценности, готовы трудиться и активно управлять бизнесом, вникая во все его тонкости.
+							p Именно с такими людьми мы хотим однажды построить всероссийскую сеть домов престарелых, которая станет для всех примером.
+					
+						.franchise-conditions-benefits
+							.light-card
+								.round-icon
+									img(src="./img/icons/i1.webp", width="30" height="30" alt="btn")
+								.h5 Паушальный взнос1<br>млн. руб.
+							.light-card
+								.round-icon
+									img(src="./img/icons/i2.webp", width="30" height="30" alt="btn")
+								.h5 Выход на операционную<br>прибыль – 2-3 мес.
+							.light-card
+								.round-icon
+									img(src="./img/icons/i3.webp", width="30" height="30" alt="btn")
+								.h5 Окупаемость<br>12 мес.
+							.light-card
+								.round-icon
+									img(src="./img/icons/i4.webp", width="30" height="30" alt="btn")
+								.h5 Роялти 200 тыс. руб.<br>с 5-го месяца
+							.light-card
+								.round-icon
+									img(src="./img/icons/i13.webp", width="30" height="30" alt="btn")
+								.h5 На открытие пансионата:<br>от 1 млн до 1,5 млн руб.
+							.light-card
+								.round-icon
+									img(src="./img/icons/i14.webp", width="30" height="30" alt="btn")
+								.h5 Чистая ежемесячная прибыль франчайзи – от 200 тыс. руб.
+					
+					.franchise-conditions-right
+						img(src="./img/franshiza/image2.webp", srcset="./img/franshiza/image2@2x.webp 2x" width="960" height="840" alt="")
+
+		
+		
+		//CONSULTATION
+		section.consultation-help
+			.container
+				.consultation-row.d-flex
+					.consultation-contacts.green-bg
+						.header-hroup
+							h2.h1  Станьте частью команды #[span.accent-word «Добро»] — оставьте свои контакты для обратной связи				
+							.txt-22 Оставьте заявку, и мы свяжемся с вами, чтобы обсудить ваши потребности
+						
+						.contacts-block
+							a(href="tel:").phone-link-icon.txt-22  +7 (800) 775-46-13
+							p Позвоните нам по бесплатному номеру
+					
+					.green-bg.form-wrapper
+						//FORM
+						form.consult-form.dark-bg
+							.form-item
+								label.label Ваше имя
+								input(type="text" placeholder="Иван")
+							.form-item
+								label.label Ваш телефон
+								input(type="tel" placeholder="+7 (000) 000-00-00")
+							.agree-block
+								label.checkbox-item
+									input(type="checkbox" checked)
+									span.custom-checkbox
+									span Я ознакомлен и согласен с условиями #[a(href="#!") пользовательского соглашения]
+
+							.form-btn
+								button.btn-primary.w-100(type="submit") Оставить заявку
+		
 		include ../sections/_team
-		include ../sections/_consultation-help
-		include ../sections/_gallery
-		include ../sections/_docs
-		include ../sections/_media-about
-		include ../sections/_brends
-		include ../sections/_care
+		
 	include ../sections/_footer
 
 

@@ -107,6 +107,8 @@
 	@media (max-width: 743px) {
 		font-size: 18px;
 		padding: 20px;
+		row-gap:10px;
+		.h5{font-size: 18px;}
 	}
 }
 .round-icon{
@@ -192,7 +194,7 @@
 		border-radius: 0 0 30px 0;
 		background-color: #fff;
 		z-index: 2;
-		width: 80%;
+		width: 58%;
 		max-width: 629px;
 		&:after{
 			content:'';
@@ -238,6 +240,37 @@
 			background-image: none!important;
 	}
 }
+.benefit-card.benefit-card--center{
+	text-align: center;
+	.benefit-card__top{
+		flex-direction: column;
+	}
+	.benefit-card__icon:after{
+		display: none;
+	}
+	.benefit-card__icon{
+		padding: 0;
+		margin-left: auto;
+		margin-right: auto;
+		border:10px solid white;
+		border-top:0;
+		position: relative;
+		z-index: 2;
+		border-radius: 50%;
+		
+	}
+	.h3{
+		padding-top: 50px;
+		border-radius: 20px 20px 0 0;
+		margin-top: -40px;
+		position: relative;
+		z-index: 1;
+	}
+	.txt-18{
+		border-radius: 0 0 20px 20px;
+		padding-top: 0;
+	}
+}
 .franchise-profit{
 	@media (max-width: 1499px) {
 		.benefit-card__top{
@@ -251,6 +284,7 @@
 			margin-left: auto;
 			margin-right: auto;
 			border:10px solid white;
+			border-top: 0;
 			position: relative;
 			z-index: 2;
 			border-radius: 50%;
@@ -314,5 +348,114 @@
 	}
 	@media (max-width: 743px) {
 		grid-template-columns: repeat(1,1fr);
+	}
+}
+.our-departments-grid{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap:20px;
+	
+	width: 100%;
+	.benefit-card{
+		flex:1;
+		min-width:380px;
+		@media (max-width: 1023px) {
+			min-width:280px;
+		}
+		@media (max-width: 743px) {
+		  width: 100%;
+		 
+		  max-width: 540px;;
+		}
+	}
+}
+.franchise-conditions-grid{
+	display: grid;
+	grid-template-columns: 17fr 24fr;
+	gap:20px;
+	@media (max-width: 1199px) {
+		grid-template-columns: 1fr;
+	}
+}
+.franchise-conditions-left{
+	max-width: 680px;
+	position: relative;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	// justify-content: space-between;
+	.txt-22{
+		position: relative;flex-grow: 1;
+		&:after{
+		content:'';
+		width: 60px;
+		height: 60px;
+		
+		position: absolute;
+		bottom: 0;
+		right: -20px;transform: translateX(100%);
+		border-radius: 0 0 0 30px;
+		box-shadow: -30px 0 white;
+		@media (max-width: 1199px) {
+			display: none;
+		}
+	}
+	}
+	@media (max-width: 1199px) {
+		max-width: unset;
+	}
+}
+.franchise-conditions-right{
+	img{
+		border-radius: 30px;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	@media (max-width: 1199px) {
+		max-height: 400px;
+	}
+}
+.franchise-conditions-benefits{
+	display: grid;
+	grid-template-columns: 400px 400px;
+	gap:20px;
+	padding: 20px;
+	padding-left: 0;
+	padding-bottom: 0;
+	border-radius: 0 30px 0 0;
+	background-color: #fff;
+	width: 840px;
+	position: relative;
+	
+	&:before{
+		content:'';
+		width: 60px;
+		height: 60px;
+		
+		position: absolute;
+		bottom: 0;
+		right:0;
+
+		transform: translate(100%, 0);
+		border-radius:  0 0 0 30px;
+		box-shadow: -16px 16px white;
+		@media (max-width: 1199px) {
+			display: none;
+		}
+	}
+	@media (max-width: 1440px) {
+		grid-template-columns: 350px 350px;width: 740px;
+	}
+	@media (max-width: 1199px) {
+		grid-template-columns: 1fr 1fr 1fr;
+		width: 100%;
+	}
+	@media (max-width: 992px) {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media (max-width: 743px) {
+		grid-template-columns: 1fr;
 	}
 }
