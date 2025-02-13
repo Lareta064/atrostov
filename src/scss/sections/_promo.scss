@@ -41,6 +41,21 @@
 	}
 	
 	.promo-title {
+		
+		padding-bottom: 40px;
+		
+		@media (max-width: 1199px) {
+			
+			padding-bottom: 28px;
+			
+			}
+		
+	}
+	
+	
+}
+.promo.promo-main{
+	.promo-title {
 		width: calc(100% - 550px);
 		max-width: 1010px;
 		background-color: #FFF;
