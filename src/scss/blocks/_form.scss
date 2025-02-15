@@ -114,9 +114,10 @@ select:-webkit-autofill:focus {
           display: flex;
         }
     a{
-      color: #ccec83;
+      color: inherit;
       
     }
+    a.txt-inherit{}
   }
 }
 .form-wrapper{

@@ -138,7 +138,17 @@ input[type="submit"] {
 		
 	}
 }
-
+section.green-bg{
+	padding-block: 130px;
+	@media (max-width: 1699px) {
+		padding-block:100px;
+		
+	}
+	@media (max-width: 1439px) {
+		padding-block:80px;
+		
+	}
+}
 .w-100{
 	width:100%!important;
 }
