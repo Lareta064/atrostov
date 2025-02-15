@@ -1,11 +1,11 @@
-.h1, .h3, .h2,.h4, .h5,.title-40, .title-30{
+.h1, .h3, .h2,.h4, .h5,.title-40, .title-30, .custom-text h1{
 	font-weight: 700;
 	font-size: 60px;
 	line-height: 1.08;
 	letter-spacing: -0.02em;
 	color: #1f1d1b;
 }
-.h1{
+.h1, .custom-text h1{
 	margin-bottom: 48px;
 	@media (max-width: 1919px) {
 		font-size: 2.95vw;
@@ -161,4 +161,43 @@ line-height:1;
 	background-color: $greenBg;
 	color: rgba(255, 255, 255, 0.5);
 	a{color: white;}
+}
+.custom-text h1{line-height: 1; margin-bottom: 30px;}
+.custom-text h2{
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 1.62;
+	letter-spacing: -0.02em;
+	color: #1f1d1b;
+	line-height: 1;
+	margin-bottom: 30px;
+	margin-top: 100px;
+	@media (max-width: 1699px) {
+		font-size: 36px;
+	}
+	@media (max-width: 1439px){margin-top: 50px;}
+}
+.custom-text img{
+	width: 100%;
+	aspect-ratio: 1100/546;
+	max-height: 546px;
+	object-fit: cover;
+	border-radius: 30px;
+}
+.custom-text{
+	font-weight: 400;
+	font-size: 22px;
+	color: rgba(31, 29, 27, 0.5);
+	a{
+		text-decoration: underline;
+		text-decoration-skip-ink: none;
+		color: #1e4737;
+	}
+	ul, ol, p, img{
+		margin-block:30px;
+
+	}
+	@media (max-width: 1699px) {
+		font-size: 18px;
+	}
 }
