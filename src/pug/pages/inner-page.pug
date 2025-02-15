@@ -68,6 +68,66 @@ block content
 									a.h5(href="#!") Разнообразный<br>и интересный досуг
 								li.drop-menu__hide 
 				
+						//БРОНИРОВАНИЕ
+						.reservation-form-wrapper
+							.h4 Бронирование
+							form.reservation-form(action="#!")
+								.form-item
+									label.label Ваш номер телефона
+									input(type="tel" placeholder="+7 (000) 000-00-00")
+								
+								.form-item
+									label.label Дата заезда
+										span.txt-red *
+									input#start-date.start-date(type="text" placeholder="ДД.ММ.ГГГГ")
+								
+								.form-item
+									label.label Дата отезда
+										span.txt-red *
+									input#end-date.start-date(type="text" placeholder="ДД.ММ.ГГГГ")
+								.form-btn
+									button.btn-primary.w-100(type="submit")  Оставить заявку
+				
+						//SLIDER
+						.slider-block
+							.h4 Специалисты
+							.sidebar-team-slider.small-slider
+								.sidebar-slider-card
+									img(src="./img/team/image1.webp", srcset="./img/team/image1@2x.webp" alt="img")
+								
+									.sidebar-slider-text
+										.txt-20 Управляющая
+										.h5 Казакова Наталья Артёмовна
+								
+								.sidebar-slider-card
+									img(src="./img/team/image1.webp", srcset="./img/team/image1@2x.webp" alt="img")
+								
+									.sidebar-slider-text
+										.txt-20 Управляющая
+										.h5 Казакова Наталья Артёмовна
+								.sidebar-slider-card
+									img(src="./img/team/image1.webp", srcset="./img/team/image1@2x.webp" alt="img")
+								
+									.sidebar-slider-text
+										.txt-20 Управляющая
+										.h5 Казакова Наталья Артёмовна
+						
+						//SLIDER
+						.slider-block
+							.h4 Наши дома
+							.sidebar-branches-slider.small-slider
+								.sidebar-slider-card
+									img(src="./img/branches/branche1.webp", srcset="./img/branches/branche1@2x.webp" alt="img")
+								
+								.sidebar-slider-card
+									img(src="./img/branches/branche2.webp", srcset="./img/branches/branche2@2x.webp" alt="img")
+								
+									
+								.sidebar-slider-card
+									img(src="img/branches/branche1.webp", srcset="./img/branches/branche1@2x.webp" alt="img")
+								
+				
+				
 				//MAIN CONTENT
 				.inner-content
 	
