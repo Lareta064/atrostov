@@ -232,3 +232,44 @@ section.green-bg{
 	 padding-inline:20px;
 	}
 }
+/*.breadcrumbs*/
+.breadcrumbs {
+	// margin-bottom: 40px;
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+.breadcrumbs>li {
+	position: relative;
+	display: inline;
+	line-height: 143%;
+	font-size: 14px;
+	
+	a {	color: #1E4737; border-bottom: 1px solid #1E4737; }
+	
+	
+
+	&:last-child>* {
+		border-bottom: 0;
+		pointer-events: none;
+		cursor: default;
+		opacity: .5;
+	}
+
+	&:last-child:hover>* {
+		border: 0;
+	}
+
+	&:hover>* {
+		border-bottom: 0;
+	}
+
+}
+
+.breadcrumbs>li+li:before {
+	content: "/\00a0";
+	padding: 0 5px;
+	color: #1E4737;
+}

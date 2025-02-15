@@ -162,16 +162,12 @@ select:-webkit-autofill:focus {
 	transition: all 0.5s ease-out;
 }
 
-.accordion__item .accordion__title .accordion__arrow {
+.accordion__item .accordion__title .accordion__arrow, .arrow-btn{
   width: 50px;
   height: 50px;
   display: block;
   border-radius: 10px;
-  background-color: #F0F0F0;
-	position: absolute;
-	top:50%;
-	transform: translateY(-50%);
-	 right: 30px;
+  
 	
 	background-position: center;
   background-repeat: no-repeat;
@@ -182,6 +178,13 @@ select:-webkit-autofill:focus {
 	.svg-carret{
 		width: 12px;
 	}
+}
+.accordion__item .accordion__title .accordion__arrow{
+  background-color: #F0F0F0;
+	position: absolute;
+	top:50%;
+	transform: translateY(-50%);
+	 right: 30px;
 }
 .accordion__item .accordion__arrow.accordion__rotate {
 	background-color: #CCEC83;
@@ -194,3 +197,10 @@ select:-webkit-autofill:focus {
 	
 }
 
+.arrow-btn{
+  background-color: #CCEC83;
+  
+}
+.arrow-btn.arrow-btn--rotate{
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='11' viewBox='0 0 20 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M19 10L10 1L1 10' stroke='%231E4737' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3e%3c/svg%3e");
+}

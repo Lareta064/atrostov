@@ -1,0 +1,82 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	main.main
+		.container
+			ul.breadcrumbs
+				li
+					a(href="#!") pansionat-dobro.ru
+				li
+					a(href="#!") Услуги
+				li
+					a(href="#!") Пансионат для пожилых людей
+		section.inner-page
+			.container
+				//SIDEBAR
+				.aside-grid
+					sidebar.sidebar
+						//MENU
+						.list-menu.has-hide
+							.h4.list-menu__title Меню
+							ul
+								li.active 
+									a.h5(href="#!") Перевозка больных
+								li 
+									a.h5(href="#!") Врачебный осмотр
+								li 
+									a.h5(href="#!") Медицинская помощь
+								li 
+									a.h5(href="#!") Патронаж
+								li 
+									a.h5(href="#!") Лечебный массаж
+								li 
+									a.h5(href="#!") Лечебная физкультура
+								li.toggle-item.drop-menu__hide 
+									a.h5(href="#!") Перевозка больных
+								li.toggle-item.drop-menu__hide 
+									a.h5(href="#!") Врачебный осмотр
+								li.toggle-item.drop-menu__hide 
+									a.h5(href="#!") Медицинская помощь
+								li.toggle-item.drop-menu__hide 
+									a.h5(href="#!") Патронаж
+								li.toggle-item.drop-menu__hide 
+									a.h5(href="#!") Лечебный массаж
+								li.toggle-item.drop-menu__hide 
+									a.h5(href="#!") Лечебная физкультура
+				
+							.drop-menu__btn
+								button.open-drop-menu.arrow-btn
+					
+					
+						//MENU
+						.list-menu
+							ul
+								li 
+									a.h5(href="#!") Уход и забота 24/7
+								li.active 
+									a.h5(href="#!") Уход за лежачимии и <br>больными
+								li 
+									a.h5(href="#!") Комфортные условия<br>проживания
+								li 
+									a.h5(href="#!") Медицинская помощь
+								li 
+									a.h5(href="#!") Доброжелательный персонал
+								li 
+									a.h5(href="#!") Вкусное и полезное 5-и<br>разовое питание
+								li 
+									a.h5(href="#!") Разнообразный<br>и интересный досуг
+								li.drop-menu__hide 
+				
+				//MAIN CONTENT
+				.inner-content
+	
+	
+	include ../sections/_footer
+
+
+
+
+			
+block variables
+	-var title = "Внутренняя";

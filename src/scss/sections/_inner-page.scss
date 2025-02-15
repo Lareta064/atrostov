@@ -1,0 +1,36 @@
+.sidebar{
+	&>*+*{margin-top: 20px;}
+}
+.list-menu{
+	&__title{margin-bottom: 24px;}
+	li a{
+		display: flex;
+		padding: 25px;
+		border-radius: 15px;
+		color: #1c1c1c;
+		transition: .3s;
+		line-height: 1;
+		&:hover{
+			background-color: #CCEC83;
+			
+		}
+	}
+	li.active a{background-color: #CCEC83;}
+	li.drop-menu__hide {display: none;}
+	li+li{margin-top: 10px;}
+	.drop-menu__btn{
+		display: flex;
+		justify-content: center;
+		margin-top: 20px;
+	}
+}
+.aside-grid{
+	display: grid;
+	grid-template-columns: 540px 1fr;
+	column-gap:20px;
+}
+.list-menu{
+	border-radius: 30px;
+	background-color: #f5f5f5;
+	padding: 30px;
+}

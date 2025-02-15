@@ -490,4 +490,19 @@ document.addEventListener("DOMContentLoaded", function (){
 		//END
 		
 	  });
+	  // OPEN HIDE MENU ITEMS
+	  
+	  const hasHideMenus = document.querySelectorAll('.has-hide')
+	  if(hasHideMenus.length > 0){
+		hasHideMenus.forEach((list)=>{
+			const openMenuItem = list.querySelector('.open-drop-menu');
+			const menuHideItems = list.querySelectorAll('.toggle-item');
+			openMenuItem.addEventListener('click', ()=>{
+				menuHideItems.forEach((li)=>{
+					li.classList.toggle('drop-menu__hide');
+				});
+				openMenuItem.classList.toggle('arrow-btn--rotate');
+			});
+		});
+	  }
 });
