@@ -621,8 +621,11 @@ document.addEventListener("DOMContentLoaded", function (){
 		arrows: true,
 		vertical: true, // Включает вертикальную прокрутку
 		verticalSwiping: true, // Разрешает свайп вверх/вниз
-		infinite: true, // Бесконечная прокрутка
+		infinite: false, // Бесконечная прокрутка
 		adaptiveHeight: false, // Должно быть `false`, иначе ломает вертикальную прокрутку
+		variableHeight: true,
+		prevArrow:$('.our-review-pagination .btn-prev'),
+		nextArrow:$('.our-review-pagination .btn-next'),
 	});
 	
 	//dropdown

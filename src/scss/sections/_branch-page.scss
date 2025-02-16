@@ -194,11 +194,11 @@
 .our-review-grid{
 	display: flex;
 	column-gap:20px;
-	// height:820px;
+	min-height:820px;
 	.our-review__col{width: calc(50% - 10px); flex-shrink:0;}
 }
 .our-review-slider {
-    width: 800px;
+    width: 100%;
     // height: 660px;
     position: relative; /* Обязательно */
     display: block; /* Убедимся, что слайдер отображается */
@@ -210,7 +210,7 @@
 
 /* Устанавливаем высоту списка слайдов */
 .our-review-slider .slick-list {
-    // height: 660px !important;
+    height: 660px !important;
 }
 
 /* Делаем контейнер слайдов вертикальным */
@@ -221,9 +221,26 @@
 
 /* Ограничиваем размер каждого слайда */
 .review-slide {
-    // height: 300px; /* Пример высоты */
+    height: 310px!important; /* Пример высоты */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+	.review-slide__text p{
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 4;
+		overflow: hidden;
+	}
+
+}
+.our-review-group{position: relative;}
+.our-review-pagination{
+	display: flex;
+	flex-direction: column;
+	row-gap:12px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 3;
 }
