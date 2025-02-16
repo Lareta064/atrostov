@@ -157,8 +157,10 @@ block content
 		section.our-review
 			.container
 				.our-review-grid
-					.our-review__col
-						.rating-form
+					//RATING FORM
+					.our-review__col.grey-box
+						.h4 Оставить отзыв:
+						form.rating-form
 							.stars-rating-checkbox.stars-rating
 								label.stars-rating-label
 									input(type='checkbox' name='ratingInput1')
@@ -175,8 +177,29 @@ block content
 								label.stars-rating-label
 									input(type='checkbox' name='ratingInput5')
 									span
-					.our-review__col
-						.our-review-group.grey-box
+							
+							.form-item.form-item--w50
+									label.label Ваше имя
+									input(type="text" placeholder="Иван")
+							.form-item.form-item--w50
+								label.label Ваша Фамилия
+								input(type="text" placeholder="Белов")
+							.form-item.form-textarea
+								textarea(name="message" placeholder="Ваш отзыв")
+							
+							.agree-block
+								label.checkbox-item
+									input(type="checkbox" checked)
+									span.custom-checkbox
+									span Я ознакомлен и согласен с условиями #[a(href="#!") пользовательского соглашения]
+							.form-btn
+								button.btn-primary.w-100(type="submit") Оставить отзыв
+							
+					
+					
+					//SLIDER
+					.our-review__col.grey-box
+						.our-review-group
 							.h4 Оставленные отзывы
 							.our-review-pagination
 								button.btn-prev(type="button")
