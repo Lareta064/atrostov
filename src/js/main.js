@@ -204,7 +204,84 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		]
 	});
-
+	$('.auther-branches-slider').slick({
+		speed: 2000,
+		draggable: true,
+		swipe: true,
+		// autoplay: true,
+		infinite: true,
+		
+		slidesToShow: '4',
+		centerMode: true,
+		// variableWidth: true,
+		centerPadding: '160px',
+		slidesToScroll: 1,
+		arrows: true,
+		prevArrow:$('.about-media .btn-prev'),
+		nextArrow:$('.about-media .btn-next'),
+	
+		
+		responsive: [
+			{
+				breakpoint: 1999,
+				settings: {
+					slidesToShow: '3',
+					centerMode: true,
+					variableWidth: false,
+					centerPadding: '160px',
+				},
+			},
+			{
+				breakpoint: 1799,
+				settings: {
+					slidesToShow: '2.5',
+					centerMode: true,
+					variableWidth: false,
+					centerPadding: '160px',
+				},
+			},
+	
+			{
+				breakpoint: 1279,
+				settings: {
+					slidesToShow: '1.5',
+					centerMode: true,
+					variableWidth: false,
+					centerPadding: '260px',
+				},
+			},{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: '1.5',
+					centerMode: true,
+					variableWidth: false,
+					centerPadding: '180px',
+				},
+			},
+			  {
+				
+				breakpoint: 799,
+				settings: {
+					slidesToShow: '1.5',
+					centerMode: false,
+					variableWidth: false,
+					centerPadding: '140px',
+					
+				}
+			},
+			{
+			  
+			  breakpoint: 743,
+			  settings: {
+				  slidesToShow: 1,
+				  centerMode: false,
+				  variableWidth: false,
+				  centerPadding: '40px',
+				  
+			  }
+		  }
+		]
+	});
 	/*team-slider*/
 	$('.team-slider').slick({
 	    speed: 2000,
@@ -212,9 +289,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		swipe: true,
 		autoplay: true,
 		infinite: true,
-		
 		slidesToShow: '3',
-		
 		slidesToScroll: 1,
 		arrows: true,
 		prevArrow:$('.team-pagination .btn-prev'),
