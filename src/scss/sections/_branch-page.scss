@@ -121,3 +121,15 @@
 		}
 	}
 }
+.branch-peculiar-grid{
+	column-count: 2;
+	column-gap: 20px;
+	.light-card{margin-bottom: 20px;}
+	@media (max-width: 1023px) {
+		column-count: 1;
+		.light-card.light-card--row{
+			flex-direction: row!important;
+			align-items: center;
+		}
+	}
+}
