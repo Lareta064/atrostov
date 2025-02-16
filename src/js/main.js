@@ -209,7 +209,6 @@ document.addEventListener("DOMContentLoaded", function (){
 		draggable: true,
 		swipe: true,
 		// autoplay: true,
-		infinite: true,
 		
 		slidesToShow: '4',
 		centerMode: true,
