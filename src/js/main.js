@@ -456,6 +456,36 @@ document.addEventListener("DOMContentLoaded", function (){
 		]
 
 	});
+	// STARS RATING
+	document.querySelectorAll('.stars-rating-checkbox').forEach(starRatingBlock => {
+		// Навешиваем обработчик событий на каждый блок
+		starRatingBlock.addEventListener('click', function (event) {
+			console.log('555');
+			const target = event.target.closest('label');
+			if (!target) return; // Если клик не по лейблу, ничего не делаем
+
+			const input = target.querySelector('input[type="checkbox"]');
+			if (!input) return; // Если у лейбла нет чекбокса, ничего не делаем
+
+			// Получаем список чекбоксов только внутри текущего блока
+			const checkboxes = starRatingBlock.querySelectorAll('input[type="checkbox"]');
+
+			// Определяем индекс текущего чекбокса
+			const index = Array.from(checkboxes).indexOf(input);
+
+			// Если текущий чекбокс стал checked, обновляем предыдущие
+			if (input.checked) {
+				for (let i = 0; i <= index; i++) {
+					checkboxes[i].checked = true;
+				}
+			} else {
+				// Если чекбокс снят, снимаем галочки у всех следующих
+				for (let i = index + 1; i < checkboxes.length; i++) {
+					checkboxes[i].checked = false;
+				}
+			}
+		});
+	});
 	/****************** */
 	function initSliders() {
 		let windowWidth = $(window).width();
@@ -571,12 +601,16 @@ document.addEventListener("DOMContentLoaded", function (){
 	});
 
 	//SIDEBAR SLIDER
-	$('.small-slider').slick({
+	$('.sidebar-team-slider').slick({
 		speed:800,
 		items:1,
 		dots: true,
 	});
-
+	$('.sidebar-branches-slider').slick({
+		speed:800,
+		items:1,
+		dots: true,
+	});
 	//dropdown
 	const dropdown = document.querySelectorAll('.dropdown');
 	

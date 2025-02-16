@@ -153,7 +153,42 @@ block content
 							.h5 Развлекательные мероприятия
 				
 
+		//Review
+		section.our-review
+			.container
+				.review-slide
+					.review-slide__top
+						.card-img
+							img(src="./img/icons/i25.webp", width="30" height="30" alt="btn")
+						.card-title
+							.h5 Роман Романов
+							.txt-18 Отзыв о пансионате “Добро” в Ставрополе
+							.stars-rating
+								span
+								span
+								span
+								span
+								span
+					
+					.review-slide__text
+						p 
 				
+				.stars-rating-checkbox.stars-rating
+					label.stars-rating-label
+						input(type='checkbox' name='ratingInput1')
+						span
+					label.stars-rating-label
+						input(type='checkbox' name='ratingInput2')
+						span
+					label.stars-rating-label
+						input(type='checkbox' name='ratingInput3')
+						span
+					label.stars-rating-label
+						input(type='checkbox' name='ratingInput4')
+						span
+					label.stars-rating-label
+						input(type='checkbox' name='ratingInput5')
+						span
 
 	include ../sections/_footer
 
