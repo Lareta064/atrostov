@@ -1,0 +1,77 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	main.main
+		.container
+			ul.breadcrumbs
+				li
+					a(href="#!") Главная
+				li
+					a(href="#!") Пансионат для пожилых людей
+				li
+					a(href="#!") Пансионат Добро
+		section.branch-info
+			.container
+				h1.h1 Пансионат Добро в #[span.accent-word Ставрополе]
+				.branch-info__content
+					.branch-fotorama
+						.branch-fotorama-slider
+							.slider-for__item
+								img(src="./img/branch-slider/img1.webp", srcset="./img/branch-slider/img1@2x.webp 2x" width="820" height="660" alt="img")
+							.slider-for__item
+								img(src="./img/branch-slider/img2.webp", srcset="./img/branch-slider/img2@2x.webp 2x" width="820" height="660" alt="img")
+							.slider-for__item
+								img(src="./img/branch-slider/img3.webp", srcset="./img/branch-slider/img3@2x.webp 2x" width="820" height="660" alt="img")
+							.slider-for__item
+								img(src="./img/branch-slider/img4.webp", srcset="./img/branch-slider/img4@2x.webp 2x" width="820" height="660" alt="img")
+							
+
+						.branch-fotorama-thumbs.small-slider
+							.slider-for__item
+								img(src="./img/branch-slider/img1.webp", srcset="./img/branch-slider/img1@2x.webp 2x" width="260" height="200" alt="img")
+							.slider-for__item
+								img(src="./img/branch-slider/img2.webp", srcset="./img/branch-slider/img2@2x.webp 2x" width="260" height="200" alt="img")
+							.slider-for__item
+								img(src="./img/branch-slider/img3.webp", srcset="./img/branch-slider/img3@2x.webp 2x" width="260" height="200" alt="img")
+							.slider-for__item
+								img(src="./img/branch-slider/img4.webp", srcset="./img/branch-slider/img4@2x.webp 2x" width="260" height="200" alt="img")
+							
+					
+					//RIGHT BLOCKS
+					.branch-short-desk
+						h2.h3 Pansionat Dobro
+						.branch-short-contacts
+							.short-contacts__item
+								span.round-icon
+									img(src="./img/icons/pin.webp", width="30" height="30" alt="img")
+								p г. Ростов-на-Дону, ул. Береговая 8 
+							.short-contacts__item
+								span.round-icon
+									img(src="./img/icons/phone.webp", width="30" height="30" alt="img")
+								p +7 (800) 775-46-13
+							.short-contacts__item
+								span.round-icon
+									img(src="./img/icons/glob.webp", width="30" height="30" alt="img")
+								p https://pansionat-dobro.ru/
+							.short-contacts__item
+								span.round-icon
+									img(src="./img/icons/email.webp", width="30" height="30" alt="img")
+								p sales@pansionat-dobro.ru
+						button.btn-primary(type="button") Заказать звонок
+						.txt-22
+							p Выбирая недорогие пансионаты для ухода за пожилым человеком, родственники всегда переживают. Частный интернат “Добро” - это лучшая организация в Подмосковье, куда вы сможете оформить своего близкого человека. В нашу сеть входит более десяти пансионатов, один из которых расположен в поселке Малаховка, недалеко от Люберец.
+	
+						.contacts-map
+							iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Af2d88298ed4bfd3e6aba321e8ee888530b9c2fe516178912c6b2381c0435a527&amp;source=constructor" width="100%" height="100%" frameborder="0")
+							
+	
+	
+	include ../sections/_footer
+
+
+
+
+			
+block variables
+	-var title = "Главная";

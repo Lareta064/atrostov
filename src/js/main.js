@@ -430,7 +430,22 @@ document.addEventListener("DOMContentLoaded", function (){
 	$(window).on('load resize', function() {
 		updateSlidesToShow();
 	});
-
+	// fotorama
+	$('.branch-fotorama-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.branch-fotorama-thumbs'
+	});
+	$('.branch-fotorama-thumbs').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.branch-fotorama-slider',
+		dots: true,
+		
+		focusOnSelect: true
+	});
 	/****************** */
 	function initSliders() {
 		let windowWidth = $(window).width();
