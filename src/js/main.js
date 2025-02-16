@@ -3,7 +3,21 @@ document.addEventListener("DOMContentLoaded", function (){
 	/*open mobile menu */
 	const menuButton = document.querySelector('.menu-button');
 	const mobileMenu = document.querySelector('#mobile-menu');
-	
+	const asideMenu = document.querySelector('#inner-menu-mobile');
+	if(asideMenu){
+		const asideMenuToggle = asideMenu.querySelector('#toggle-innerMenu');
+		asideMenuToggle.addEventListener('click', ()=>{
+			asideMenu.classList.toggle('active');
+			bodyEl.classList.toggle('lock');
+		});
+		// Клик снаружи 
+		// document.addEventListener('click', function (e) {
+		// 	if (e.target !== asideMenu) {
+		// 		asideMenu.classList.remove('active');
+		// 	    bodyEl.classList.remove('active');
+		// 	}
+		// });
+	}
 	menuButton.addEventListener('click', ()=> {
 		const hasDropActiveItem = mobileMenu.querySelector('.has-drop.active');
 		if( menuButton.classList.contains('active')){

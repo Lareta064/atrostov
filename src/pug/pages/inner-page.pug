@@ -16,9 +16,9 @@ mixin select(plh="Пример заполнения", inpName = 'input_name', la
 			input.dropdown__input-hidden(type="hidden", name=""+ inpName)
 block content
 	include ../sections/_header
-	main.main
+	main.main.inner-main
 		#inner-menu-mobile.inner-menu-mobile
-			.inner-menu-btn
+			.inner-menu-btn#toggle-innerMenu Menu
 				span
 			.sidebar-scroll-wrapper
 				.list-menu.has-hide
