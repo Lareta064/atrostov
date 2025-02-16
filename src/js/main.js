@@ -444,7 +444,17 @@ document.addEventListener("DOMContentLoaded", function (){
 		asNavFor: '.branch-fotorama-slider',
 		dots: true,
 		
-		focusOnSelect: true
+		focusOnSelect: true,
+		responsive: [
+			{
+				breakpoint: 799,
+				settings: {
+					slidesToShow: '2',
+					
+				},
+			}
+		]
+
 	});
 	/****************** */
 	function initSliders() {
