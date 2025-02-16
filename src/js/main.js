@@ -10,13 +10,27 @@ document.addEventListener("DOMContentLoaded", function (){
 			asideMenu.classList.toggle('active');
 			bodyEl.classList.toggle('lock');
 		});
-		// Клик снаружи 
-		// document.addEventListener('click', function (e) {
-		// 	if (e.target !== asideMenu) {
-		// 		asideMenu.classList.remove('active');
-		// 	    bodyEl.classList.remove('active');
-		// 	}
-		// });
+		
+		// Отслеживаем начало касания
+		asideMenu.addEventListener('touchstart', (event) => {
+			startX = event.touches[0].clientX;
+		});
+	
+		// Отслеживаем завершение касания
+		asideMenu.addEventListener('touchend', (event) => {
+			endX = event.changedTouches[0].clientX;
+			let diffX = endX - startX;
+	
+			if (diffX > 50) {
+				// Провели вправо (открыть)
+				asideMenu.classList.add('active');
+				bodyEl.classList.add('lock');
+			} else if (diffX < -50) {
+				// Провели влево (закрыть)
+				asideMenu.classList.remove('active');
+				bodyEl.classList.remove('lock');
+			}
+		});
 	}
 	menuButton.addEventListener('click', ()=> {
 		const hasDropActiveItem = mobileMenu.querySelector('.has-drop.active');
@@ -208,7 +222,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		speed: 2000,
 		draggable: true,
 		swipe: true,
-		// autoplay: true,
+		autoplay: true,
 		
 		slidesToShow: '4',
 		centerMode: true,
@@ -291,8 +305,8 @@ document.addEventListener("DOMContentLoaded", function (){
 		slidesToShow: '3',
 		slidesToScroll: 1,
 		arrows: true,
-		prevArrow:$('.team-pagination .btn-prev'),
-		nextArrow:$('.team-pagination .btn-next'),
+		prevArrow:$('.auther-branches-nav .btn-prev'),
+		nextArrow:$('.auther-branches-nav .btn-next'),
 		
 		responsive: [
 			{
@@ -700,6 +714,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		variableHeight: true,
 		prevArrow:$('.our-review-pagination .btn-prev'),
 		nextArrow:$('.our-review-pagination .btn-next'),
+		
 	});
 	
 	//dropdown

@@ -1,8 +1,10 @@
 .stars-rating{
 	display: flex;
 	align-items: center;
-	
-	column-gap: 5px;
+	column-gap: 4px;
+	@media (max-width: 743px) {
+		column-gap: 3px;
+	}
 }
 .stars-rating span{
 	width: 35px;
