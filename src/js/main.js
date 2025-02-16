@@ -436,14 +436,15 @@ document.addEventListener("DOMContentLoaded", function (){
 		slidesToScroll: 1,
 		arrows: false,
 		fade: true,
-		asNavFor: '.branch-fotorama-thumbs'
+		asNavFor: '.branch-fotorama-thumbs',
+		arrows: false,
 	});
 	$('.branch-fotorama-thumbs').slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		asNavFor: '.branch-fotorama-slider',
 		dots: true,
-		
+		arrows: false,
 		focusOnSelect: true,
 		responsive: [
 			{
@@ -603,14 +604,27 @@ document.addEventListener("DOMContentLoaded", function (){
 	//SIDEBAR SLIDER
 	$('.sidebar-team-slider').slick({
 		speed:800,
-		items:1,
+		slidesToShow: 1,
 		dots: true,
+		arrows: false,
 	});
 	$('.sidebar-branches-slider').slick({
 		speed:800,
-		items:1,
+		slidesToShow: 1,
 		dots: true,
+		arrows: false,
 	});
+	$('.our-review-slider').slick({
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: true,
+		vertical: true, // Включает вертикальную прокрутку
+		verticalSwiping: true, // Разрешает свайп вверх/вниз
+		infinite: true, // Бесконечная прокрутка
+		adaptiveHeight: false, // Должно быть `false`, иначе ломает вертикальную прокрутку
+	});
+	
 	//dropdown
 	const dropdown = document.querySelectorAll('.dropdown');
 	
