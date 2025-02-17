@@ -155,8 +155,7 @@ block content
 
 		section.auther-branches
 			.container
-				h2.h1 #[span.accent-word Отзывы] постояльцев и заказчиков
-			
+				h2.h1.center-desktop #[span.accent-word Похожие] предложения
 			.auther-branches-slider.overlay-bg
 				//single card
 				.branch-card.slider-card
@@ -293,6 +292,7 @@ block content
 		
 		//Review
 		section.our-review
+			h2.h1.center-desktop #[span.accent-word Отзывы] постояльцев и заказчиков
 			.container
 				.our-review-grid
 					//RATING FORM
@@ -339,11 +339,7 @@ block content
 					.our-review__col.grey-box
 						.our-review-group
 							.h4 Оставленные отзывы
-							.our-review-pagination
-								button.btn-prev(type="button")
-									span.arrow-top
-								button.btn-next(type="button")
-									span.arrow-bottom
+							
 							
 							.our-review-slider
 								//review-slide
@@ -398,8 +394,12 @@ block content
 									.review-slide__text.txt-20
 										p Хочу выразить огромную благодарность всему персоналу пансионата "Добро"! Забота, внимание и уютная атмосфера это то, что создает ощущение дома для моих родителей. Рекомендую всем, кто ищет надежный и качественный уход для своих близких. Рекомендую всем, кто ищет надежный и качественный уход для своих близких.
 					
-				
-				
+							//navigation
+							.our-review-pagination.slider-pagination
+								button.btn-prev(type="button")
+									span.arrow-top
+								button.btn-next(type="button")
+									span.arrow-bottom
 				
 				
 				

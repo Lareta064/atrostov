@@ -234,11 +234,27 @@
 		
 	}
 }
+@media (max-width: 743px) {
+    .our-review-slider .slick-list {
+        height: auto !important; /* Авто-высота */
+    }
 
+    .our-review-slider .slick-track {
+        flex-direction: row !important; /* Меняем на горизонтальную прокрутку */
+    }
+
+    .review-slide {
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
 
 .our-review-slider .slick-list {
     height: 560px !important;
-	@media (max-width: 743px) { height: 490px !important;}
+	@media (max-width: 743px) { height: auto !important;}
 }
 
 .our-review-slider .slick-track {
@@ -251,6 +267,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+	overflow: hidden;
 	.review-slide__text p{
 		display: -webkit-box;
 		-webkit-box-orient: vertical;
@@ -272,17 +289,24 @@
 	}
 	
 }
-.our-review-pagination{
-	display: flex;
-	flex-direction: column;
-	row-gap:10px;
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: 3;
-	@media (max-width: 767px) {
-	   display: none;
+
+@media (min-width: 744px) {
+	.our-review-pagination{
+		display: flex;
+		flex-direction: column;
+		row-gap:10px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 3;
 	}	
+}
+
+@media (max-width: 767px) {
+.our-review-pagination{
+	.arrow-top{transform: rotate(0);}
+  .arrow-bottom{transform: rotate(180deg);}
+ }
 }
 .rating-form{
 	display: flex;

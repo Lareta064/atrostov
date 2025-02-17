@@ -712,10 +712,23 @@ document.addEventListener("DOMContentLoaded", function (){
 		infinite: false, // Бесконечная прокрутка
 		adaptiveHeight: false, // Должно быть `false`, иначе ломает вертикальную прокрутку
 		variableHeight: true,
-		prevArrow:$('.our-review-pagination .btn-prev'),
-		nextArrow:$('.our-review-pagination .btn-next'),
-		
+		prevArrow: $('.our-review-pagination .btn-prev'),
+		nextArrow: $('.our-review-pagination .btn-next'),
+	
+		responsive: [
+			{
+				breakpoint: 743, // На экранах меньше 743px
+				settings: {
+					slidesToShow: 1, // Показывать один слайд
+					vertical: false, // Выключить вертикальный режим
+					verticalSwiping: false, // Выключить свайп вверх/вниз
+					variableHeight: false, // Выключить автоматическую высоту
+					adaptiveHeight: true, // Включить адаптивную высоту
+				}
+			}
+		]
 	});
+	
 	
 	//dropdown
 	const dropdown = document.querySelectorAll('.dropdown');

@@ -210,3 +210,9 @@ line-height:1;
 		font-size: 18px;
 	}
 }
+.center-desktop{
+	text-align: center;
+	@media (max-width: 743px) {
+		text-align: left;
+	}
+}
