@@ -1,0 +1,272 @@
+extends ../layouts/layout.pug
+mixin select(plh="Пример заполнения", inpName = 'input_name', label)
+	.form-item&attributes(attributes)
+		if label
+			label #{label}
+		.dropdown
+			button.dropdown__button(type="button") #{plh}
+			
+			.dropdown__list
+				ul
+					li.dropdown__list-item(data-value="Мужской") Мужской
+					li.dropdown__list-item(data-value="Женский") Женский
+					
+
+			//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+			input.dropdown__input-hidden(type="hidden", name=""+ inpName)
+block content
+	include ../sections/_header
+	main.main.inner-main
+		//БОКОВОЕ МЕНЮ НА МОБ ВЕРСИИ
+		#inner-menu-mobile.inner-menu-mobile
+			.inner-menu-btn#toggle-innerMenu Menu
+				span
+			.sidebar-scroll-wrapper
+				.list-menu.has-hide
+					.h4.list-menu__title Меню
+					ul
+						li.active 
+							a.h5(href="#!") Перевозка больных
+						li 
+							a.h5(href="#!") Врачебный осмотр
+						li 
+							a.h5(href="#!") Медицинская помощь
+						li 
+							a.h5(href="#!") Патронаж
+						li 
+							a.h5(href="#!") Лечебный массаж
+						li 
+							a.h5(href="#!") Лечебная физкультура
+						li.toggle-item.drop-menu__hide 
+							a.h5(href="#!") Перевозка больных
+						li.toggle-item.drop-menu__hide 
+							a.h5(href="#!") Врачебный осмотр
+						li.toggle-item.drop-menu__hide 
+							a.h5(href="#!") Медицинская помощь
+						li.toggle-item.drop-menu__hide 
+							a.h5(href="#!") Патронаж
+						li.toggle-item.drop-menu__hide 
+							a.h5(href="#!") Лечебный массаж
+						li.toggle-item.drop-menu__hide 
+							a.h5(href="#!") Лечебная физкультура
+		
+					.drop-menu__btn
+						button.open-drop-menu.arrow-btn
+			
+			
+				//MENU
+				.list-menu
+					ul
+						li 
+							a.h5(href="#!") Уход и забота 24/7
+						li.active 
+							a.h5(href="#!") Уход за лежачимии и <br>больными
+						li 
+							a.h5(href="#!") Комфортные условия<br>проживания
+						li 
+							a.h5(href="#!") Медицинская помощь
+						li 
+							a.h5(href="#!") Доброжелательный персонал
+						li 
+							a.h5(href="#!") Вкусное и полезное 5-и<br>разовое питание
+						li 
+							a.h5(href="#!") Разнообразный<br>и интересный досуг
+		.container
+			ul.breadcrumbs
+				li
+					a(href="#!") pansionat-dobro.ru
+				li
+					a(href="#!") Услуги
+				li
+					a(href="#!") Пансионат для пожилых людей
+		section.inner-page
+			.container
+				//SIDEBAR
+				.aside-grid.aside-grid--desktop
+					sidebar.sidebar
+						//MENU
+						.list-menu.has-hide
+							.h4.list-menu__title Меню
+							ul
+								li.active 
+									a.h5(href="#!") Перевозка больных
+								li 
+									a.h5(href="#!") Врачебный осмотр
+								li 
+									a.h5(href="#!") Медицинская помощь
+								li 
+									a.h5(href="#!") Патронаж
+								li 
+									a.h5(href="#!") Лечебный массаж
+								li 
+									a.h5(href="#!") Лечебная физкультура
+								li.toggle-item.drop-menu__hide 
+									a.h5(href="#!") Перевозка больных
+								li.toggle-item.drop-menu__hide 
+									a.h5(href="#!") Врачебный осмотр
+								li.toggle-item.drop-menu__hide 
+									a.h5(href="#!") Медицинская помощь
+								li.toggle-item.drop-menu__hide 
+									a.h5(href="#!") Патронаж
+								li.toggle-item.drop-menu__hide 
+									a.h5(href="#!") Лечебный массаж
+								li.toggle-item.drop-menu__hide 
+									a.h5(href="#!") Лечебная физкультура
+				
+							.drop-menu__btn
+								button.open-drop-menu.arrow-btn
+					
+					
+						//MENU
+						.list-menu
+							ul
+								li 
+									a.h5(href="#!") Уход и забота 24/7
+								li.active 
+									a.h5(href="#!") Уход за лежачимии и <br>больными
+								li 
+									a.h5(href="#!") Комфортные условия<br>проживания
+								li 
+									a.h5(href="#!") Медицинская помощь
+								li 
+									a.h5(href="#!") Доброжелательный персонал
+								li 
+									a.h5(href="#!") Вкусное и полезное 5-и<br>разовое питание
+								li 
+									a.h5(href="#!") Разнообразный<br>и интересный досуг
+								
+				
+						//БРОНИРОВАНИЕ
+						.reservation-form-wrapper
+							.h4 Бронирование
+							form.reservation-form(action="#!")
+								.form-item
+									label.label Ваш номер телефона
+									input(type="tel" placeholder="+7 (000) 000-00-00")
+								
+								.form-item
+									label.label Дата заезда
+										span.txt-red *
+									input#start-date.start-date(type="text" placeholder="ДД.ММ.ГГГГ")
+								
+								.form-item
+									label.label Дата отезда
+										span.txt-red *
+									input#end-date.start-date(type="text" placeholder="ДД.ММ.ГГГГ")
+								.form-btn
+									button.btn-primary.w-100(type="submit")  Оставить заявку
+				
+						//SLIDER
+						.slider-block
+							.h4 Специалисты
+							.sidebar-team-slider.small-slider
+								.sidebar-slider-card
+									img(src="./img/team/image1.webp", srcset="./img/team/image1@2x.webp" alt="img")
+								
+									.sidebar-slider-text
+										.txt-20 Управляющая
+										.h5 Казакова Наталья Артёмовна
+								
+								.sidebar-slider-card
+									img(src="./img/team/image1.webp", srcset="./img/team/image1@2x.webp" alt="img")
+								
+									.sidebar-slider-text
+										.txt-20 Управляющая
+										.h5 Казакова Наталья Артёмовна
+								.sidebar-slider-card
+									img(src="./img/team/image1.webp", srcset="./img/team/image1@2x.webp" alt="img")
+								
+									.sidebar-slider-text
+										.txt-20 Управляющая
+										.h5 Казакова Наталья Артёмовна
+						
+						//SLIDER
+						.slider-block
+							.h4 Наши дома
+							.sidebar-branches-slider.small-slider
+								.sidebar-slider-card
+									img(src="./img/branches/branche1.webp", srcset="./img/branches/branche1@2x.webp" alt="img")
+								
+								.sidebar-slider-card
+									img(src="./img/branches/branche2.webp", srcset="./img/branches/branche2@2x.webp" alt="img")
+								
+									
+								.sidebar-slider-card
+									img(src="img/branches/branche1.webp", srcset="./img/branches/branche1@2x.webp" alt="img")
+								
+				
+					section.blog
+						h1.h1 Блог
+						.blog-content
+							//single card
+							.blog-card
+								.blog-card__img
+									img(src='./img/blog/blog-card.webp', srcset='./img/blog/blog-card@2x.webp 2x' width='390' height='300' loading='lazy' alt='img')
+									.blog-date Опубликовано: 24.06.2024г.
+								
+								.blog-card__txt
+									.blog-card-head Что подарить бабушке на день рождения
+									.blog-card__body
+										p Выбор подарка для бабушки – это всегда особенная задача. Важно учитывать её возраст, образ жизни и интересы. Из собственного опыта скажу, что нет ниче...
+									.blog-card__footer
+										.blog-date Опубликовано: 24.06.2024г.
+										a.btn-primary(href="#!") Читать далее
+							//single card
+							.blog-card
+								.blog-card__img
+									img(src='./img/blog/blog-card.webp', srcset='./img/blog/blog-card@2x.webp 2x' width='390' height='300' loading='lazy' alt='img')
+									.blog-date Опубликовано: 24.06.2024г.
+								
+								.blog-card__txt
+									.blog-card-head Что подарить бабушке на день рождения
+									.blog-card__body
+										p Выбор подарка для бабушки – это всегда особенная задача. Важно учитывать её возраст, образ жизни и интересы. Из собственного опыта скажу, что нет ниче...
+									.blog-card__footer
+										.blog-date Опубликовано: 24.06.2024г.
+										a.btn-primary(href="#!") Читать далее
+							//single card
+							.blog-card
+								.blog-card__img
+									img(src='./img/blog/blog-card.webp', srcset='./img/blog/blog-card@2x.webp 2x' width='390' height='300' loading='lazy' alt='img')
+									.blog-date Опубликовано: 24.06.2024г.
+								
+								.blog-card__txt
+									.blog-card-head Что подарить бабушке на день рождения
+									.blog-card__body
+										p Выбор подарка для бабушки – это всегда особенная задача. Важно учитывать её возраст, образ жизни и интересы. Из собственного опыта скажу, что нет ниче...
+									.blog-card__footer
+										.blog-date Опубликовано: 24.06.2024г.
+										a.btn-primary(href="#!") Читать далее
+							//single card
+							.blog-card
+								.blog-card__img
+									img(src='./img/blog/blog-card.webp', srcset='./img/blog/blog-card@2x.webp 2x' width='390' height='300' loading='lazy' alt='img')
+									.blog-date Опубликовано: 24.06.2024г.
+								
+								.blog-card__txt
+									.blog-card-head Что подарить бабушке на день рождения
+									.blog-card__body
+										p Выбор подарка для бабушки – это всегда особенная задача. Важно учитывать её возраст, образ жизни и интересы. Из собственного опыта скажу, что нет ниче...
+									.blog-card__footer
+										.blog-date Опубликовано: 24.06.2024г.
+										a.btn-primary(href="#!") Читать далее
+
+						.blog-pagination.pagination-wrapper
+							button.btn-prev(type="button")
+								span.arrow-left
+							button.btn-next(type="button")
+								span.arrow-right
+							
+
+						
+				
+				
+		
+	include ../sections/_footer
+
+
+
+
+			
+block variables
+	-var title = "Внутренняя";

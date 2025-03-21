@@ -9,3 +9,6 @@ $btnColor: #1E4737;
 $inputBgGreen: #285141;
 $greyBg: #F0F0F0;
 
+@function remy($pxsize) {
+	@return calc(($pxsize/19.20))*1vw;
+}

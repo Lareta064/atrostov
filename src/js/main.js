@@ -623,7 +623,6 @@ document.addEventListener("DOMContentLoaded", function (){
 	});
 	// Fancybox
 	Fancybox.bind("[data-fancybox]", {
-        
 		Thumbs: false,
 	});
 	//ACORDION

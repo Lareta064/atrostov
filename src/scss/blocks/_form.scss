@@ -215,5 +215,9 @@ select:-webkit-autofill:focus {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='11' viewBox='0 0 20 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M19 10L10 1L1 10' stroke='%231E4737' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3e%3c/svg%3e");
 }
 .popUp-form-wrapper{
-
+  .h4{
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .agree-block{max-width: 360px;}
 }

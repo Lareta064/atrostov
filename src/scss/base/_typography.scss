@@ -166,7 +166,7 @@ line-height:1;
 .green-bg{
 	background-color: $greenBg;
 	color: rgba(255, 255, 255, 0.5);
-	a{color: white;}
+	a, .h1, .h2, .h3{color: white;}
 }
 .custom-text h1{line-height: 1; margin-bottom: 30px;}
 .custom-text h2{
