@@ -1,0 +1,394 @@
+extends ../layouts/layout.pug
+mixin select(plh="Пример заполнения", inpName = 'input_name', label)
+	.form-item&attributes(attributes)
+		if label
+			label #{label}
+		.dropdown
+			button.dropdown__button(type="button") #{plh}
+			
+			.dropdown__list
+				ul
+					li.dropdown__list-item(data-value="Мужской") Мужской
+					li.dropdown__list-item(data-value="Женский") Женский
+					
+
+			//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+			input.dropdown__input-hidden(type="hidden", name=""+ inpName)
+block content
+	include ../sections/_header
+	main.main.inner-main
+		//БОКОВОЕ МЕНЮ НА МОБ ВЕРСИИ
+		#inner-menu-mobile.inner-menu-mobile
+			.inner-menu-btn#toggle-innerMenu Menu
+				span
+			.sidebar-scroll-wrapper
+				.list-menu.has-hide
+					.h4.list-menu__title Меню
+					ul
+						li.active 
+							a.h5(href="#!") Перевозка больных
+						li 
+							a.h5(href="#!") Врачебный осмотр
+						li 
+							a.h5(href="#!") Медицинская помощь
+						li 
+							a.h5(href="#!") Патронаж
+						li 
+							a.h5(href="#!") Лечебный массаж
+						li 
+							a.h5(href="#!") Лечебная физкультура
+						li.toggle-item.drop-menu__hide 
+							a.h5(href="#!") Перевозка больных
+						li.toggle-item.drop-menu__hide 
+							a.h5(href="#!") Врачебный осмотр
+						li.toggle-item.drop-menu__hide 
+							a.h5(href="#!") Медицинская помощь
+						li.toggle-item.drop-menu__hide 
+							a.h5(href="#!") Патронаж
+						li.toggle-item.drop-menu__hide 
+							a.h5(href="#!") Лечебный массаж
+						li.toggle-item.drop-menu__hide 
+							a.h5(href="#!") Лечебная физкультура
+		
+					.drop-menu__btn
+						button.open-drop-menu.arrow-btn
+			
+			
+				//MENU
+				.list-menu
+					ul
+						li 
+							a.h5(href="#!") Уход и забота 24/7
+						li.active 
+							a.h5(href="#!") Уход за лежачимии и <br>больными
+						li 
+							a.h5(href="#!") Комфортные условия<br>проживания
+						li 
+							a.h5(href="#!") Медицинская помощь
+						li 
+							a.h5(href="#!") Доброжелательный персонал
+						li 
+							a.h5(href="#!") Вкусное и полезное 5-и<br>разовое питание
+						li 
+							a.h5(href="#!") Разнообразный<br>и интересный досуг
+		.container
+			ul.breadcrumbs
+				li
+					a(href="#!") pansionat-dobro.ru
+				li
+					a(href="#!") Услуги
+				li
+					a(href="#!") Пансионат для пожилых людей
+		section.inner-page
+			.container
+				//SIDEBAR
+				.aside-grid.aside-grid--desktop
+					sidebar.sidebar
+						//MENU
+						.list-menu.has-hide
+							.h4.list-menu__title Меню
+							ul
+								li.active 
+									a.h5(href="#!") Перевозка больных
+								li 
+									a.h5(href="#!") Врачебный осмотр
+								li 
+									a.h5(href="#!") Медицинская помощь
+								li 
+									a.h5(href="#!") Патронаж
+								li 
+									a.h5(href="#!") Лечебный массаж
+								li 
+									a.h5(href="#!") Лечебная физкультура
+								li.toggle-item.drop-menu__hide 
+									a.h5(href="#!") Перевозка больных
+								li.toggle-item.drop-menu__hide 
+									a.h5(href="#!") Врачебный осмотр
+								li.toggle-item.drop-menu__hide 
+									a.h5(href="#!") Медицинская помощь
+								li.toggle-item.drop-menu__hide 
+									a.h5(href="#!") Патронаж
+								li.toggle-item.drop-menu__hide 
+									a.h5(href="#!") Лечебный массаж
+								li.toggle-item.drop-menu__hide 
+									a.h5(href="#!") Лечебная физкультура
+				
+							.drop-menu__btn
+								button.open-drop-menu.arrow-btn
+					
+					
+						//MENU
+						.list-menu
+							ul
+								li 
+									a.h5(href="#!") Уход и забота 24/7
+								li.active 
+									a.h5(href="#!") Уход за лежачимии и <br>больными
+								li 
+									a.h5(href="#!") Комфортные условия<br>проживания
+								li 
+									a.h5(href="#!") Медицинская помощь
+								li 
+									a.h5(href="#!") Доброжелательный персонал
+								li 
+									a.h5(href="#!") Вкусное и полезное 5-и<br>разовое питание
+								li 
+									a.h5(href="#!") Разнообразный<br>и интересный досуг
+								
+				
+						//БРОНИРОВАНИЕ
+						.reservation-form-wrapper
+							.h4 Бронирование
+							form.reservation-form(action="#!")
+								.form-item
+									label.label Ваш номер телефона
+									input(type="tel" placeholder="+7 (000) 000-00-00")
+								
+								.form-item
+									label.label Дата заезда
+										span.txt-red *
+									input#start-date.start-date(type="text" placeholder="ДД.ММ.ГГГГ")
+								
+								.form-item
+									label.label Дата отезда
+										span.txt-red *
+									input#end-date.start-date(type="text" placeholder="ДД.ММ.ГГГГ")
+								.form-btn
+									button.btn-primary.w-100(type="submit")  Оставить заявку
+				
+						//SLIDER
+						.slider-block
+							.h4 Специалисты
+							.sidebar-team-slider.small-slider
+								.sidebar-slider-card
+									img(src="./img/team/image1.webp", srcset="./img/team/image1@2x.webp" alt="img")
+								
+									.sidebar-slider-text
+										.txt-20 Управляющая
+										.h5 Казакова Наталья Артёмовна
+								
+								.sidebar-slider-card
+									img(src="./img/team/image1.webp", srcset="./img/team/image1@2x.webp" alt="img")
+								
+									.sidebar-slider-text
+										.txt-20 Управляющая
+										.h5 Казакова Наталья Артёмовна
+								.sidebar-slider-card
+									img(src="./img/team/image1.webp", srcset="./img/team/image1@2x.webp" alt="img")
+								
+									.sidebar-slider-text
+										.txt-20 Управляющая
+										.h5 Казакова Наталья Артёмовна
+						
+						//SLIDER
+						.slider-block
+							.h4 Наши дома
+							.sidebar-branches-slider.small-slider
+								.sidebar-slider-card
+									img(src="./img/branches/branche1.webp", srcset="./img/branches/branche1@2x.webp" alt="img")
+								
+								.sidebar-slider-card
+									img(src="./img/branches/branche2.webp", srcset="./img/branches/branche2@2x.webp" alt="img")
+								
+									
+								.sidebar-slider-card
+									img(src="img/branches/branche1.webp", srcset="./img/branches/branche1@2x.webp" alt="img")
+								
+				
+					//MAIN CONTENT
+					.inner-content.custom-text
+						h1 #[span.accent-word Что подарить] бабушке на&nbsp;день рождения
+						p Выбор подарка для бабушки – это всегда особенная задача. Важно учитывать её возраст, образ жизни и интересы. Из собственного опыта скажу, что нет ничего лучше, чем видеть искреннюю радость на лице бабушки при получении подарка. Вот несколько идей, которые помогут вам определиться.
+						h2 Как выбрать подарок бабушке на день рождения
+						p
+							strong Чтобы подарок действительно порадовал бабушку, учтите несколько нюансов:
+
+						ul
+							li #[strong Узнайте, что ей нравится.] Проведите время с бабушкой, спросите о её увлечениях и предпочтениях. Возможно, она давно мечтает о чем-то конкретном, но не говорит об этом вслух.
+							li #[strong Исходите из своих финансовых возможностей.] Необязательно покупать дорогие вещи. Главное — внимание и забота.
+
+							li #[strong Подумайте о практичности.] Полезные подарки, которые облегчат бабушке жизнь или сделают её более комфортной, всегда ценятся.
+							li  #[strong Учитывайте её возраст.] Сложные в использовании гаджеты могут вызвать больше проблем, чем радости.
+							li  #[strong Не забывайте о здоровье.] Подарки не должны ухудшать её самочувствие.
+						
+						p Заболевание Альцгеймера – это не приговор. В пансионате для больных Альцгеймером каждый человек получает необходимую заботу и внимание, чтобы его жизнь была полна и комфортна.
+						img(src="./img/blog/atricle-img1.webp", srcset="./img/blog/atricle-img1@2x.webp" width="1100" height="546" alt="img")
+
+						
+						h2 Оригинальные подарки
+						p Ничто не сравнится с подарком, сделанным своими руками. Помню, как в детстве я создал для бабушки домик из пластилина - копию ее любимой дачи. Ее глаза светились от радости! Сейчас можно подарить что-то более сложное:
+						ul
+							li Фотоальбом с семейными снимками и трогательными подписями
+							li Вязаный шарф или уютный плед
+							li Декорированная в технике декупажа шкатулка
+
+						
+
+						h2 Подарки для досуга
+						p
+							strong День рождения — отличный повод разнообразить досуг бабушки:
+						p Склероз – это хроническое нейродегенеративное заболевание, которое приводит к нарушению нервной системы и, как следствие, к ухудшению качества жизни. #[a(href="#!") Пансионат для больных склерозом] предоставляют специализированный уход и поддержку, помогая пациентам справиться с вызовами, которые возникают в связи с этим заболеванием.
+						ul
+							li #[strong Билеты в театр или на концерт.] Подарите ей незабываемые впечатления от культурного мероприятия.
+							li #[strong Кресло-качалка.] Удобное кресло-качалка станет любимым местом для отдыха.
+							li #[strong Картина по номерам.] Этот увлекательный процесс позволит бабушке интересно провести время и потренировать мелкую моторику.
+							li #[strong Радиоприёмник.] Модель в стиле ретро подарит атмосферу молодости.
+						
+						img(src="./img/blog/atricle-img2.webp", srcset="./img/blog/atricle-img2@2x.webp" width="1100" height="546" alt="img")
+
+						
+				
+				.aside-grid
+					sidebar.sidebar
+						//FORM
+						.form-wrapper.free-consult
+							.h4 Бесплатная<br>консультация
+							.txt-20 Я бы сюда добавил какое нибудь краткое описание, преимуществаили может ваш слоган
+							
+							form.contacts-form
+								.form-item
+									label.label Ваше имя
+									input(type="text" placeholder="Иван")
+								.form-item
+									label.label Ваш номер телефона
+									input(type="tel" placeholder="+7 (000) 000-00-00")
+
+								.agree-block
+									label.checkbox-item
+										input(type="checkbox" checked)
+										span.custom-checkbox
+										span Я ознакомлен и согласен с условиями #[a(href="#!") пользовательского соглашения]
+								.form-btn
+									button.btn-primary.w-100(type="submit")  Оставить заявку
+					
+					
+					.inner-content
+						form.calc-form
+							.h4 Калькулятор проживания
+							.calc-form-grid
+								.form-item
+									label.label Пол пожилого
+										span.txt-red *
+									.dropdown
+										button.dropdown__button(type="button") Мужской
+
+										.dropdown__list
+											ul
+												li.dropdown__list-item(data-value="Мужской") Мужской
+												li.dropdown__list-item(data-value="Женский") Женский
+								.form-item
+									label.label Самостоятельный?
+										span.txt-red *
+									.dropdown
+										button.dropdown__button(type="button") Да
+
+										.dropdown__list
+											ul
+												li.dropdown__list-item(data-value="Да") Да
+												li.dropdown__list-item(data-value="Нет") Нет
+
+								.form-item
+									label.label Возраст
+										span.txt-red *
+									input(type="number" placeholder="0" name="")
+								
+								.form-item
+									label.label Ваш комментарий
+									input(type="tel" placeholder="+7 (000) 000-00-00")
+								
+								.form-item.form-textarea
+									textarea(name="message" placeholder="Комментарий...")
+								.form-item.form-btn
+									button.btn-primary.w-100(type="submit") Отправить заявку
+									p.txt-18 Специалист свяжется с вами в ближайшее время
+	
+		//Статьи
+		section.about-media
+			.container
+				h2.h1 #[span.accent-word Популярные ] статьи
+			.about-media-slider.overlay-bg
+				.about-media-card
+					.about-media__img
+						img.img-cover(src="./img/media.webp", width="520" height="300" srcset="./img/media@2x.webp 2x" alt="alt")
+					.about-media__txt
+						.h5 Про добро. Частные дома престарелых – бизнес или благотворительность?
+						p В Ростовской области уже пять лет работает сеть частных пансионатов для престарелых жителей «Добро». О том, как пришла в голову идея проекта, сложно ли работать социальному бизнесу и как государство может помочь пожилым людям, корреспонденту «АиФ-Ростов» рассказал донской предприниматель Евгений Атаманчук
+					.about-media__footer
+						a(href="#!").btn-primary.w-100 
+							span.hide-mobile Перейти на статью
+							span.hide-desktop Подробнее
+				.about-media-card
+					.about-media__img
+						img.img-cover(src="./img/media.webp", width="520" height="300" srcset="./img/media@2x.webp 2x" alt="alt")
+					.about-media__txt
+						.h5 Про добро. Частные дома престарелых – бизнес или благотворительность?
+						p В Ростовской области уже пять лет работает сеть частных пансионатов для престарелых жителей «Добро». О том, как пришла в голову идея проекта, сложно ли работать социальному бизнесу и как государство может помочь пожилым людям, корреспонденту «АиФ-Ростов» рассказал донской предприниматель Евгений Атаманчук
+					.about-media__footer
+						a(href="#!").btn-primary.w-100 
+							span.hide-mobile Перейти на статью
+							span.hide-desktop Подробнее
+				.about-media-card
+					.about-media__img
+						img.img-cover(src="./img/media.webp", width="520" height="300" srcset="./img/media@2x.webp 2x" alt="alt")
+					.about-media__txt
+						.h5 Про добро. Частные дома престарелых – бизнес или благотворительность?
+						p В Ростовской области уже пять лет работает сеть частных пансионатов для престарелых жителей «Добро». О том, как пришла в голову идея проекта, сложно ли работать социальному бизнесу и как государство может помочь пожилым людям, корреспонденту «АиФ-Ростов» рассказал донской предприниматель Евгений Атаманчук
+					.about-media__footer
+						a(href="#!").btn-primary.w-100 
+							span.hide-mobile Перейти на статью
+							span.hide-desktop Подробнее
+				.about-media-card
+					.about-media__img
+						img.img-cover(src="./img/media.webp", width="520" height="300" srcset="./img/media@2x.webp 2x" alt="alt")
+					.about-media__txt
+						.h5 Про добро. Частные дома престарелых – бизнес или благотворительность?
+						p В Ростовской области уже пять лет работает сеть частных пансионатов для престарелых жителей «Добро». О том, как пришла в голову идея проекта, сложно ли работать социальному бизнесу и как государство может помочь пожилым людям, корреспонденту «АиФ-Ростов» рассказал донской предприниматель Евгений Атаманчук
+					.about-media__footer
+						a(href="#!").btn-primary.w-100 
+							span.hide-mobile Перейти на статью
+							span.hide-desktop Подробнее
+				.about-media-card
+					.about-media__img
+						img.img-cover(src="./img/media.webp", width="520" height="300" srcset="./img/media@2x.webp 2x" alt="alt")
+					.about-media__txt
+						.h5 Про добро. Частные дома престарелых – бизнес или благотворительность?
+						p В Ростовской области уже пять лет работает сеть частных пансионатов для престарелых жителей «Добро». О том, как пришла в голову идея проекта, сложно ли работать социальному бизнесу и как государство может помочь пожилым людям, корреспонденту «АиФ-Ростов» рассказал донской предприниматель Евгений Атаманчук
+					.about-media__footer
+						a(href="#!").btn-primary.w-100 
+							span.hide-mobile Перейти на статью
+							span.hide-desktop Подробнее
+				.about-media-card
+					.about-media__img
+						img.img-cover(src="./img/media.webp", width="520" height="300" srcset="./img/media@2x.webp 2x" alt="alt")
+					.about-media__txt
+						.h5 Про добро. Частные дома престарелых – бизнес или благотворительность?
+						p В Ростовской области уже пять лет работает сеть частных пансионатов для престарелых жителей «Добро». О том, как пришла в голову идея проекта, сложно ли работать социальному бизнесу и как государство может помочь пожилым людям, корреспонденту «АиФ-Ростов» рассказал донской предприниматель Евгений Атаманчук
+					.about-media__footer
+						a(href="#!").btn-primary.w-100 
+							span.hide-mobile Перейти на статью
+							span.hide-desktop Подробнее
+				.about-media-card
+					.about-media__img
+						img.img-cover(src="./img/media.webp", width="520" height="300" srcset="./img/media@2x.webp 2x" alt="alt")
+					.about-media__txt
+						.h5 Про добро. Частные дома престарелых – бизнес или благотворительность?
+						p В Ростовской области уже пять лет работает сеть частных пансионатов для престарелых жителей «Добро». О том, как пришла в голову идея проекта, сложно ли работать социальному бизнесу и как государство может помочь пожилым людям, корреспонденту «АиФ-Ростов» рассказал донской предприниматель Евгений Атаманчук
+					.about-media__footer
+						a(href="#!").btn-primary.w-100 
+							span.hide-mobile Перейти на статью
+							span.hide-desktop Подробнее
+			//slider pagination
+			.about-media-pagination.slider-pagination
+				button.btn-prev(type="button")
+					span.arrow-left
+				button.btn-next(type="button")
+					span.arrow-right
+	
+	include ../sections/_footer
+
+
+
+
+			
+block variables
+	-var title = "Одна статья";
