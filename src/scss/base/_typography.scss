@@ -245,3 +245,30 @@ line-height:1;
 		text-align: left;
 	}
 }
+.blockquote-txt{
+	position: relative;
+	padding-left: 60px;
+	padding-block: 40px;
+	&:after{
+		content:'\201C';
+		display: block;
+		font-weight: 700;
+		font-size: 180px;
+		line-height: .36;
+		letter-spacing: -0.02em;
+		color: rgba(204, 236, 131, 0.4);
+		position: absolute;
+		right: 30px;
+		top: 55px;
+		text-stroke: 1px rgba(30, 71, 55, .3);
+		-webkit-text-stroke:1px rgba(30, 71, 55, .3);
+		
+	}
+	&>*{
+		max-width: 740px; width: 90%;
+		font-style: italic;
+		font-weight: 600;
+		font-size: 22px;
+		color: #1e4737;
+	}
+}

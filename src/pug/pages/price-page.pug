@@ -1,0 +1,503 @@
+extends ../layouts/layout.pug
+mixin select(plh="Пример заполнения", inpName = 'input_name', label)
+	.form-item&attributes(attributes)
+		if label
+			label #{label}
+		.dropdown
+			button.dropdown__button(type="button") #{plh}
+			
+			.dropdown__list
+				ul
+					li.dropdown__list-item(data-value="Мужской") Мужской
+					li.dropdown__list-item(data-value="Женский") Женский
+					
+
+			//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+			input.dropdown__input-hidden(type="hidden", name=""+ inpName)
+block content
+	include ../sections/_header
+	main.main.inner-main
+		//БОКОВОЕ МЕНЮ НА МОБ ВЕРСИИ
+		#inner-menu-mobile.inner-menu-mobile
+			.inner-menu-btn#toggle-innerMenu Menu
+				span
+			.sidebar-scroll-wrapper
+				.list-menu.has-hide
+					.h4.list-menu__title Меню
+					ul
+						li.active 
+							a.h5(href="#!") Перевозка больных
+						li 
+							a.h5(href="#!") Врачебный осмотр
+						li 
+							a.h5(href="#!") Медицинская помощь
+						li 
+							a.h5(href="#!") Патронаж
+						li 
+							a.h5(href="#!") Лечебный массаж
+						li 
+							a.h5(href="#!") Лечебная физкультура
+						li.toggle-item.drop-menu__hide 
+							a.h5(href="#!") Перевозка больных
+						li.toggle-item.drop-menu__hide 
+							a.h5(href="#!") Врачебный осмотр
+						li.toggle-item.drop-menu__hide 
+							a.h5(href="#!") Медицинская помощь
+						li.toggle-item.drop-menu__hide 
+							a.h5(href="#!") Патронаж
+						li.toggle-item.drop-menu__hide 
+							a.h5(href="#!") Лечебный массаж
+						li.toggle-item.drop-menu__hide 
+							a.h5(href="#!") Лечебная физкультура
+		
+					.drop-menu__btn
+						button.open-drop-menu.arrow-btn
+			
+			
+				//MENU
+				.list-menu
+					ul
+						li 
+							a.h5(href="#!") Уход и забота 24/7
+						li.active 
+							a.h5(href="#!") Уход за лежачимии и <br>больными
+						li 
+							a.h5(href="#!") Комфортные условия<br>проживания
+						li 
+							a.h5(href="#!") Медицинская помощь
+						li 
+							a.h5(href="#!") Доброжелательный персонал
+						li 
+							a.h5(href="#!") Вкусное и полезное 5-и<br>разовое питание
+						li 
+							a.h5(href="#!") Разнообразный<br>и интересный досуг
+		.container
+			ul.breadcrumbs
+				li
+					a(href="#!") pansionat-dobro.ru
+				li
+					a(href="#!") Услуги
+				li
+					a(href="#!") Пансионат для пожилых людей
+		section.inner-page
+			.container
+				//SIDEBAR
+				.aside-grid.aside-grid--desktop
+					sidebar.sidebar
+						//MENU
+						.list-menu.has-hide
+							.h4.list-menu__title Меню
+							ul
+								li.active 
+									a.h5(href="#!") Перевозка больных
+								li 
+									a.h5(href="#!") Врачебный осмотр
+								li 
+									a.h5(href="#!") Медицинская помощь
+								li 
+									a.h5(href="#!") Патронаж
+								li 
+									a.h5(href="#!") Лечебный массаж
+								li 
+									a.h5(href="#!") Лечебная физкультура
+								li.toggle-item.drop-menu__hide 
+									a.h5(href="#!") Перевозка больных
+								li.toggle-item.drop-menu__hide 
+									a.h5(href="#!") Врачебный осмотр
+								li.toggle-item.drop-menu__hide 
+									a.h5(href="#!") Медицинская помощь
+								li.toggle-item.drop-menu__hide 
+									a.h5(href="#!") Патронаж
+								li.toggle-item.drop-menu__hide 
+									a.h5(href="#!") Лечебный массаж
+								li.toggle-item.drop-menu__hide 
+									a.h5(href="#!") Лечебная физкультура
+				
+							.drop-menu__btn
+								button.open-drop-menu.arrow-btn
+					
+					
+						//MENU
+						.list-menu
+							ul
+								li 
+									a.h5(href="#!") Уход и забота 24/7
+								li.active 
+									a.h5(href="#!") Уход за лежачимии и <br>больными
+								li 
+									a.h5(href="#!") Комфортные условия<br>проживания
+								li 
+									a.h5(href="#!") Медицинская помощь
+								li 
+									a.h5(href="#!") Доброжелательный персонал
+								li 
+									a.h5(href="#!") Вкусное и полезное 5-и<br>разовое питание
+								li 
+									a.h5(href="#!") Разнообразный<br>и интересный досуг
+								
+				
+						//БРОНИРОВАНИЕ
+						.reservation-form-wrapper
+							.h4 Бронирование
+							form.reservation-form(action="#!")
+								.form-item
+									label.label Ваш номер телефона
+									input(type="tel" placeholder="+7 (000) 000-00-00")
+								
+								.form-item
+									label.label Дата заезда
+										span.txt-red *
+									input#start-date.start-date(type="text" placeholder="ДД.ММ.ГГГГ")
+								
+								.form-item
+									label.label Дата отезда
+										span.txt-red *
+									input#end-date.start-date(type="text" placeholder="ДД.ММ.ГГГГ")
+								.form-btn
+									button.btn-primary.w-100(type="submit")  Оставить заявку
+				
+						//SLIDER
+						.slider-block
+							.h4 Специалисты
+							.sidebar-team-slider.small-slider
+								.sidebar-slider-card
+									img(src="./img/team/image1.webp", srcset="./img/team/image1@2x.webp" alt="img")
+								
+									.sidebar-slider-text
+										.txt-20 Управляющая
+										.h5 Казакова Наталья Артёмовна
+								
+								.sidebar-slider-card
+									img(src="./img/team/image1.webp", srcset="./img/team/image1@2x.webp" alt="img")
+								
+									.sidebar-slider-text
+										.txt-20 Управляющая
+										.h5 Казакова Наталья Артёмовна
+								.sidebar-slider-card
+									img(src="./img/team/image1.webp", srcset="./img/team/image1@2x.webp" alt="img")
+								
+									.sidebar-slider-text
+										.txt-20 Управляющая
+										.h5 Казакова Наталья Артёмовна
+						
+						//SLIDER
+						.slider-block
+							.h4 Наши дома
+							.sidebar-branches-slider.small-slider
+								.sidebar-slider-card
+									img(src="./img/branches/branche1.webp", srcset="./img/branches/branche1@2x.webp" alt="img")
+								
+								.sidebar-slider-card
+									img(src="./img/branches/branche2.webp", srcset="./img/branches/branche2@2x.webp" alt="img")
+								
+									
+								.sidebar-slider-card
+									img(src="img/branches/branche1.webp", srcset="./img/branches/branche1@2x.webp" alt="img")
+								
+				
+					//MAIN CONTENT
+					.price-page-content.txt-22
+						.price-page-block
+							h1.h1 Стоимость проживания в доме престарелых в #[span.accent-word Ростове-на-Дону]
+							p Стоимость проживания в доме престарелых определяется количеством и качеством оказываемых клиентам услуг. Большое значение имеет, в каком физическом состоянии пожилой человек, есть ли дополнительные пожелания, особые требования, медицинские рекомендации. В преклонном возрасте людям необходима не только физическая, но и моральная поддержка и помощь. Ведь в этот период обостряются заболевания, возможно появление неврологических и психических расстройств. Сотрудники нашего пансионата готовы обеспечить постояльцам качественный уход, круглосуточно заботиться о них. Дома такие условия невозможно представить из-за постоянной занятости родственников, отсутствия у них медицинского образования.
+							//video
+							.video-box
+								a(href="https://www.youtube.com/embed/__-vp0g_BhA?si=ATYLxRiZZo-EeydT"  data-fancybox="video-about").about__video.video-link
+									img.img-cover.img-round(src="./img/video-posters/poster1.webp", width="1100" height="474" alt="img")
+							
+							.price-page-cards
+								.price-card
+									p Самостоятельные
+									p от #[span 1199 #[small.txt-red *]] руб./сут.
+								.price-card
+									p Пожилые с ограниченными возможностями
+									p от #[span 1399] руб./сут.
+								.price-card
+									p Лежачие пожилые
+									p от #[span 1299] руб./сут.
+								.price-card
+									p Короткое размещение
+									p от #[span 1500] руб./сут.
+								.price-card
+									p Трансфер в пансионат
+									p от #[span 1800] руб./сут.
+								.price-card
+									p Поездка в театр, цирк
+									p от #[span 900] руб./сут.
+								
+								.price-card
+									p Перевязка, физиотерапевтические процедуры
+									p от #[span 500] руб./сут.
+								.price-card
+									p ЛФК (лечебная физкультура)
+									p от #[span 500] руб./сут.
+								.price-card
+									p Сиделка для пожилого человека
+									p от #[span 800] руб./сут.
+					
+							.price-notify #[span.txt-red *] льготные места ограничены. Узнать о наличии мест можно по телефону #[a.txt-link(href="tel:+78633033857") +7 (863) 303-38-57]
+							.calc-button
+								a(href="#!").btn-primary Рассчитать стоимость
+						
+						//BLOCK
+						.price-page-block
+							h2.h1 Кого мы  #[span.accent-word принимаем]
+							p Постояльцы нашего пансионата в Ростове на Дону - не только пожилые люди, но и мужчины и женщины с тяжелыми заболеваниями. Люди, которым требуется тщательный уход. Мы никому не отказываем, наоборот предлагаем родным разместить у нас близких, так как готовы обеспечить их лечением, медицинской помощью.
+							p Среди клиентов хватает лежачих больных, которым требуется особая забота. Здесь те, кто перенес инсульт, страдает от болезни Альцгеймера, деменции, имеет инвалидность. Это страшные диагнозы для родственников, которые просто не в состоянии обеспечить необходимый уход.
+							.price-block-img
+								img(src='./img/price/image.webp', srcset='./img/price/image@2x.webp 2x' width='820' height='1354' loading='lazy' alt='img')
+
+						//BLOCK
+						.price-page-block
+							h2.h1 Что входит в  #[span.accent-word стоимость проживания]
+							p Цены в пансионате для пожилых складываются из нескольких критериев. Стоимость проживания рассчитываться за каждые сутки, проведенные в интернате.
+							.title-30 В стоимость входит:
+							ol
+								li круглосуточный уход и присмотр за пенсионерами;
+								li профессиональная и качественная медицинская помощь;
+								li реабилитационные программы (зависят от диагноза);
+								li организация досуга - совместные дни рождения, концерты, творческие мастер-классы;
+								li гигиенические процедуры (стрижка ногтей, волос, обработка пролежней и т.д.);
+								li регулярная уборка помещений, комнаты сияют чистотой;
+								li услуги прачечной;
+								li сбалансированное 5-разовое питание (меню составляется с учетом рекомендаций и пожеланий конкретного пациента), по рекомендации врача может быть организован диетический стол.
+				
+							p Это перечень базовых услуг, которые предоставляются постояльцам нашего частного пансионата.
+							p В базовую стоимость входят услуги опытных сиделок, ежедневный осмотр врачами, организуется прием узкими специалистами, сбор анализов, есть удобные кровати, в которых комфортно себя будут чувствовать лежачие пациенты.
+
+							.grey-box.our-special-box
+								.title-40.mb-30 Специальные условия в пансионате Добро
+								.our-special
+									.light-card.light-card--row
+										.round-icon
+											img(src="./img/icons/i24.webp", width="30" height="30" alt="img")
+										.h5 Ежедневный обход врача, измерение температуры и артериального давления
+									.light-card.light-card--row
+										.round-icon
+											img(src="./img/icons/i20.webp", width="30" height="30" alt="img")
+										.h5 Помощь в принятии пищи (индивидуальная сбалансированная диета)
+
+									.light-card.light-card--row
+										.round-icon
+											img(src="./img/icons/i19.webp", width="30" height="30" alt="img")
+										.h5 Функциональные кровати для лежачих пожилых больных
+									.light-card.light-card--row
+										.round-icon
+											img(src="./img/icons/i28.webp", width="30" height="30" alt="img")
+										.h5 Организованный досуг - концерты, творческие вечера, мастер-классы
+
+									.light-card.light-card--row
+										.round-icon
+											img(src="./img/icons/i29.webp", width="30" height="30" alt="img")
+										.h5 Пансионаты оборудованы поручнями и пандусами
+									.light-card.light-card--row
+										.round-icon
+											img(src="./img/icons/i25.webp", width="30" height="30" alt="img")
+										.h5 Выдача назначенных медикаментов и контроль их приема
+
+									.light-card.light-card--row
+										.round-icon
+											img(src="./img/icons/i32.webp", width="30" height="30" alt="img")
+										.h5 Заботливые и профессиональные сиделки для пожилых
+									.light-card.light-card--row
+										.round-icon
+											img(src="./img/icons/i30.webp", width="30" height="30" alt="img")
+										.h5 Специализированные стулья туалеты для инвалидов
+
+									.light-card.light-card--row
+										.round-icon
+											img(src="./img/icons/i26.webp", width="30" height="30" alt="img")
+										.h5 Гигиенические процедуры: стрижка волос и ногтей, обработка пролежней
+
+									.light-card.light-card--row
+										.round-icon
+											img(src="./img/icons/i31.webp", width="30" height="30" alt="img")
+										.h5 Противопролежневые матрасы, средства и системы
+									.light-card.light-card--row
+										.round-icon
+											img(src="./img/icons/i22.webp", width="30" height="30" alt="img")
+										.h5 Инвалидные коляски, трости, ходунки, костыли, и др.
+
+									.light-card.light-card--row
+										.round-icon
+											img(src="./img/icons/i27.webp", width="30" height="30" alt="img")
+										.h5 Ежедневные прогулки
+						
+						//BLOCK
+						.price-page-block
+							h2.h1 #[span.accent-word Преимущества] пансионата Добро
+							p В государственных домах престарелые постояльцы часто сталкиваются со сложностями, связанными с недостатком финансирования. Из-за этого родственникам приходится регулярно доплачивать за услуги сиделки, лекарственные препараты, дополнительные удобства для близкого. Нам удалось обеспечить низкие цены, включив в стоимость весь перечень базовых услуг.
+							p Необходимость в доплатах может появиться только при исключительных пожеланиях, особом лечении или реабилитации, которая связана с нетипичными процедурами.
+				
+							.grey-box.blockquote-txt
+								p Еще одна сложность, с которой сталкиваются в государственных учреждениях, связана с тем, что попасть в них достаточно сложно.
+				
+							.title-30 Опять же из-за нехватки финансов эту услугу могут получить:
+							ul
+								li лежачие пациенты;
+								li инвалиды первой или второй группы;
+								li больные, которым требуется постоянный уход и реабилитация.
+				
+							p При этом одним из основных условий становится отсутствие родственников, которые могли бы взять их к себе, ухаживать и содержать. В результате повсюду уныние и апатия.
+							p В нашем пансионате все совершенно по-другому. Внешне он больше всего напоминает современный и функциональный санаторий, где можно эффективно поправить здоровье.
+							.grey-box.blockquote-txt
+								p Стоимость размещения небольшая. Прайс-лист составлен из расчета, чтобы услугами полного пансиона пользовались представители всех социальных слоев. У нас есть льготные места и скидки на пребывание, воспользоваться ими могут все желающие.
+							p Наш пансионат находится в экологически чистом и благоустроенном месте. Он оптимально подойдет для временного или постоянного проживания. Жить здесь будет комфортно круглый год.
+							p Каждому постояльцу и его посетителям обеспечивается внимательное и уважительное отношение со стороны профессионально подготовленного персонала. Для постоянных пациентов здесь создана приятная и непринужденная атмосфера. Существует возможность почувствовать себя по-домашнему в кругу ровесников со схожими интересами и потребностями.
+							p Высокое качество услуг подтверждают сертификаты и лицензии. В штате работают опытные профессионалы, которые знают, как сделать старость счастливой. Звоните, чтобы получить подробную информацию. Обеспечьте своим любимым спокойную и счастливую старость.
+							p #[a.txt-link «Добро»] – это современный пансионат европейского уровня. Для того чтобы уточнить детали, задать интересующие вопросы, позвоните по номеру: #[a.txt-link(href="tel:+78633033857") +7 (863) 303-38-57]
+				
+				.aside-grid
+					sidebar.sidebar
+						//FORM
+						.form-wrapper.free-consult
+							.h4 Бесплатная<br>консультация
+							.txt-20 Я бы сюда добавил какое нибудь краткое описание, преимуществаили может ваш слоган
+							
+							form.contacts-form
+								.form-item
+									label.label Ваше имя
+									input(type="text" placeholder="Иван")
+								.form-item
+									label.label Ваш номер телефона
+									input(type="tel" placeholder="+7 (000) 000-00-00")
+
+								.agree-block
+									label.checkbox-item
+										input(type="checkbox" checked)
+										span.custom-checkbox
+										span Я ознакомлен и согласен с условиями #[a(href="#!") пользовательского соглашения]
+								.form-btn
+									button.btn-primary.w-100(type="submit")  Оставить заявку
+					
+					
+					.inner-content
+						form.calc-form
+							.h4 Калькулятор проживания
+							.calc-form-grid
+								.form-item
+									label.label Пол пожилого
+										span.txt-red *
+									.dropdown
+										button.dropdown__button(type="button") Мужской
+
+										.dropdown__list
+											ul
+												li.dropdown__list-item(data-value="Мужской") Мужской
+												li.dropdown__list-item(data-value="Женский") Женский
+								.form-item
+									label.label Самостоятельный?
+										span.txt-red *
+									.dropdown
+										button.dropdown__button(type="button") Да
+
+										.dropdown__list
+											ul
+												li.dropdown__list-item(data-value="Да") Да
+												li.dropdown__list-item(data-value="Нет") Нет
+
+								.form-item
+									label.label Возраст
+										span.txt-red *
+									input(type="number" placeholder="0" name="")
+								
+								.form-item
+									label.label Ваш комментарий
+									input(type="tel" placeholder="+7 (000) 000-00-00")
+								
+								.form-item.form-textarea
+									textarea(name="message" placeholder="Комментарий...")
+								.form-item.form-btn
+									button.btn-primary.w-100(type="submit") Отправить заявку
+									p.txt-18 Специалист свяжется с вами в ближайшее время
+	
+		//Статьи
+		section.about-media
+			.container
+				h2.h1 #[span.accent-word Популярные ] статьи
+			.about-media-slider.overlay-bg
+				.about-media-card
+					.about-media__img
+						img.img-cover(src="./img/media.webp", width="520" height="300" srcset="./img/media@2x.webp 2x" alt="alt")
+					.about-media__txt
+						.h5 Про добро. Частные дома престарелых – бизнес или благотворительность?
+						p В Ростовской области уже пять лет работает сеть частных пансионатов для престарелых жителей «Добро». О том, как пришла в голову идея проекта, сложно ли работать социальному бизнесу и как государство может помочь пожилым людям, корреспонденту «АиФ-Ростов» рассказал донской предприниматель Евгений Атаманчук
+					.about-media__footer
+						a(href="#!").btn-primary.w-100 
+							span.hide-mobile Перейти на статью
+							span.hide-desktop Подробнее
+				.about-media-card
+					.about-media__img
+						img.img-cover(src="./img/media.webp", width="520" height="300" srcset="./img/media@2x.webp 2x" alt="alt")
+					.about-media__txt
+						.h5 Про добро. Частные дома престарелых – бизнес или благотворительность?
+						p В Ростовской области уже пять лет работает сеть частных пансионатов для престарелых жителей «Добро». О том, как пришла в голову идея проекта, сложно ли работать социальному бизнесу и как государство может помочь пожилым людям, корреспонденту «АиФ-Ростов» рассказал донской предприниматель Евгений Атаманчук
+					.about-media__footer
+						a(href="#!").btn-primary.w-100 
+							span.hide-mobile Перейти на статью
+							span.hide-desktop Подробнее
+				.about-media-card
+					.about-media__img
+						img.img-cover(src="./img/media.webp", width="520" height="300" srcset="./img/media@2x.webp 2x" alt="alt")
+					.about-media__txt
+						.h5 Про добро. Частные дома престарелых – бизнес или благотворительность?
+						p В Ростовской области уже пять лет работает сеть частных пансионатов для престарелых жителей «Добро». О том, как пришла в голову идея проекта, сложно ли работать социальному бизнесу и как государство может помочь пожилым людям, корреспонденту «АиФ-Ростов» рассказал донской предприниматель Евгений Атаманчук
+					.about-media__footer
+						a(href="#!").btn-primary.w-100 
+							span.hide-mobile Перейти на статью
+							span.hide-desktop Подробнее
+				.about-media-card
+					.about-media__img
+						img.img-cover(src="./img/media.webp", width="520" height="300" srcset="./img/media@2x.webp 2x" alt="alt")
+					.about-media__txt
+						.h5 Про добро. Частные дома престарелых – бизнес или благотворительность?
+						p В Ростовской области уже пять лет работает сеть частных пансионатов для престарелых жителей «Добро». О том, как пришла в голову идея проекта, сложно ли работать социальному бизнесу и как государство может помочь пожилым людям, корреспонденту «АиФ-Ростов» рассказал донской предприниматель Евгений Атаманчук
+					.about-media__footer
+						a(href="#!").btn-primary.w-100 
+							span.hide-mobile Перейти на статью
+							span.hide-desktop Подробнее
+				.about-media-card
+					.about-media__img
+						img.img-cover(src="./img/media.webp", width="520" height="300" srcset="./img/media@2x.webp 2x" alt="alt")
+					.about-media__txt
+						.h5 Про добро. Частные дома престарелых – бизнес или благотворительность?
+						p В Ростовской области уже пять лет работает сеть частных пансионатов для престарелых жителей «Добро». О том, как пришла в голову идея проекта, сложно ли работать социальному бизнесу и как государство может помочь пожилым людям, корреспонденту «АиФ-Ростов» рассказал донской предприниматель Евгений Атаманчук
+					.about-media__footer
+						a(href="#!").btn-primary.w-100 
+							span.hide-mobile Перейти на статью
+							span.hide-desktop Подробнее
+				.about-media-card
+					.about-media__img
+						img.img-cover(src="./img/media.webp", width="520" height="300" srcset="./img/media@2x.webp 2x" alt="alt")
+					.about-media__txt
+						.h5 Про добро. Частные дома престарелых – бизнес или благотворительность?
+						p В Ростовской области уже пять лет работает сеть частных пансионатов для престарелых жителей «Добро». О том, как пришла в голову идея проекта, сложно ли работать социальному бизнесу и как государство может помочь пожилым людям, корреспонденту «АиФ-Ростов» рассказал донской предприниматель Евгений Атаманчук
+					.about-media__footer
+						a(href="#!").btn-primary.w-100 
+							span.hide-mobile Перейти на статью
+							span.hide-desktop Подробнее
+				.about-media-card
+					.about-media__img
+						img.img-cover(src="./img/media.webp", width="520" height="300" srcset="./img/media@2x.webp 2x" alt="alt")
+					.about-media__txt
+						.h5 Про добро. Частные дома престарелых – бизнес или благотворительность?
+						p В Ростовской области уже пять лет работает сеть частных пансионатов для престарелых жителей «Добро». О том, как пришла в голову идея проекта, сложно ли работать социальному бизнесу и как государство может помочь пожилым людям, корреспонденту «АиФ-Ростов» рассказал донской предприниматель Евгений Атаманчук
+					.about-media__footer
+						a(href="#!").btn-primary.w-100 
+							span.hide-mobile Перейти на статью
+							span.hide-desktop Подробнее
+			//slider pagination
+			.about-media-pagination.slider-pagination
+				button.btn-prev(type="button")
+					span.arrow-left
+				button.btn-next(type="button")
+					span.arrow-right
+	
+	include ../sections/_footer
+
+
+
+
+			
+block variables
+	-var title = "Внутренняя";
