@@ -1,6 +1,14 @@
 .inner-page{
 	position: relative;
-	
+	.inner-content{
+		padding-bottom: 150px;
+		@media (max-width: 1919px) {
+			padding-bottom: remy(150);
+		}
+		@media (max-width: 767px) {
+			padding-bottom: 80px;
+		}
+	}
 }
 
 .inner-menu-mobile{
