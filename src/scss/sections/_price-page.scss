@@ -25,12 +25,27 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	gap:20px;
+	@media (max-width: 1023px) {
+		grid-template-columns: 1fr 1fr;
+	}
+	@media (max-width: 743px) {
+		grid-template-columns: 1fr;
+	}
 }
 .price-page-content,.price-page-block{
 	display: flex;
 	flex-direction: column;
 	row-gap:160px;
 	&>*{width: 100%;}
+	
+}
+.price-page-content{
+	@media (max-width: 1919px) {
+		row-gap:remy(160);
+	}
+	@media (max-width: 1023px) {
+		row-gap:100px;
+	}
 }
 .price-page-block{
 	row-gap:30px;
@@ -39,11 +54,17 @@
 .price-block-img{
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	row-gap:20px;
 }
 .our-special{
 	display: grid;
 	grid-template-columns:  1fr 1fr;
 	gap:20px;
+	@media (max-width: 699px) {
+		grid-template-columns:  1fr;
+	}
 	
 }
 .our-special-box{

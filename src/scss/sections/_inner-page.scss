@@ -2,6 +2,9 @@
 	position: relative;
 	.inner-content{
 		padding-bottom: 150px;
+		ul, ol{
+			li+li{margin-top: 12px;}
+		}
 		@media (max-width: 1919px) {
 			padding-bottom: remy(150);
 		}

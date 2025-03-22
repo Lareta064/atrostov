@@ -50,7 +50,9 @@ p {
 figure {
 	margin: 0;
 }
-
+a[href^="tel:"],a[href^="email:"]{
+	white-space: nowrap;
+}
 img {
 	max-width: 100%;
 	height: auto;
