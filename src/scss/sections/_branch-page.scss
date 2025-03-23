@@ -21,26 +21,7 @@
 		row-gap:30px;
 		.txt-22{width: 100%;}
 	}
-	.branch-short-contacts{
-		width: 100%;
-		.benefit-card{
-			display: none!important;
-			@media (max-width: 743px) {
-				display: flex !important;
-				.h3{
-					font-weight: 600;
-					font-size: 18px;
-					letter-spacing: -0.02em;
-					color: rgba(31, 29, 27, 0.5);
-				}
-				.txt-18{
-					font-weight: 700;
-					
-					color: #1f1d1b;
-				}
-			   }
-		}
-	}
+	
 	.branch-fotorama {
 		max-width: 820px;
 		padding-bottom: 50px;
@@ -72,6 +53,26 @@
 		}
 	}
 }
+.branch-short-contacts{
+	width: 100%;
+	.benefit-card{
+		display: none!important;
+		@media (max-width: 743px) {
+			display: flex !important;
+			.h3{
+				font-weight: 600;
+				font-size: 18px;
+				letter-spacing: -0.02em;
+				color: rgba(31, 29, 27, 0.5);
+			}
+			.txt-18{
+				font-weight: 700;
+				
+				color: #1f1d1b;
+			}
+		   }
+	}
+}
 .short-contacts__item{
 	display: flex;
 	align-items: center;
@@ -86,6 +87,7 @@
 		border-radius: 100px;
 		background-color: #f5f5f5;
 		flex-grow: 1;
+		a,span{color: #1f1d1b;}
 		@media (max-width: 1439px) {
 		font-size: 20px;
 		}
@@ -94,6 +96,7 @@
 	 display: none;
 	}
 }
+
 .contacts-map{
 	height: 250px;
 	width: 100%;

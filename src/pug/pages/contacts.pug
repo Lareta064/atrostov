@@ -14,6 +14,19 @@ mixin select(plh="Пример заполнения", inpName = 'input_name', la
 
 			//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
 			input.dropdown__input-hidden(type="hidden", name=""+ inpName)
+
+mixin contactsCard(city, address)
+	.contacts-card
+		.contacts-card__title #{city}
+		.contacts-card__item
+			.square-icon
+				img(src="./img/icons/phone.webp", width="30" height="30" alt="img")
+			a(href="tel:+78007754613") +7 (800) 775-46-13
+		
+		.contacts-card__item
+			.square-icon
+				img(src="./img/icons/pin.webp", width="30" height="30" alt="img")
+			p !{address}
 block content
 	include ../sections/_header
 	main.main.inner-main
@@ -196,157 +209,108 @@ block content
 								
 				
 					//MAIN CONTENT
-					section.price-page-content.txt-22.inner-content
-						.price-page-block
-							h1.h1.mb-0 Стоимость проживания в доме престарелых в #[span.accent-word Ростове-на-Дону]
-							p Стоимость проживания в доме престарелых определяется количеством и качеством оказываемых клиентам услуг. Большое значение имеет, в каком физическом состоянии пожилой человек, есть ли дополнительные пожелания, особые требования, медицинские рекомендации. В преклонном возрасте людям необходима не только физическая, но и моральная поддержка и помощь. Ведь в этот период обостряются заболевания, возможно появление неврологических и психических расстройств. Сотрудники нашего пансионата готовы обеспечить постояльцам качественный уход, круглосуточно заботиться о них. Дома такие условия невозможно представить из-за постоянной занятости родственников, отсутствия у них медицинского образования.
-							//video
-							.video-box
-								a(href="https://www.youtube.com/embed/__-vp0g_BhA?si=ATYLxRiZZo-EeydT"  data-fancybox="video-about").about__video.video-link
-									img.img-cover.img-round(src="./img/video-posters/poster1.webp", width="1100" height="474" alt="img")
-							
-							.price-page-cards
-								.price-card
-									p Самостоятельные
-									p от #[span 1199 #[small.txt-red *]] руб./сут.
-								.price-card
-									p Пожилые с ограниченными возможностями
-									p от #[span 1399] руб./сут.
-								.price-card
-									p Лежачие пожилые
-									p от #[span 1299] руб./сут.
-								.price-card
-									p Короткое размещение
-									p от #[span 1500] руб./сут.
-								.price-card
-									p Трансфер в пансионат
-									p от #[span 1800] руб./сут.
-								.price-card
-									p Поездка в театр, цирк
-									p от #[span 900] руб./сут.
+					.contacts-page-content.inner-content.block-gap-100
+						.branch-short-desk.block-gap-30
+							h1.h1.mb-0  #[span.accent-word Ростов-на-Дону]
+						
+							.h3 Pansionat Dobro
+							//contacts items
+							.branch-short-contacts.two-columns
+								.short-contacts__item
+									span.round-icon
+										img(src="./img/icons/pin.webp", width="30" height="30" alt="img")
+									p ул. Тружеников, 86/5
+								//элемент для моб версии
+								.benefit-card
+									.benefit-card__top
+										.benefit-card__icon
+											span
+												img(src="./img/icons/pin.webp", width="30" height="30" alt="img")
+										.h3 Адрес:
+									p.txt-18  ул. Тружеников, 86/5
 								
-								.price-card
-									p Перевязка, физиотерапевтические процедуры
-									p от #[span 500] руб./сут.
-								.price-card
-									p ЛФК (лечебная физкультура)
-									p от #[span 500] руб./сут.
-								.price-card
-									p Сиделка для пожилого человека
-									p от #[span 800] руб./сут.
-					
-							.price-notify #[span.txt-red *] льготные места ограничены. Узнать о наличии мест можно по телефону #[a.txt-link(href="tel:+78633033857") +7 (863) 303-38-57]
-							.calc-button
-								a(href="#!").btn-primary Рассчитать стоимость
-						
-						//BLOCK
-						.price-page-block
-							h2.h1 Кого мы  #[span.accent-word принимаем]
-							p Постояльцы нашего пансионата в Ростове на Дону - не только пожилые люди, но и мужчины и женщины с тяжелыми заболеваниями. Люди, которым требуется тщательный уход. Мы никому не отказываем, наоборот предлагаем родным разместить у нас близких, так как готовы обеспечить их лечением, медицинской помощью.
-							p Среди клиентов хватает лежачих больных, которым требуется особая забота. Здесь те, кто перенес инсульт, страдает от болезни Альцгеймера, деменции, имеет инвалидность. Это страшные диагнозы для родственников, которые просто не в состоянии обеспечить необходимый уход.
-							figure.price-block-img
-								img(src='./img/price/image.webp', srcset='./img/price/image@2x.webp 2x' width='820' height='1354' loading='lazy' alt='img')
-								figcaption Стоимость проживания и услуги
+								.short-contacts__item
+									span.round-icon
+										img(src="./img/icons/phone.webp", width="30" height="30" alt="img")
+									p
+										a(href="tel:+78007754613") +7 (800) 775-46-13
+								//элемент для моб версии
+								.benefit-card
+									.benefit-card__top
+										.benefit-card__icon
+											span
+												img(src="./img/icons/phone.webp", width="30" height="30" alt="img")
+										.h3 Наш телефон:
+									p.txt-18  
+										a(href="tel:+78007754613") +7 (800) 775-46-13
+								
+								
+								.short-contacts__item
+									span.round-icon
+										img(src="./img/icons/email.webp", width="30" height="30" alt="img")
+									p
+										a(href="mailto:info@pansionat-dobro.ru") info@pansionat-dobro.ru
+								
+								//элемент для моб версии
+								.benefit-card
+									.benefit-card__top
+										.benefit-card__icon
+											span
+												img(src="./img/icons/email.webp", width="30" height="30" alt="img")
+										.h3 Наша почта:
+									p.txt-18
+										a(href="mailto:info@pansionat-dobro.ru") sales@pansionat-dobro.ru
+								
+								
+								.short-contacts__item
+									span.round-icon
+										img(src="./img/icons/email.webp", width="30" height="30" alt="img")
 									
-						//BLOCK
-						.price-page-block
-							h2.h1 Что входит в  #[span.accent-word стоимость проживания]
-							p Цены в пансионате для пожилых складываются из нескольких критериев. Стоимость проживания рассчитываться за каждые сутки, проведенные в интернате.
-							.title-30 В стоимость входит:
-							ol
-								li круглосуточный уход и присмотр за пенсионерами;
-								li профессиональная и качественная медицинская помощь;
-								li реабилитационные программы (зависят от диагноза);
-								li организация досуга - совместные дни рождения, концерты, творческие мастер-классы;
-								li гигиенические процедуры (стрижка ногтей, волос, обработка пролежней и т.д.);
-								li регулярная уборка помещений, комнаты сияют чистотой;
-								li услуги прачечной;
-								li сбалансированное 5-разовое питание (меню составляется с учетом рекомендаций и пожеланий конкретного пациента), по рекомендации врача может быть организован диетический стол.
+									p.social-group
+										a(href="#!")
+											img(src="./img/socials/vk.webp", width="25" height="25" alt="vk")
+										a(href="#!")
+											img(src="./img/socials/ok.webp", width="25" height="25" alt="ok")
+										
+										a(href="#!")
+											img(src="./img/socials/youtube.webp", width="25" height="25" alt="youtube")
+								//элемент для моб версии
+								.benefit-card
+									.benefit-card__top
+										.benefit-card__icon
+											span
+												img(src="./img/icons/email.webp", width="30" height="30" alt="img")
+										.h3 Наша почта:
+									p.txt-18.social-group
+										a(href="#!")
+											img(src="./img/socials/vk.webp", width="25" height="25" alt="vk")
+										a(href="#!")
+											img(src="./img/socials/ok.webp", width="25" height="25" alt="ok")
+										
+										a(href="#!")
+											img(src="./img/socials/youtube.webp", width="25" height="25" alt="youtube")
+
+							p.txt-22 Экскурсия проводится по предварительной записи. Свяжитесь с нами любым удобным для вас способом. Ответим быстро!
+							//MAP
+							.map-wrapper
+								iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3A13e02d731c04b56220a2a064d1fa54db38ac5402f907fd4bdf75e632a107fa8e&source=constructor' width='100%' height='100%' frameborder='0')
 				
-							p Это перечень базовых услуг, которые предоставляются постояльцам нашего частного пансионата.
-							p В базовую стоимость входят услуги опытных сиделок, ежедневный осмотр врачами, организуется прием узкими специалистами, сбор анализов, есть удобные кровати, в которых комфортно себя будут чувствовать лежачие пациенты.
+						.branch-contacts.block-gap-30.grey-box
+							.branch-contacts__title
+								h2.h1 #[span.accent-word Пансионаты] в регионах
+								p.txt-22 Пансионат "Добро" кроме Ростова-на-Дону также имеет филиалы и партнёрскую сеть в регионах:
+							
+							.branch-contacts-wrapper.two-columns
+								+contactsCard('Краснодар', 'улица имени Калинина, 53')
+								+contactsCard('Ставрополь', 'Старомарьевское ш., 36')
+								+contactsCard('Пятигорск', 'ул. Приозерная д.23А')
+								+contactsCard('Астрахань', 'Набережная 1 Мая, 29')
+								+contactsCard('Волгоград', 'ул. Моцарта, 19')
+								+contactsCard('Воронеж', 'Ключевая ул., 25')
+								+contactsCard('Санкт-Петербург', 'посёлок Парголово, Выборгское шоссе, 483')
+								+contactsCard('Ульяновск', '3-й пер. Маяковского, д.41')
 
-							.grey-box.our-special-box
-								.title-40.mb-30 Специальные условия в пансионате Добро
-								.our-special
-									.light-card.light-card--row
-										.round-icon
-											img(src="./img/icons/i24.webp", width="30" height="30" alt="img")
-										.h5 Ежедневный обход врача, измерение температуры и артериального давления
-									.light-card.light-card--row
-										.round-icon
-											img(src="./img/icons/i20.webp", width="30" height="30" alt="img")
-										.h5 Помощь в принятии пищи (индивидуальная сбалансированная диета)
-
-									.light-card.light-card--row
-										.round-icon
-											img(src="./img/icons/i19.webp", width="30" height="30" alt="img")
-										.h5 Функциональные кровати для лежачих пожилых больных
-									.light-card.light-card--row
-										.round-icon
-											img(src="./img/icons/i28.webp", width="30" height="30" alt="img")
-										.h5 Организованный досуг - концерты, творческие вечера, мастер-классы
-
-									.light-card.light-card--row
-										.round-icon
-											img(src="./img/icons/i29.webp", width="30" height="30" alt="img")
-										.h5 Пансионаты оборудованы поручнями и пандусами
-									.light-card.light-card--row
-										.round-icon
-											img(src="./img/icons/i25.webp", width="30" height="30" alt="img")
-										.h5 Выдача назначенных медикаментов и контроль их приема
-
-									.light-card.light-card--row
-										.round-icon
-											img(src="./img/icons/i32.webp", width="30" height="30" alt="img")
-										.h5 Заботливые и профессиональные сиделки для пожилых
-									.light-card.light-card--row
-										.round-icon
-											img(src="./img/icons/i30.webp", width="30" height="30" alt="img")
-										.h5 Специализированные стулья туалеты для инвалидов
-
-									.light-card.light-card--row
-										.round-icon
-											img(src="./img/icons/i26.webp", width="30" height="30" alt="img")
-										.h5 Гигиенические процедуры: стрижка волос и ногтей, обработка пролежней
-
-									.light-card.light-card--row
-										.round-icon
-											img(src="./img/icons/i31.webp", width="30" height="30" alt="img")
-										.h5 Противопролежневые матрасы, средства и системы
-									.light-card.light-card--row
-										.round-icon
-											img(src="./img/icons/i22.webp", width="30" height="30" alt="img")
-										.h5 Инвалидные коляски, трости, ходунки, костыли, и др.
-
-									.light-card.light-card--row
-										.round-icon
-											img(src="./img/icons/i27.webp", width="30" height="30" alt="img")
-										.h5 Ежедневные прогулки
-						
-						//BLOCK
-						.price-page-block
-							h2.h1 #[span.accent-word Преимущества] пансионата Добро
-							p В государственных домах престарелые постояльцы часто сталкиваются со сложностями, связанными с недостатком финансирования. Из-за этого родственникам приходится регулярно доплачивать за услуги сиделки, лекарственные препараты, дополнительные удобства для близкого. Нам удалось обеспечить низкие цены, включив в стоимость весь перечень базовых услуг.
-							p Необходимость в доплатах может появиться только при исключительных пожеланиях, особом лечении или реабилитации, которая связана с нетипичными процедурами.
 				
-							.grey-box.blockquote-txt
-								p Еще одна сложность, с которой сталкиваются в государственных учреждениях, связана с тем, что попасть в них достаточно сложно.
-				
-							.title-30 Опять же из-за нехватки финансов эту услугу могут получить:
-							ul
-								li лежачие пациенты;
-								li инвалиды первой или второй группы;
-								li больные, которым требуется постоянный уход и реабилитация.
-				
-							p При этом одним из основных условий становится отсутствие родственников, которые могли бы взять их к себе, ухаживать и содержать. В результате повсюду уныние и апатия.
-							p В нашем пансионате все совершенно по-другому. Внешне он больше всего напоминает современный и функциональный санаторий, где можно эффективно поправить здоровье.
-							.grey-box.blockquote-txt
-								p Стоимость размещения небольшая. Прайс-лист составлен из расчета, чтобы услугами полного пансиона пользовались представители всех социальных слоев. У нас есть льготные места и скидки на пребывание, воспользоваться ими могут все желающие.
-							p Наш пансионат находится в экологически чистом и благоустроенном месте. Он оптимально подойдет для временного или постоянного проживания. Жить здесь будет комфортно круглый год.
-							p Каждому постояльцу и его посетителям обеспечивается внимательное и уважительное отношение со стороны профессионально подготовленного персонала. Для постоянных пациентов здесь создана приятная и непринужденная атмосфера. Существует возможность почувствовать себя по-домашнему в кругу ровесников со схожими интересами и потребностями.
-							p Высокое качество услуг подтверждают сертификаты и лицензии. В штате работают опытные профессионалы, которые знают, как сделать старость счастливой. Звоните, чтобы получить подробную информацию. Обеспечьте своим любимым спокойную и счастливую старость.
-							p #[a.txt-link «Добро»] – это современный пансионат европейского уровня. Для того чтобы уточнить детали, задать интересующие вопросы, позвоните по номеру: #[a.txt-link(href="tel:+78633033857") +7 (863) 303-38-57]
 				
 				.aside-grid
 					sidebar.sidebar

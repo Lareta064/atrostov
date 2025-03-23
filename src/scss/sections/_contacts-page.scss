@@ -1,0 +1,40 @@
+.map-wrapper{
+	width: 100%;
+	height: 450px;
+	iframe{
+		width: 100%;
+		height: 100%;
+		border-radius: 20px;
+		display: block;
+	}
+	@media (max-width: 743px) {
+		height: 200px;
+	}
+}
+.contacts-card{
+	border-radius: 20px;
+	background: #f0f0f0;
+	padding: 30px;
+	&>*+*{margin-top: 10px;}
+	&__title{
+		font-weight: 700;
+		font-size: 30px;
+		line-height: 2.17;
+		letter-spacing: -0.02em;
+		color: #1f1d1b;
+		
+	}
+	&__item{
+		display: flex;
+		align-items: center;
+		column-gap:10px;
+		p, a{
+			font-weight: 700;
+			font-size: 22px;
+			letter-spacing: -0.02em;
+			color: #1f1d1b;
+		}
+		a:hover{opacity: .7;}
+	}
+	
+}
