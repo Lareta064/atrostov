@@ -112,11 +112,27 @@ line-height:1;
 	}
 }
 .txt-accent{color: #ccec83;}
-.txt-link{
+.txt-link,.bg-link{
 	text-decoration: underline;
 	text-decoration-skip-ink: none;
 	color: #1e4737;
 	display: inline;
+}
+.bg-link{
+	border-radius: 20px;
+	padding: 15px 30px;
+	background: #f0f0f0;
+	font-weight: 700;
+	font-size: 22px;
+	letter-spacing: -0.02em;
+	display: block;
+	transition: .3s;
+	@media (max-width: 1364px) {
+		font-size: 18px;
+	}
+}
+a.bg-link:hover{
+	background-color: #fcfcfc;
 }
 .header-group{
 	margin-bottom: 48px;
